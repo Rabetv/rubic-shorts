@@ -202,6 +202,68 @@ def synth_voice(text, out):
     return a, sr
 
 
+def elevenlabs_tts(text, voice_id, out):
+    """Erzeugt die komplette Sprachspur direkt bei ElevenLabs (braucht ELEVENLABS_KEY)."""
+    import urllib.request
+    key = os.environ["ELEVENLABS_KEY"]
+    body = json.dumps({"text": text, "model_id": "eleven_multilingual_v2",
+                       "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.35}}).encode()
+    req = urllib.request.Request(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}?output_format=mp3_44100_128",
+        data=body, headers={"xi-api-key": key, "Content-Type": "application/json", "Accept": "audio/mpeg"})
+    with urllib.request.urlopen(req, timeout=300) as r:
+        open(out, "wb").write(r.read())
+    return out
+
+
+def align_voice(path, shots, tempo=1.0):
+    """Schneidet eine durchgehende Sprachaufnahme per Whisper-Wortzeiten in Clips pro Shot."""
+    import difflib
+    from faster_whisper import WhisperModel
+    wav = path + ".22k.wav"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-ac", "1", "-ar", "22050",
+                    "-af", f"atempo={tempo}", wav], check=True)
+    with wave.open(wav) as w:
+        sr = w.getframerate()
+        a = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32)
+    model = WhisperModel(os.environ.get("WHISPER_MODEL", "small"), device="cpu", compute_type="int8")
+    raw16 = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", wav, "-ac", "1", "-ar", "16000",
+                            "-f", "s16le", "-"], check=True, capture_output=True).stdout
+    a16 = np.frombuffer(raw16, np.int16).astype(np.float32) / 32768.0
+    segs, _ = model.transcribe(a16, language="de", word_timestamps=True)
+    words = [(norm(x.word), x.start, x.end) for sg in segs for x in sg.words if norm(x.word)]
+    script, owner = [], []
+    for i, sh in enumerate(shots):
+        for w_ in sh.get("say", sh["text"]).split():
+            if norm(w_):
+                script.append(norm(w_)); owner.append(i)
+    sm = difflib.SequenceMatcher(a=script, b=[w[0] for w in words], autojunk=False)
+    m = {}
+    for blk in sm.get_matching_blocks():
+        for k in range(blk.size):
+            m[blk.a + k] = blk.b + k
+    first, last = {}, {}
+    for si, sh_i in enumerate(owner):
+        if si in m:
+            first.setdefault(sh_i, m[si]); last[sh_i] = m[si]
+    clips = []
+    for i in range(len(shots)):
+        if i not in first:
+            raise RuntimeError(f"Shot {i+1}: Sprache nicht gefunden")
+        t0 = max(0, words[first[i]][1] - 0.03)
+        if i + 1 < len(shots) and (i + 1) in first:
+            t1 = words[first[i + 1]][1] - 0.03                   # bis kurz vor den nächsten Shot
+        else:
+            t1 = len(a) / sr
+        c = a[int(t0 * sr): int(t1 * sr)]
+        env = np.convolve(np.abs(c), np.ones(441) / 441, mode="same")
+        loud = np.nonzero(env > 0.02 * env.max())[0]            # Stille am Ende abschneiden
+        if len(loud):
+            c = c[: min(len(c), loud[-1] + int(0.08 * sr))]
+        clips.append(c)
+    return clips, sr
+
+
 def ambient(dur, sr=44100, seed=1):
     t = np.arange(int(dur * sr)) / sr
     rng = np.random.default_rng(seed)
@@ -248,11 +310,20 @@ def render(story_path, part_no, out_mp4, used_ids=None):
 
     # Sprecher und Timing (Schnitt jeweils auf den ersten Wortanfang)
     sr_v, clips, starts, durs = None, [], [], []
+    ext = None
+    if not part.get("voice_file") and part.get("voice") and os.environ.get("ELEVENLABS_KEY"):
+        script = "\n\n".join(x.get("say", x["text"]) for x in shots)
+        part["voice_file"] = elevenlabs_tts(script, part["voice"], os.path.join(tmp, "voice.mp3"))
+    if part.get("voice_file"):
+        ext, sr_v = align_voice(part["voice_file"], shots, part.get("tempo", 1.0))
     t = 0.0
     for i, s in enumerate(shots):
-        a, sr_v = synth_voice(s.get("say", s["text"]), os.path.join(tmp, f"v{i}.wav"))
+        if ext is not None:
+            a = ext[i]
+        else:
+            a, sr_v = synth_voice(s.get("say", s["text"]), os.path.join(tmp, f"v{i}.wav"))
         lead = s.get("lead", 0.35 if i == 0 else 0.0)
-        d = lead + len(a) / sr_v + s.get("pause", 0.45)
+        d = lead + len(a) / sr_v + s.get("pause", 0.25)
         d = max(d, s.get("min", 1.6))
         clips.append((t + lead, a))
         starts.append(t)
@@ -269,7 +340,26 @@ def render(story_path, part_no, out_mp4, used_ids=None):
         i0 = int(st * sr)
         voice[i0:i0 + len(a)] += a[: len(voice) - i0]
     bed = ambient(total, sr)
-    mix = voice[: len(bed)] * 0.9 + bed * 0.09
+    tt_ = np.arange(len(bed)) / sr
+    swell = np.interp(tt_, [0, total * 0.75, total - 2.5, total], [0.7, 1.6, 1.0, 0.6])
+    bed = bed * swell                                            # Spannung baut sich auf
+    fx = np.zeros_like(bed)
+    rng = np.random.default_rng(5)
+    for i, s in enumerate(shots):
+        i0 = int(starts[i] * sr)
+        if s.get("hit"):                                         # tiefer Einschlag auf dem Schnitt
+            n = int(1.6 * sr); tt = np.arange(n) / sr
+            boom = np.sin(2 * np.pi * (48 + 30 * np.exp(-tt * 9)) * tt) * np.exp(-tt * 2.6)
+            thump = rng.normal(0, 1, n) * np.exp(-tt * 28) * 0.35
+            seg = (boom + thump) * 0.9
+            fx[i0:i0 + n] += seg[: len(fx) - i0]
+        if s.get("riser") and i + 1 < len(shots):                # Rauschen steigt bis zum nächsten Schnitt
+            i1 = int(starts[i + 1] * sr); n = i1 - i0
+            nz = rng.normal(0, 1, n)
+            k = 6; nz = np.convolve(nz, np.ones(k) / k, mode="same")
+            env = np.linspace(0, 1, n) ** 2.2
+            fx[i0:i1] += nz * env * 0.35
+    mix = voice[: len(bed)] * 0.9 + bed * 0.10 + fx * 0.5
     mix = mix / (np.abs(mix).max() + 1e-9) * 0.9
     wav = os.path.join(tmp, "mix.wav")
     with wave.open(wav, "wb") as w:
