@@ -47,6 +47,10 @@ def cmd_build(voice):
     # Story-Datei temporär mit Stimme versehen
     if voice != "--piper":
         part["voice_file"] = os.path.abspath(voice)
+    if "--tempo" in sys.argv:
+        part["tempo"] = float(sys.argv[sys.argv.index("--tempo") + 1])
+    else:
+        part.setdefault("tempo", 1.0)   # ElevenLabs v4 mit Tags spricht schon ruhig
     tmp_story = "/tmp/_story.json"
     json.dump(story, open(tmp_story, "w"), ensure_ascii=False)
     info = make_short.render(tmp_story, part["part"], out, st.get("used_photos", []))

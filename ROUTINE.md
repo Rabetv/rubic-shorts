@@ -13,7 +13,7 @@ Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht
    a) ElevenLabs-Connector: `creative_generate_speech` mit prompt = `script` (enthält Emotions-Tags), model_id = `voice_model` (eleven_v4), voice_id = `voice_elevenlabs`, **generations_count 1**. Mit `creative_get_flow_run_status` (alle 30 s) warten, bis fertig; die Audio-URL der Generation nach `/tmp/voice.mp3` laden (curl). Nicht doppelt starten. Bei Fehler (Limit/Kontingent/429) → b).
    b) vidIQ: `vidiq_balance`; wenn ≥ 15 Credits: `vidiq_voiceover_generate` (script = `script_plain` ohne Tags, voiceId = `voice_vidiq`), `vidiq_job_poll` bis fertig, MP3 nach `/tmp/voice.mp3`.
    c) Sonst: `build --piper` (Ersatzstimme) und das im Bericht sagen.
-4. Rendern im Hintergrund (8–12 min): `python3 render/daily.py build /tmp/voice.mp3` (bzw. `--piper`). Auf Ende warten.
+4. Rendern im Hintergrund (8–12 min): `python3 render/daily.py build /tmp/voice.mp3` – bei vidIQ-Stimme zusätzlich `--tempo 0.88` (langsamer), bei Piper `build --piper`. Auf Ende warten.
 5. Kontaktbogen (`sheet` im Ergebnis) EINMAL ansehen. Nur bei klar falschen Bildern (Menschen, Städte, Text, Boote ohne Bezug): Suchbegriff in der Story ändern, `git reset --hard HEAD~1`, erneut bauen.
 6. Metricool `createScheduledPost`: blogId 7525052, date = `publish_at` aus dem Ergebnis (19:00 Asia/Nicosia = 18:00 deutsche Zeit),
    info: autoPublish true, media [url], providers [{"network":"youtube"}], publicationDate {dateTime, timezone "Asia/Nicosia"},
