@@ -9,10 +9,10 @@ Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht
    `pip install --break-system-packages -q piper-tts faster-whisper; mkdir -p ~/rubic-cache/voice && cd ~/rubic-cache/voice && for e in onnx onnx.json; do [ -f de_DE-thorsten-high.$e ] || curl -sSL -o de_DE-thorsten-high.$e https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high/de_DE-thorsten-high.$e; done`
 2. `python3 render/daily.py next`
    - `MISSING_PART`: nur dann den nächsten Teil schreiben (siehe „Neue Teile“), committen, dann erneut `next`.
-3. Stimme (in dieser Reihenfolge):
-   a) Ist `ELEVENLABS_KEY` im Prompt gesetzt → nichts tun, `build --piper` erzeugt sie automatisch über ElevenLabs.
-   b) Sonst vidIQ: `vidiq_balance`; wenn ≥ 15 Credits: `vidiq_voiceover_generate` (script = `script`, voiceId = `voice`), `vidiq_job_poll` bis fertig, MP3 nach `/tmp/voice.mp3` laden.
-   c) Sonst: `build --piper` (Ersatzstimme) und das im Abschlussbericht sagen.
+3. Stimme (in dieser Reihenfolge, Text = `script`):
+   a) ElevenLabs-Connector: `creative_generate_speech` mit prompt = `script`, model_id `eleven_multilingual_v2`, voice_id = `voice_elevenlabs`, **generations_count 1**. Mit `creative_get_flow_run_status` (alle 30 s) warten, bis fertig; die Audio-URL der Generation nach `/tmp/voice.mp3` laden (curl). Nicht doppelt starten. Bei Fehler (Limit/Kontingent/429) → b).
+   b) vidIQ: `vidiq_balance`; wenn ≥ 15 Credits: `vidiq_voiceover_generate` (script, voiceId = `voice_vidiq`), `vidiq_job_poll` bis fertig, MP3 nach `/tmp/voice.mp3`.
+   c) Sonst: `build --piper` (Ersatzstimme) und das im Bericht sagen.
 4. Rendern im Hintergrund (8–12 min): `python3 render/daily.py build /tmp/voice.mp3` (bzw. `--piper`). Auf Ende warten.
 5. Kontaktbogen (`sheet` im Ergebnis) EINMAL ansehen. Nur bei klar falschen Bildern (Menschen, Städte, Text, Boote ohne Bezug): Suchbegriff in der Story ändern, `git reset --hard HEAD~1`, erneut bauen.
 6. Metricool `createScheduledPost`: blogId 7525052, date = `publish_at` aus dem Ergebnis (19:00 Asia/Nicosia = 18:00 deutsche Zeit),

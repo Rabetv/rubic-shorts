@@ -26,7 +26,7 @@
     "Natur",
     "Doku"
    ],
-   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "voice": "NBqeXKdZHweef6y0B67V",
    "shots": [
     {
      "img": {
@@ -218,7 +218,8 @@
      "xfade": true,
      "skip_words": 4
     }
-   ]
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
   },
   {
    "part": 2,
@@ -232,7 +233,7 @@
     "Elemente",
     "Natur"
    ],
-   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "voice": "NBqeXKdZHweef6y0B67V",
    "shots": [
     {
      "img": {
@@ -373,7 +374,8 @@
      "text_out": 0.5,
      "xfade": true
     }
-   ]
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
   },
   {
    "part": 3,
@@ -387,7 +389,7 @@
     "Elemente",
     "Natur"
    ],
-   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "voice": "NBqeXKdZHweef6y0B67V",
    "shots": [
     {
      "img": {
@@ -538,7 +540,8 @@
      "text_out": 0.5,
      "xfade": true
     }
-   ]
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
   },
   {
    "part": 4,
@@ -552,7 +555,7 @@
     "Elemente",
     "Natur"
    ],
-   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "voice": "NBqeXKdZHweef6y0B67V",
    "shots": [
     {
      "img": {
@@ -693,7 +696,8 @@
      "text_out": 0.5,
      "xfade": true
     }
-   ]
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
   },
   {
    "part": 5,
@@ -707,7 +711,7 @@
     "Elemente",
     "Natur"
    ],
-   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "voice": "NBqeXKdZHweef6y0B67V",
    "shots": [
     {
      "img": {
@@ -847,7 +851,8 @@
      "text_out": 0.5,
      "xfade": true
     }
-   ]
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
   }
  ],
  "next_series_idea": "Der Donnerstein von Ensisheim (Meteorit, 7. Nov. 1492, Elsass) – Fakten vor dem Schreiben prüfen"

@@ -30,7 +30,8 @@ def cmd_next():
                          ensure_ascii=False, indent=1))
         return
     script = "\n\n".join(s.get("say", s["text"]) for s in part["shots"])
-    print(json.dumps({"status": "OK", "story": st["story"], "part": part["part"], "voice": part.get("voice"),
+    print(json.dumps({"status": "OK", "story": st["story"], "part": part["part"], "voice_elevenlabs": part.get("voice", "NBqeXKdZHweef6y0B67V"),
+                      "voice_vidiq": part.get("voice_vidiq", "JBFqnCBsd6RMkjVDRZzb"),
                       "chars": len(script), "script": script}, ensure_ascii=False, indent=1))
 
 
