@@ -1,0 +1,55 @@
+{
+  "series": "surtsey",
+  "title": "Surtsey – die Insel, die aus dem Feuer kam",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Surtsey",
+    "https://whc.unesco.org/en/list/1267"
+  ],
+  "plan": [
+    "Teil 1: Rauch auf dem Meer – die Geburt der Insel (14.11.1963)",
+    "Teil 2: Feuer gegen Wasser – 3,5 Jahre Ausbruch bis 5. Juni 1967, max. 2,7 km²",
+    "Teil 3: Das Verbot – seit 1965 Naturschutzgebiet, nur wenige Forscher dürfen hin; warum",
+    "Teil 4: Das erste Leben – Moose und Flechten ab 1965, Samen, Vögel",
+    "Teil 5: Die Insel verschwindet – Erosion, heute etwa halb so groß, UNESCO-Welterbe 2008"
+  ],
+  "parts": [
+    {
+      "part": 1,
+      "yt_title": "Eine Insel, die es gestern noch nicht gab 🌋 Surtsey Teil 1",
+      "description": "14. November 1963: Vor Island steigt Rauch aus dem Meer. Was die Crew eines Fischerboots sieht, ist die Geburt einer neuen Insel.\n\nTeil 2 kommt morgen.\n\n#surtsey #island #vulkan #geschichte #shorts",
+      "tags": ["Surtsey", "Island", "Vulkan", "Geschichte", "Natur", "Doku"],
+      "shots": [
+        {"img": {"unsplash": "milky way night sky"}, "text": "Diese Geschichte beginnt mit Rauch.", "key": "Rauch", "sub": "Surtsey · Teil 1",
+         "say": "Diese Geschichte beginnt mit Rauch.", "motion": "push", "amount": 0.05},
+        {"img": {"unsplash": "dark stormy ocean waves"}, "text": "14. November 1963.", "key": "1963", "sub": "Ein Fischerboot vor der Südküste Islands.",
+         "say": "Vierzehnter November, neunzehnhundertdreiundsechzig. Ein Fischerboot vor der Südküste Islands.", "size": 140, "motion": "pan_r", "amount": 0.05},
+        {"img": {"unsplash": "smoke column over sea"}, "text": "Der Koch sieht eine dunkle Rauchsäule.", "key": "Rauchsäule",
+         "say": "Der Schiffskoch entdeckt eine dunkle Rauchsäule.", "motion": "push", "amount": 0.06},
+        {"img": {"unsplash": "fog over sea"}, "text": "Mitten auf dem offenen Meer.", "key": "Meer",
+         "say": "Mitten auf dem offenen Meer.", "motion": "pan_l", "amount": 0.05, "xfade": true},
+        {"img": {"unsplash": "glowing embers dark"}, "text": "Die Crew denkt an ein brennendes Schiff.", "key": "brennendes",
+         "say": "Die Crew denkt an ein brennendes Schiff.", "motion": "rot", "amount": 0.04, "deg": 1.2},
+        {"img": {"sketch": "volcano"}, "text": "Doch das Feuer kommt von unten.", "key": "unten", "sub": "Ein Vulkan, 130 Meter unter dem Meeresspiegel.",
+         "say": "Doch das Feuer kommt von unten. Hundertdreißig Meter unter dem Meeresspiegel bricht ein Vulkan aus.", "motion": "push", "amount": 0.04},
+        {"img": {"unsplash": "lava flow night glow"}, "text": "Glut trifft auf eiskaltes Wasser.", "key": "Glut",
+         "say": "Glühendes Gestein trifft auf eiskaltes Wasser.", "motion": "push", "amount": 0.07},
+        {"img": {"unsplash": "volcano eruption ash cloud"}, "text": "Dampf und Asche steigen kilometerhoch.", "key": "kilometerhoch",
+         "say": "Dampf und Asche steigen kilometerhoch in den Himmel.", "motion": "pan_u", "amount": 0.06},
+        {"img": {"unsplash": "black volcanic rock macro"}, "text": "Und dann taucht etwas auf.", "key": "etwas",
+         "say": "Und dann taucht etwas auf.", "motion": "push", "amount": 0.05, "xfade": true, "pause": 0.7},
+        {"img": {"unsplash": "black sand beach iceland"}, "text": "Neues Land.", "key": "Land", "size": 160,
+         "say": "Neues Land.", "motion": "push", "amount": 0.08, "pause": 0.6},
+        {"img": {"nasa": "earth horizon from space station"}, "text": "Eine Insel, die es gestern noch nicht gab.", "key": "gestern",
+         "say": "Eine Insel, die es gestern noch nicht gab.", "motion": "pan_r", "amount": 0.04},
+        {"img": {"unsplash": "green moss macro"}, "text": "Man nennt sie Surtsey.", "key": "Surtsey", "sub": "Nach Surtr, dem Feuerriesen der nordischen Sage.",
+         "say": "Man nennt sie Surtsey. Nach Surtr, dem Feuerriesen der nordischen Sage.", "motion": "push", "amount": 0.05},
+        {"img": {"unsplash": "misty cliffs ocean"}, "text": "Bald darf sie fast niemand mehr betreten.", "key": "niemand",
+         "say": "Und schon bald darf sie fast niemand mehr betreten.", "motion": "pan_l", "amount": 0.05},
+        {"img": {"unsplash": "starry sky clouds night"}, "text": "Warum? Das erfährst du in Teil 2.", "key": "Teil 2",
+         "say": "Warum? Das erfährst du in Teil zwei.", "motion": "push", "amount": 0.04, "xfade": true},
+        {"img": {"same_as": 0}, "text": "Bis dann.", "key": "Bis dann.", "size": 150,
+         "say": "Bis dann.", "motion": "pull", "amount": 0.06, "pause": 1.6, "text_out": 0.5, "xfade": true}
+      ]
+    }
+  ]
+}
