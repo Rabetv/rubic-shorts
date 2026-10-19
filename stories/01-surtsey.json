@@ -245,7 +245,8 @@
      "motion": "push",
      "amount": 0.05,
      "sub": "Surtsey · Teil 2",
-     "hit": true
+     "hit": true,
+     "tag": "[mysterious] [slowly]"
     },
     {
      "img": {
@@ -255,7 +256,8 @@
      "key": "1965",
      "say": "Neunzehnhundertfünfundsechzig. Der Vulkan spuckt noch immer Feuer.",
      "motion": "pan_r",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -275,7 +277,8 @@
      "key": "Tourist",
      "say": "Kein Tourist. Kein Boot. Kein einziges Haus.",
      "motion": "pan_l",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[whispers]"
     },
     {
      "img": {
@@ -285,7 +288,8 @@
      "key": "Forscher",
      "say": "Nur eine Handvoll Forscher darf an Land gehen.",
      "motion": "push",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -306,7 +310,8 @@
      "say": "Warum dieser ganze Aufwand?",
      "motion": "push",
      "amount": 0.05,
-     "pause": 0.9
+     "pause": 0.9,
+     "tag": "[curious]"
     },
     {
      "img": {
@@ -317,7 +322,8 @@
      "say": "Weil Surtsey ein einmaliges Experiment ist.",
      "motion": "push",
      "amount": 0.05,
-     "hit": true
+     "hit": true,
+     "tag": "[dramatically]"
     },
     {
      "img": {
@@ -327,7 +333,8 @@
      "key": "Leben",
      "say": "Wie findet Leben ganz allein seinen Weg auf ein Land, auf dem noch nie etwas gelebt hat?",
      "motion": "push",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[curious]"
     },
     {
      "img": {
@@ -337,7 +344,8 @@
      "key": "Tomate",
      "say": "Einmal wuchs dort plötzlich eine Tomatenpflanze.",
      "motion": "pan_r",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -372,10 +380,12 @@
      "size": 150,
      "pause": 1.4,
      "text_out": 0.5,
-     "xfade": true
+     "xfade": true,
+     "tag": "[warmly] [softly]"
     }
    ],
-   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
   },
   {
    "part": 3,
@@ -401,7 +411,8 @@
      "motion": "push",
      "amount": 0.05,
      "sub": "Surtsey · Teil 3",
-     "hit": true
+     "hit": true,
+     "tag": "[mysterious] [slowly]"
     },
     {
      "img": {
@@ -411,7 +422,8 @@
      "key": "Meer",
      "say": "Ihr Gegner war das Meer.",
      "motion": "pan_r",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -463,7 +475,8 @@
      "say": "Doch Surtsey hatte einen entscheidenden Vorteil.",
      "motion": "push",
      "amount": 0.05,
-     "hit": true
+     "hit": true,
+     "tag": "[dramatically]"
     },
     {
      "img": {
@@ -473,7 +486,8 @@
      "key": "Krater",
      "say": "Die Insel war so groß geworden, dass kein Meerwasser mehr in den Krater lief.",
      "motion": "pan_l",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -538,10 +552,12 @@
      "size": 150,
      "pause": 1.4,
      "text_out": 0.5,
-     "xfade": true
+     "xfade": true,
+     "tag": "[warmly] [softly]"
     }
    ],
-   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
   },
   {
    "part": 4,
@@ -567,7 +583,8 @@
      "motion": "push",
      "amount": 0.05,
      "sub": "Surtsey · Teil 4",
-     "hit": true
+     "hit": true,
+     "tag": "[mysterious] [slowly]"
     },
     {
      "img": {
@@ -577,7 +594,8 @@
      "key": "Gäste",
      "say": "Doch das Meer brachte die ersten Gäste.",
      "motion": "pan_r",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -618,7 +636,8 @@
      "say": "Und dann kamen die Vögel.",
      "motion": "push",
      "amount": 0.05,
-     "hit": true
+     "hit": true,
+     "tag": "[dramatically]"
     },
     {
      "img": {
@@ -628,7 +647,8 @@
      "key": "Nester",
      "say": "Eissturmvögel und Gryllteisten bauen die ersten Nester.",
      "motion": "push",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -680,7 +700,8 @@
      "motion": "push",
      "amount": 0.05,
      "xfade": true,
-     "riser": true
+     "riser": true,
+     "tag": "[nervous]"
     },
     {
      "img": {
@@ -694,10 +715,12 @@
      "size": 150,
      "pause": 1.4,
      "text_out": 0.5,
-     "xfade": true
+     "xfade": true,
+     "tag": "[warmly] [softly]"
     }
    ],
-   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
   },
   {
    "part": 5,
@@ -723,7 +746,8 @@
      "motion": "push",
      "amount": 0.05,
      "sub": "Surtsey · Teil 5",
-     "hit": true
+     "hit": true,
+     "tag": "[mysterious] [slowly]"
     },
     {
      "img": {
@@ -733,7 +757,8 @@
      "key": "zurück",
      "say": "Das Meer holt sich sein Land zurück.",
      "motion": "pan_r",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -754,7 +779,8 @@
      "say": "Heute ist es nicht einmal mehr die Hälfte.",
      "motion": "push",
      "amount": 0.05,
-     "hit": true
+     "hit": true,
+     "tag": "[dramatically]"
     },
     {
      "img": {
@@ -764,7 +790,8 @@
      "key": "Hektar",
      "say": "Jedes Jahr verschlingt das Meer ungefähr einen Hektar.",
      "motion": "push",
-     "amount": 0.05
+     "amount": 0.05,
+     "tag": "[serious]"
     },
     {
      "img": {
@@ -849,10 +876,12 @@
      "size": 150,
      "pause": 1.4,
      "text_out": 0.5,
-     "xfade": true
+     "xfade": true,
+     "tag": "[warmly] [softly]"
     }
    ],
-   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb"
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
   }
  ],
  "next_series_idea": "Der Donnerstein von Ensisheim (Meteorit, 7. Nov. 1492, Elsass) – Fakten vor dem Schreiben prüfen"

@@ -216,6 +216,23 @@ def elevenlabs_tts(text, voice_id, out):
     return out
 
 
+def stretch_pauses(a, sr, factor=1.8, min_gap=0.12):
+    """Verlängert Sprechpausen innerhalb eines Clips (ruhigeres Erzähltempo)."""
+    env = np.convolve(np.abs(a), np.ones(int(0.02 * sr)) / int(0.02 * sr), mode="same")
+    quiet = env < 0.03 * (env.max() + 1e-9)
+    out, i, n = [], 0, len(a)
+    while i < n:
+        j = i
+        while j < n and quiet[j] == quiet[i]:
+            j += 1
+        seg = a[i:j]
+        out.append(seg)
+        if quiet[i] and (j - i) / sr >= min_gap and i > 0 and j < n:
+            out.append(np.zeros(int(len(seg) * (factor - 1)), dtype=a.dtype))
+        i = j
+    return np.concatenate(out)
+
+
 def align_voice(path, shots, tempo=1.0):
     """Schneidet eine durchgehende Sprachaufnahme per Whisper-Wortzeiten in Clips pro Shot."""
     import difflib
@@ -262,7 +279,7 @@ def align_voice(path, shots, tempo=1.0):
         loud = np.nonzero(env > 0.02 * env.max())[0]            # Stille am Ende abschneiden
         if len(loud):
             c = c[: min(len(c), loud[-1] + int(0.08 * sr))]
-        clips.append(c)
+        clips.append(stretch_pauses(c, sr))
     return clips, sr
 
 
@@ -317,7 +334,7 @@ def render(story_path, part_no, out_mp4, used_ids=None):
         script = "\n\n".join(x.get("say", x["text"]) for x in shots)
         part["voice_file"] = elevenlabs_tts(script, part["voice"], os.path.join(tmp, "voice.mp3"))
     if part.get("voice_file"):
-        ext, sr_v = align_voice(part["voice_file"], shots, part.get("tempo", 0.95))
+        ext, sr_v = align_voice(part["voice_file"], shots, part.get("tempo", 0.88))
     t = 0.0
     for i, s in enumerate(shots):
         if ext is not None:
