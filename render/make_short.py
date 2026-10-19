@@ -434,7 +434,7 @@ def render(story_path, part_no, out_mp4, used_ids=None):
     ff = subprocess.Popen(
         ["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
          "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", wav,
-         "-c:v", "libx264", "-preset", "medium", "-b:v", "6M", "-maxrate", "8M", "-bufsize", "12M", "-pix_fmt", "yuv420p",
+         "-c:v", "libx264", "-preset", "medium", "-b:v", "4500k", "-maxrate", "6M", "-bufsize", "9M", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-t", f"{nframes / FPS:.4f}", "-movflags", "+faststart", out_mp4],
         stdin=subprocess.PIPE)
     shot_frames = [int(round(st * FPS)) for st in starts] + [nframes]
