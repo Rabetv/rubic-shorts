@@ -59,7 +59,7 @@ def cmd_build(voice):
     st["used_photos"] = sorted(set(st.get("used_photos", [])) | set(info["used"]))
     last = max([h.get("publish", h["date"]) for h in st["history"]] or [today])
     publish = max(datetime.date.fromisoformat(today),
-                  datetime.date.fromisoformat(last) + datetime.timedelta(days=1)).isoformat()
+                  datetime.date.fromisoformat(last) + datetime.timedelta(days=2)).isoformat()
     st["history"].append({"date": today, "publish": publish, "story": st["story"], "part": part["part"], "file": out})
     st["next_part"] = part["part"] + 1
     json.dump(st, open("state.json", "w"), indent=1, ensure_ascii=False)

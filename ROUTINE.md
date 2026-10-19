@@ -1,7 +1,7 @@
-# Rubic Shorts – tägliche Routine (sparsam!)
+# Rubic Shorts – Routine alle 2 Tage (sparsam!)
 
 Kanal: **Rubic (@rubic.shorts)**, Thema **Steine und die vier Elemente** (Feuer, Wasser, Erde, Wind).
-Jeden Tag ein deutscher Short (Teil einer Serie), eingeplant über Metricool für 18:00 deutsche Zeit.
+Jeden zweiten Tag ein deutscher Short (Teil einer Serie), eingeplant über Metricool für 18:00 deutsche Zeit.
 Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht nur in der Kanal-Bio.
 
 ## Ablauf – wenige Schritte, kurze Ausgaben
@@ -24,7 +24,7 @@ Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht
 - Fakten vorher per Websuche prüfen, Quellen in `sources`. Lieber vage als falsch.
 - Serien mit 4–6 Teilen über Steine (Meteoriten, berühmte Steine, Kristalle, Vulkane, Gestein) oder die vier Elemente. Idee für die nächste Serie steht in `next_series_idea`.
   Neue Serie: `stories/NN-<slug>.json` im Format von `stories/01-surtsey.json`, in `state.json` `story` umstellen und `next_part` auf 1.
-- **Spannung:** Hook im ersten Satz (Rätsel/Behauptung), falsche Fährte, kurze Schläge, Auflösung, Cliffhanger auf den nächsten Teil. `"hit": true` auf Wendepunkte, `"riser": true` vor einer Enthüllung.
+- **Spannung:** Hook im ersten Satz (Rätsel/Behauptung), falsche Fährte, kurze Schläge, Auflösung, Cliffhanger auf den nächsten Teil (der kommt „übermorgen“, nie „morgen“ schreiben). `"hit": true` auf Wendepunkte, `"riser": true` vor einer Enthüllung.
 - **Ruhiges Tempo:** 12–14 Shots, pro Shot ein kurzer Gedanke, `say` höchstens 1–2 kurze Sätze; gesamt 650–850 Zeichen.
 - Erster Shot = Milchstraße (`{"unsplash": "milky way night sky"}`, mit `"sub": "<Serie> · Teil N"`), letzter Shot `{"same_as": 0}`, `"motion": "pull"`, Text „Bis dann.“, `"text_out": 0.5` → Loop.
 - Zahlen in `say` ausschreiben. Bild-Suchbegriffe englisch, ohne Menschen. Bewegungen: push, pull, pan_l, pan_r, pan_u, pan_d, rot.

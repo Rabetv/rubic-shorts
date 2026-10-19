@@ -17,7 +17,7 @@
   {
    "part": 1,
    "yt_title": "Er sah etwas, das es nicht geben durfte 🌋 Surtsey Teil 1",
-   "description": "14. November 1963, südlich von Island: Ein Schiffskoch sieht schwarzen Rauch mitten auf dem offenen Meer. Was dann passiert, verändert die Landkarte.\n\nTeil 2 kommt morgen.\n\n#surtsey #island #vulkan #geschichte #shorts",
+   "description": "14. November 1963, südlich von Island: Ein Schiffskoch sieht schwarzen Rauch mitten auf dem offenen Meer. Was dann passiert, verändert die Landkarte.\n\nTeil 2 folgt.\n\n#surtsey #island #vulkan #geschichte #shorts",
    "tags": [
     "Surtsey",
     "Island",
@@ -209,13 +209,14 @@
      "text": "Bis dann.",
      "key": "Bis dann.",
      "size": 150,
-     "sub": "Teil 2 morgen.",
+     "sub": "Teil 2 folgt.",
      "say": "Teil zwei kommt morgen. Bis dann.",
      "motion": "pull",
      "amount": 0.06,
      "pause": 1.4,
      "text_out": 0.5,
-     "xfade": true
+     "xfade": true,
+     "skip_words": 4
     }
    ]
   },
@@ -364,7 +365,7 @@
      },
      "text": "Bis dann.",
      "key": "Bis dann.",
-     "say": "Teil drei kommt morgen. Bis dann.",
+     "say": "Teil drei kommt übermorgen. Bis dann.",
      "motion": "pull",
      "amount": 0.05,
      "size": 150,
@@ -529,7 +530,7 @@
      },
      "text": "Bis dann.",
      "key": "Bis dann.",
-     "say": "Teil vier kommt morgen. Bis dann.",
+     "say": "Teil vier kommt übermorgen. Bis dann.",
      "motion": "pull",
      "amount": 0.05,
      "size": 150,
@@ -684,7 +685,7 @@
      },
      "text": "Bis dann.",
      "key": "Bis dann.",
-     "say": "Der letzte Teil kommt morgen. Bis dann.",
+     "say": "Der letzte Teil kommt übermorgen. Bis dann.",
      "motion": "pull",
      "amount": 0.05,
      "size": 150,
@@ -697,7 +698,7 @@
   {
    "part": 5,
    "yt_title": "Diese Insel verschwindet – jeden Tag ⏳ Surtsey Teil 5",
-   "description": "Surtsey wird jedes Jahr kleiner. Doch ihr harter Kern könnte noch Jahrhunderte überdauern. Das Finale der Serie.\n\nMorgen beginnt eine neue Geschichte.\n\n#surtsey #unesco #island #elemente #shorts",
+   "description": "Surtsey wird jedes Jahr kleiner. Doch ihr harter Kern könnte noch Jahrhunderte überdauern. Das Finale der Serie.\n\nÜbermorgen beginnt eine neue Geschichte.\n\n#surtsey #unesco #island #elemente #shorts",
    "tags": [
     "Surtsey",
     "Island",
@@ -825,9 +826,9 @@
      "img": {
       "unsplash": "meteor shooting star night"
      },
-     "text": "Morgen: ein Stein, der vom Himmel fiel.",
+     "text": "Übermorgen: ein Stein, der vom Himmel fiel.",
      "key": "Himmel",
-     "say": "Morgen beginnt eine neue Geschichte. Über einen Stein, der vom Himmel fiel.",
+     "say": "Übermorgen beginnt eine neue Geschichte. Über einen Stein, der vom Himmel fiel.",
      "motion": "push",
      "amount": 0.05,
      "xfade": true

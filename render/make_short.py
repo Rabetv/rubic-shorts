@@ -243,8 +243,10 @@ def align_voice(path, shots, tempo=1.0):
         for k in range(blk.size):
             m[blk.a + k] = blk.b + k
     first, last = {}, {}
+    seen = {}
     for si, sh_i in enumerate(owner):
-        if si in m:
+        k = seen.get(sh_i, 0); seen[sh_i] = k + 1
+        if si in m and k >= shots[sh_i].get("skip_words", 0):
             first.setdefault(sh_i, m[si]); last[sh_i] = m[si]
     clips = []
     for i in range(len(shots)):
