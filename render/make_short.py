@@ -216,7 +216,7 @@ def elevenlabs_tts(text, voice_id, out):
     return out
 
 
-def stretch_pauses(a, sr, factor=1.3, min_gap=0.12, max_gap=0.55):
+def stretch_pauses(a, sr, factor=1.0, min_gap=0.12, max_gap=99.0):
     """Passt Sprechpausen an: kurze leicht verlängern, sehr lange auf max_gap kürzen."""
     env = np.convolve(np.abs(a), np.ones(int(0.02 * sr)) / int(0.02 * sr), mode="same")
     quiet = env < 0.03 * (env.max() + 1e-9)

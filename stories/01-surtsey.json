@@ -246,7 +246,7 @@
      "amount": 0.05,
      "sub": "Surtsey · Teil 2",
      "hit": true,
-     "tag": "[mysterious]"
+     "tag": "[mysterious] [slowly]"
     },
     {
      "img": {
@@ -381,7 +381,7 @@
      "pause": 1.4,
      "text_out": 0.5,
      "xfade": true,
-     "tag": "[warmly]"
+     "tag": "[warmly] [softly]"
     }
    ],
    "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
@@ -412,7 +412,7 @@
      "amount": 0.05,
      "sub": "Surtsey · Teil 3",
      "hit": true,
-     "tag": "[mysterious]"
+     "tag": "[mysterious] [slowly]"
     },
     {
      "img": {
@@ -553,7 +553,7 @@
      "pause": 1.4,
      "text_out": 0.5,
      "xfade": true,
-     "tag": "[warmly]"
+     "tag": "[warmly] [softly]"
     }
    ],
    "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
@@ -584,7 +584,7 @@
      "amount": 0.05,
      "sub": "Surtsey · Teil 4",
      "hit": true,
-     "tag": "[mysterious]"
+     "tag": "[mysterious] [slowly]"
     },
     {
      "img": {
@@ -716,7 +716,7 @@
      "pause": 1.4,
      "text_out": 0.5,
      "xfade": true,
-     "tag": "[warmly]"
+     "tag": "[warmly] [softly]"
     }
    ],
    "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
@@ -747,7 +747,7 @@
      "amount": 0.05,
      "sub": "Surtsey · Teil 5",
      "hit": true,
-     "tag": "[mysterious]"
+     "tag": "[mysterious] [slowly]"
     },
     {
      "img": {
@@ -877,7 +877,7 @@
      "pause": 1.4,
      "text_out": 0.5,
      "xfade": true,
-     "tag": "[warmly]"
+     "tag": "[warmly] [softly]"
     }
    ],
    "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",

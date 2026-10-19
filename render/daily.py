@@ -50,7 +50,7 @@ def cmd_build(voice):
     if "--tempo" in sys.argv:
         part["tempo"] = float(sys.argv[sys.argv.index("--tempo") + 1])
     else:
-        part.setdefault("tempo", 1.06)  # ElevenLabs v4 mit Tags spricht sehr ruhig
+        part.setdefault("tempo", 1.12)  # emotional (v4-Tags), nur etwas schneller
     tmp_story = "/tmp/_story.json"
     json.dump(story, open(tmp_story, "w"), ensure_ascii=False)
     info = make_short.render(tmp_story, part["part"], out, st.get("used_photos", []))
