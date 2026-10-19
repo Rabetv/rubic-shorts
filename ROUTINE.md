@@ -1,32 +1,30 @@
-# Rubic Shorts – tägliche Routine
+# Rubic Shorts – tägliche Routine (sparsam!)
 
-Jeden Tag entsteht **ein** deutscher YouTube Short (Teil einer mehrteiligen Story) und wird über
-Metricool auf dem Kanal **Rubic (@rubic.shorts)** eingeplant.
+Kanal: **Rubic (@rubic.shorts)**, Thema **Steine und die vier Elemente** (Feuer, Wasser, Erde, Wind).
+Jeden Tag ein deutscher Short (Teil einer Serie), eingeplant über Metricool für 18:00 deutsche Zeit.
+Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht nur in der Kanal-Bio.
 
-## Regeln für den Inhalt
-- Spannende, **wahre** Geschichten (Natur, Geschichte, Kosmos, Elemente Feuer/Wasser/Erde/Wind), Serien mit 4–6 Teilen.
-- **Keine Werbung** in den Videos: kein Shop, kein Logo, kein „Euer Nikki“, keine Produkte. Der Link zu nikki-stones.com steht nur in der Kanal-Bio.
-- Jede Tatsache vor dem Schreiben mit einer Websuche prüfen; Quellen in `sources` der Story-Datei eintragen. Lieber vage formulieren als falsch.
-- Pro Bild **ein Gedanke**, 12–16 Shots, 40–55 s. Schlüsselwort pro Shot in `key` (wird gold).
-- Erster Shot und letzter Shot nutzen dasselbe Milchstraßen-Foto (`"same_as": 0`, letzter Shot `"motion": "pull"`, `"text_out": 0.5`) → Loop.
-- Letzter Text immer: „Bis dann.“ Vorletzter Shot macht neugierig auf den nächsten Teil (oder auf die nächste Serie, wenn es der letzte Teil war).
-- Zahlen im Feld `say` ausschreiben (z. B. „neunzehnhundertdreiundsechzig“), damit der Sprecher sie richtig liest.
-- Fotos nur von Unsplash (`{"unsplash": "englische Suchbegriffe"}`) oder NASA (`{"nasa": "..."}`); Suchbegriffe so wählen, dass keine Menschen, Städte oder Boote im Bild sind, wenn sie nicht passen. `{"sketch": "volcano"}` erzeugt eine blaue Linienskizze.
-- Bewegungen: `push`, `pull`, `pan_l`, `pan_r`, `pan_u`, `pan_d`, `rot` mit `amount` 0.03–0.08. `"xfade": true` nur an ruhigen Stellen.
+## Ablauf – wenige Schritte, kurze Ausgaben
+1. Repo `Rabetv/rubic-shorts` anhängen (add_repo, push) und klonen. Setup in EINEM Bash-Aufruf:
+   `pip install --break-system-packages -q piper-tts faster-whisper; mkdir -p ~/rubic-cache/voice && cd ~/rubic-cache/voice && for e in onnx onnx.json; do [ -f de_DE-thorsten-high.$e ] || curl -sSL -o de_DE-thorsten-high.$e https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high/de_DE-thorsten-high.$e; done`
+2. `python3 render/daily.py next`
+   - `MISSING_PART`: nur dann den nächsten Teil schreiben (siehe „Neue Teile“), committen, dann erneut `next`.
+3. Stimme (in dieser Reihenfolge):
+   a) Ist `ELEVENLABS_KEY` im Prompt gesetzt → nichts tun, `build --piper` erzeugt sie automatisch über ElevenLabs.
+   b) Sonst vidIQ: `vidiq_balance`; wenn ≥ 15 Credits: `vidiq_voiceover_generate` (script = `script`, voiceId = `voice`), `vidiq_job_poll` bis fertig, MP3 nach `/tmp/voice.mp3` laden.
+   c) Sonst: `build --piper` (Ersatzstimme) und das im Abschlussbericht sagen.
+4. Rendern im Hintergrund (8–12 min): `python3 render/daily.py build /tmp/voice.mp3` (bzw. `--piper`). Auf Ende warten.
+5. Kontaktbogen (`sheet` im Ergebnis) EINMAL ansehen. Nur bei klar falschen Bildern (Menschen, Städte, Text, Boote ohne Bezug): Suchbegriff in der Story ändern, `git reset --hard HEAD~1`, erneut bauen.
+6. Metricool `createScheduledPost`: blogId 7525052, date = `publish_at` aus dem Ergebnis (19:00 Asia/Nicosia = 18:00 deutsche Zeit),
+   info: autoPublish true, media [url], providers [{"network":"youtube"}], publicationDate {dateTime, timezone "Asia/Nicosia"},
+   text = description, youtubeData {title: yt_title, type "short", privacy "public", tags, category "EDUCATION", madeForKids false, isAiGeneratedContent false}.
+7. Bericht an den Nutzer (Deutsch, max. 3 Zeilen): Titel, geplante Zeit, welche Stimme.
 
-## Ablauf (für die geplante Sitzung)
-1. Repo `Rabetv/rubic-shorts` anhängen und klonen. `state.json` lesen: aktuelle Serie und nächster Teil.
-2. Falls der nächste Teil in der Story-Datei noch fehlt: Fakten recherchieren, Teil schreiben (Format wie Teil 1 in `stories/01-surtsey.json`).
-   Ist die Serie fertig, eine neue Serie `stories/NN-<slug>.json` mit Plan anlegen und mit Teil 1 beginnen.
-3. Setup: `pip install --break-system-packages -q piper-tts`; Stimme laden nach `~/rubic-cache/voice/`:
-   `https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high/de_DE-thorsten-high.onnx` (+ `.onnx.json`). Lizenz: CC0.
-   Unsplash-Schlüssel steht im Prompt der Routine → `export UNSPLASH_KEY=...`.
-4. Rendern (dauert ~8–10 min, im Hintergrund starten):
-   `python3 render/make_short.py stories/<datei>.json <teil> videos/<YYYY-MM-DD>-<slug>-<teil>.mp4 --used state.json`
-5. Prüfen: Kontaktbogen (`ffmpeg -vf "fps=1/2.5,scale=270:480,tile=6x3"`) ansehen. Unpassende Fotos (Menschen, Städte, Boote, Text) → Suchbegriff ändern, neu rendern.
-6. `state.json` aktualisieren (`used_photos` ← `used` aus der `.mp4.json`, nächster Teil), Video + JSON committen und pushen.
-7. Öffentliche URL: `https://raw.githubusercontent.com/Rabetv/rubic-shorts/main/videos/<datei>.mp4`
-8. Metricool (`blogId` 7525052, Zeitzone Asia/Nicosia): `createScheduledPost` für heute 19:00 Asia/Nicosia (= 18:00 deutsche Zeit, ganzjährig 1 h Unterschied),
-   providers `[{"network":"youtube"}]`, `youtubeData`: `{"title": yt_title, "type": "short", "privacy": "public", "madeForKids": false, "tags": tags, "category": "EDUCATION"}`,
-   `text` = description, `media` = [URL], `autoPublish`: true.
-9. Kurze Nachricht an den Nutzer: Titel, geplante Zeit, Link zum Video.
+## Neue Teile / neue Serie schreiben
+- Fakten vorher per Websuche prüfen, Quellen in `sources`. Lieber vage als falsch.
+- Serien mit 4–6 Teilen über Steine (Meteoriten, berühmte Steine, Kristalle, Vulkane, Gestein) oder die vier Elemente. Idee für die nächste Serie steht in `next_series_idea`.
+  Neue Serie: `stories/NN-<slug>.json` im Format von `stories/01-surtsey.json`, in `state.json` `story` umstellen und `next_part` auf 1.
+- **Spannung:** Hook im ersten Satz (Rätsel/Behauptung), falsche Fährte, kurze Schläge, Auflösung, Cliffhanger auf den nächsten Teil. `"hit": true` auf Wendepunkte, `"riser": true` vor einer Enthüllung.
+- **Ruhiges Tempo:** 12–14 Shots, pro Shot ein kurzer Gedanke, `say` höchstens 1–2 kurze Sätze; gesamt 650–850 Zeichen.
+- Erster Shot = Milchstraße (`{"unsplash": "milky way night sky"}`, mit `"sub": "<Serie> · Teil N"`), letzter Shot `{"same_as": 0}`, `"motion": "pull"`, Text „Bis dann.“, `"text_out": 0.5` → Loop.
+- Zahlen in `say` ausschreiben. Bild-Suchbegriffe englisch, ohne Menschen. Bewegungen: push, pull, pan_l, pan_r, pan_u, pan_d, rot.

@@ -1,61 +1,853 @@
 {
-  "series": "surtsey",
-  "title": "Surtsey – die Insel, die aus dem Feuer kam",
-  "sources": [
-    "https://de.wikipedia.org/wiki/Surtsey",
-    "https://whc.unesco.org/en/list/1267",
-    "https://dlab.epfl.ch/wikispeedia/wpcd/wp/s/Surtsey.htm"
-  ],
-  "plan": [
-    "Teil 1: Rauch auf dem Meer – die Geburt der Insel (14.11.1963). Cliffhanger: Bald darf fast niemand hin – warum?",
-    "Teil 2: Das Verbot – seit 1965 Naturschutzgebiet, nur wenige Forscher; Grund: beobachten, wie Leben ganz von allein auf neues Land kommt. Cliffhanger: Was kam zuerst?",
-    "Teil 3: Feuer gegen Wasser – 3,5 Jahre Ausbruch bis 5. Juni 1967, max. 2,7 km². Cliffhanger: Und dann kam das erste Leben …",
-    "Teil 4: Das erste Leben – Moose und Flechten ab 1965, Samen über Meer und Vögel. Cliffhanger: Doch die Insel hat ein Ablaufdatum.",
-    "Teil 5: Die Insel verschwindet – Erosion, heute etwa halb so groß, UNESCO-Welterbe 2008. Abschluss + Neugier auf nächste Serie"
-  ],
-  "parts": [
+ "series": "surtsey",
+ "title": "Surtsey – die Insel, die aus dem Feuer kam",
+ "sources": [
+  "https://de.wikipedia.org/wiki/Surtsey",
+  "https://whc.unesco.org/en/list/1267",
+  "https://dlab.epfl.ch/wikispeedia/wpcd/wp/s/Surtsey.htm"
+ ],
+ "plan": [
+  "Teil 1: Rauch auf dem Meer – die Geburt der Insel (14.11.1963). Cliffhanger: Bald darf fast niemand hin – warum?",
+  "Teil 2: Das Verbot – seit 1965 Naturschutzgebiet, nur wenige Forscher; Grund: beobachten, wie Leben ganz von allein auf neues Land kommt. Cliffhanger: Was kam zuerst?",
+  "Teil 3: Feuer gegen Wasser – 3,5 Jahre Ausbruch bis 5. Juni 1967, max. 2,7 km². Cliffhanger: Und dann kam das erste Leben …",
+  "Teil 4: Das erste Leben – Moose und Flechten ab 1965, Samen über Meer und Vögel. Cliffhanger: Doch die Insel hat ein Ablaufdatum.",
+  "Teil 5: Die Insel verschwindet – Erosion, heute etwa halb so groß, UNESCO-Welterbe 2008. Abschluss + Neugier auf nächste Serie"
+ ],
+ "parts": [
+  {
+   "part": 1,
+   "yt_title": "Er sah etwas, das es nicht geben durfte 🌋 Surtsey Teil 1",
+   "description": "14. November 1963, südlich von Island: Ein Schiffskoch sieht schwarzen Rauch mitten auf dem offenen Meer. Was dann passiert, verändert die Landkarte.\n\nTeil 2 kommt morgen.\n\n#surtsey #island #vulkan #geschichte #shorts",
+   "tags": [
+    "Surtsey",
+    "Island",
+    "Vulkan",
+    "wahre Geschichte",
+    "Natur",
+    "Doku"
+   ],
+   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "shots": [
     {
-      "part": 1,
-      "yt_title": "Er sah etwas, das es nicht geben durfte 🌋 Surtsey Teil 1",
-      "description": "14. November 1963, südlich von Island: Ein Schiffskoch sieht schwarzen Rauch mitten auf dem offenen Meer. Was dann passiert, verändert die Landkarte.\n\nTeil 2 kommt morgen.\n\n#surtsey #island #vulkan #geschichte #shorts",
-      "tags": ["Surtsey", "Island", "Vulkan", "wahre Geschichte", "Natur", "Doku"],
-      "voice": "JBFqnCBsd6RMkjVDRZzb",
-      "voice_file": "/tmp/claude-0/out/george.mp3",
-      "tempo": 1.06,
-      "shots": [
-        {"img": {"unsplash": "milky way night sky"}, "text": "Er sah etwas, das es nicht geben durfte.", "key": "nicht geben", "sub": "Surtsey · Teil 1",
-         "say": "Im November neunzehnhundertdreiundsechzig sieht ein Schiffskoch etwas, das es nicht geben dürfte.", "motion": "push", "amount": 0.05, "hit": true},
-        {"img": {"unsplash": "dark stormy ocean waves"}, "text": "Südlich von Island. 7:15 Uhr.", "key": "7:15", "size": 130,
-         "say": "Ein Fischkutter, südlich von Island. Viertel nach sieben am Morgen.", "motion": "pan_r", "amount": 0.05, "pause": 0.3},
-        {"img": {"unsplash": "smoke column over sea"}, "text": "Schwarzer Rauch. Mitten aus dem Meer.", "key": "Rauch",
-         "say": "Am Horizont steigt schwarzer Rauch auf. Mitten aus dem offenen Meer.", "motion": "push", "amount": 0.06, "pause": 0.3},
-        {"img": {"unsplash": "fog over sea"}, "text": "Ein brennendes Schiff?", "key": "brennendes", "size": 140,
-         "say": "Der Kapitän glaubt: Da brennt ein Schiff. Er lässt Kurs darauf nehmen.", "motion": "pan_l", "amount": 0.05, "pause": 0.3},
-        {"img": {"unsplash": "glowing embers dark"}, "text": "Je näher sie kommen …", "key": "näher", "size": 140,
-         "say": "Doch je näher sie kommen, desto seltsamer wird es.", "motion": "rot", "amount": 0.04, "deg": 1.2, "pause": 0.25},
-        {"img": {"unsplash": "dark empty ocean horizon night"}, "text": "Kein Schiff. Kein Wrack. Niemand.", "key": "Niemand",
-         "say": "Da ist kein Schiff. Kein Wrack. Niemand.", "motion": "push", "amount": 0.03, "pause": 0.6},
-        {"img": {"sketch": "volcano"}, "text": "Das Feuer kommt von unten.", "key": "unten", "sub": "130 Meter unter dem Kiel.",
-         "say": "Das Feuer kommt von unten. Hundertdreißig Meter unter ihnen ist ein Vulkan erwacht.", "motion": "push", "amount": 0.05, "hit": true},
-        {"img": {"unsplash": "lava flow night glow"}, "text": "Das Meer beginnt zu kochen.", "key": "kochen",
-         "say": "Glühendes Gestein trifft auf eiskaltes Wasser. Das Meer beginnt zu kochen.", "motion": "push", "amount": 0.07, "pause": 0.3},
-        {"img": {"unsplash": "volcano eruption ash cloud"}, "text": "Asche, kilometerhoch.", "key": "kilometerhoch", "size": 140,
-         "say": "Asche schießt kilometerhoch in den Himmel.", "motion": "pan_u", "amount": 0.06, "pause": 0.3, "riser": true},
-        {"img": {"unsplash": "black volcanic rock macro"}, "text": "Dann bricht etwas durch die Wellen.", "key": "etwas",
-         "say": "Und dann bricht etwas durch die Wellen.", "motion": "push", "amount": 0.05, "pause": 0.9},
-        {"img": {"unsplash": "black sand beach iceland"}, "text": "Land.", "key": "Land", "size": 160,
-         "say": "Land. Wo eben noch offenes Meer war.", "motion": "push", "amount": 0.08, "pause": 0.5, "hit": true},
-        {"img": {"nasa": "earth horizon from space station"}, "text": "Eine Insel, die es gestern nicht gab.", "key": "gestern",
-         "say": "Die Erde hat gerade eine neue Insel geboren.", "motion": "pan_r", "amount": 0.04, "xfade": true},
-        {"img": {"unsplash": "green moss macro"}, "text": "Ihr Name: Surtsey.", "key": "Surtsey", "sub": "Nach Surtr, dem Feuerriesen der nordischen Sage.",
-         "say": "Sie bekommt den Namen eines Feuerriesen. Surtsey.", "motion": "push", "amount": 0.05},
-        {"img": {"unsplash": "misty cliffs ocean"}, "text": "Bald darf sie fast niemand mehr betreten.", "key": "niemand",
-         "say": "Doch schon bald darf fast niemand mehr einen Fuß auf sie setzen.", "motion": "pan_l", "amount": 0.05},
-        {"img": {"unsplash": "starry sky clouds night"}, "text": "Der Grund? Erstaunlicher als der Vulkan.", "key": "Grund?",
-         "say": "Und der Grund dafür ist erstaunlicher als der Vulkan selbst.", "motion": "push", "amount": 0.04, "xfade": true},
-        {"img": {"same_as": 0}, "text": "Bis dann.", "key": "Bis dann.", "size": 150, "sub": "Teil 2 morgen.",
-         "say": "Teil zwei kommt morgen. Bis dann.", "motion": "pull", "amount": 0.06, "pause": 1.4, "text_out": 0.5, "xfade": true}
-      ]
+     "img": {
+      "unsplash": "milky way night sky"
+     },
+     "text": "Er sah etwas, das es nicht geben durfte.",
+     "key": "nicht geben",
+     "sub": "Surtsey · Teil 1",
+     "say": "Im November neunzehnhundertdreiundsechzig sieht ein Schiffskoch etwas, das es nicht geben dürfte.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "dark stormy ocean waves"
+     },
+     "text": "Südlich von Island. 7:15 Uhr.",
+     "key": "7:15",
+     "size": 130,
+     "say": "Ein Fischkutter, südlich von Island. Viertel nach sieben am Morgen.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "pause": 0.3
+    },
+    {
+     "img": {
+      "unsplash": "smoke column over sea"
+     },
+     "text": "Schwarzer Rauch. Mitten aus dem Meer.",
+     "key": "Rauch",
+     "say": "Am Horizont steigt schwarzer Rauch auf. Mitten aus dem offenen Meer.",
+     "motion": "push",
+     "amount": 0.06,
+     "pause": 0.3
+    },
+    {
+     "img": {
+      "unsplash": "fog over sea"
+     },
+     "text": "Ein brennendes Schiff?",
+     "key": "brennendes",
+     "size": 140,
+     "say": "Der Kapitän glaubt: Da brennt ein Schiff. Er lässt Kurs darauf nehmen.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "pause": 0.3
+    },
+    {
+     "img": {
+      "unsplash": "glowing embers dark"
+     },
+     "text": "Je näher sie kommen …",
+     "key": "näher",
+     "size": 140,
+     "say": "Doch je näher sie kommen, desto seltsamer wird es.",
+     "motion": "rot",
+     "amount": 0.04,
+     "deg": 1.2,
+     "pause": 0.25
+    },
+    {
+     "img": {
+      "unsplash": "dark empty ocean horizon night"
+     },
+     "text": "Kein Schiff. Kein Wrack. Niemand.",
+     "key": "Niemand",
+     "say": "Da ist kein Schiff. Kein Wrack. Niemand.",
+     "motion": "push",
+     "amount": 0.03,
+     "pause": 0.6
+    },
+    {
+     "img": {
+      "sketch": "volcano"
+     },
+     "text": "Das Feuer kommt von unten.",
+     "key": "unten",
+     "sub": "130 Meter unter dem Kiel.",
+     "say": "Das Feuer kommt von unten. Hundertdreißig Meter unter ihnen ist ein Vulkan erwacht.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "lava flow night glow"
+     },
+     "text": "Das Meer beginnt zu kochen.",
+     "key": "kochen",
+     "say": "Glühendes Gestein trifft auf eiskaltes Wasser. Das Meer beginnt zu kochen.",
+     "motion": "push",
+     "amount": 0.07,
+     "pause": 0.3
+    },
+    {
+     "img": {
+      "unsplash": "volcano eruption ash cloud"
+     },
+     "text": "Asche, kilometerhoch.",
+     "key": "kilometerhoch",
+     "size": 140,
+     "say": "Asche schießt kilometerhoch in den Himmel.",
+     "motion": "pan_u",
+     "amount": 0.06,
+     "pause": 0.3,
+     "riser": true
+    },
+    {
+     "img": {
+      "unsplash": "black volcanic rock macro"
+     },
+     "text": "Dann bricht etwas durch die Wellen.",
+     "key": "etwas",
+     "say": "Und dann bricht etwas durch die Wellen.",
+     "motion": "push",
+     "amount": 0.05,
+     "pause": 0.9
+    },
+    {
+     "img": {
+      "unsplash": "black sand beach iceland"
+     },
+     "text": "Land.",
+     "key": "Land",
+     "size": 160,
+     "say": "Land. Wo eben noch offenes Meer war.",
+     "motion": "push",
+     "amount": 0.08,
+     "pause": 0.5,
+     "hit": true
+    },
+    {
+     "img": {
+      "nasa": "earth horizon from space station"
+     },
+     "text": "Eine Insel, die es gestern nicht gab.",
+     "key": "gestern",
+     "say": "Die Erde hat gerade eine neue Insel geboren.",
+     "motion": "pan_r",
+     "amount": 0.04,
+     "xfade": true
+    },
+    {
+     "img": {
+      "unsplash": "green moss macro"
+     },
+     "text": "Ihr Name: Surtsey.",
+     "key": "Surtsey",
+     "sub": "Nach Surtr, dem Feuerriesen der nordischen Sage.",
+     "say": "Sie bekommt den Namen eines Feuerriesen. Surtsey.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "misty cliffs ocean"
+     },
+     "text": "Bald darf sie fast niemand mehr betreten.",
+     "key": "niemand",
+     "say": "Doch schon bald darf fast niemand mehr einen Fuß auf sie setzen.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "starry sky clouds night"
+     },
+     "text": "Der Grund? Erstaunlicher als der Vulkan.",
+     "key": "Grund?",
+     "say": "Und der Grund dafür ist erstaunlicher als der Vulkan selbst.",
+     "motion": "push",
+     "amount": 0.04,
+     "xfade": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Bis dann.",
+     "key": "Bis dann.",
+     "size": 150,
+     "sub": "Teil 2 morgen.",
+     "say": "Teil zwei kommt morgen. Bis dann.",
+     "motion": "pull",
+     "amount": 0.06,
+     "pause": 1.4,
+     "text_out": 0.5,
+     "xfade": true
     }
-  ]
+   ]
+  },
+  {
+   "part": 2,
+   "yt_title": "Diese Insel darfst du NIE betreten 🚫 Surtsey Teil 2",
+   "description": "Seit 1965 dürfen nur wenige Forscher auf Surtsey. Warum? Weil die Insel ein einmaliges Experiment ist.\n\n#surtsey #island #natur #geschichte #shorts",
+   "tags": [
+    "Surtsey",
+    "Island",
+    "Vulkan",
+    "wahre Geschichte",
+    "Elemente",
+    "Natur"
+   ],
+   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "milky way night sky"
+     },
+     "text": "Eine Insel, die du nie betreten darfst.",
+     "key": "nie",
+     "say": "Es gibt eine Insel in Europa, die du niemals betreten darfst.",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Surtsey · Teil 2",
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "volcanic island ocean aerial"
+     },
+     "text": "1965. Der Vulkan ist noch aktiv.",
+     "key": "1965",
+     "say": "Neunzehnhundertfünfundsechzig. Der Vulkan spuckt noch immer Feuer.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "dark volcanic landscape fog"
+     },
+     "text": "Da steht sie schon unter Schutz.",
+     "key": "Schutz",
+     "say": "Und trotzdem wird die Insel schon unter strengen Schutz gestellt.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "barren lava field"
+     },
+     "text": "Kein Tourist. Kein Boot. Kein Haus.",
+     "key": "Tourist",
+     "say": "Kein Tourist. Kein Boot. Kein einziges Haus.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "magnifying glass moss"
+     },
+     "text": "Nur wenige Forscher dürfen an Land.",
+     "key": "Forscher",
+     "say": "Nur eine Handvoll Forscher darf an Land gehen.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "seeds macro dark"
+     },
+     "text": "Sie prüfen sogar ihre Taschen auf Samen.",
+     "key": "Samen",
+     "say": "Und selbst die müssen ihre Kleidung und Taschen nach Samen durchsuchen.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "empty black sand desert"
+     },
+     "text": "Warum dieser Aufwand?",
+     "key": "Warum?",
+     "say": "Warum dieser ganze Aufwand?",
+     "motion": "push",
+     "amount": 0.05,
+     "pause": 0.9
+    },
+    {
+     "img": {
+      "unsplash": "sprout black soil"
+     },
+     "text": "Surtsey ist ein Experiment.",
+     "key": "Experiment",
+     "say": "Weil Surtsey ein einmaliges Experiment ist.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "black volcanic sand closeup"
+     },
+     "text": "Wie kommt Leben auf neues Land?",
+     "key": "Leben",
+     "say": "Wie findet Leben ganz allein seinen Weg auf ein Land, auf dem noch nie etwas gelebt hat?",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "tomato plant leaves dark"
+     },
+     "text": "Einmal wuchs dort eine Tomate.",
+     "key": "Tomate",
+     "say": "Einmal wuchs dort plötzlich eine Tomatenpflanze.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "dark green leaves moody"
+     },
+     "text": "Unfreiwillig eingeschleppt.",
+     "key": "eingeschleppt",
+     "say": "Ein Besucher hatte die Samen unfreiwillig eingeschleppt. Die Pflanze wurde sofort entfernt.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "starry sky clouds night"
+     },
+     "text": "Doch erst musste die Insel überleben.",
+     "key": "überleben",
+     "say": "Doch bevor das Leben kam, musste die Insel erst einmal überleben.",
+     "motion": "push",
+     "amount": 0.05,
+     "xfade": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Bis dann.",
+     "key": "Bis dann.",
+     "say": "Teil drei kommt morgen. Bis dann.",
+     "motion": "pull",
+     "amount": 0.05,
+     "size": 150,
+     "pause": 1.4,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ]
+  },
+  {
+   "part": 3,
+   "yt_title": "Das Meer wollte diese Insel zerstören 🌊 Surtsey Teil 3",
+   "description": "Lose Asche gegen Wintersturm: Wie Surtsey den Kampf gegen das Meer überlebte, während zwei Schwesterinseln verschwanden.\n\n#surtsey #vulkan #lava #geschichte #shorts",
+   "tags": [
+    "Surtsey",
+    "Island",
+    "Vulkan",
+    "wahre Geschichte",
+    "Elemente",
+    "Natur"
+   ],
+   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "milky way night sky"
+     },
+     "text": "Die Insel kämpfte ums Überleben.",
+     "key": "Überleben",
+     "say": "Gleich nach ihrer Geburt kämpfte Surtsey ums Überleben.",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Surtsey · Teil 3",
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "stormy waves crashing rocks"
+     },
+     "text": "Ihr Gegner: das Meer.",
+     "key": "Meer",
+     "say": "Ihr Gegner war das Meer.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "black ash sand texture"
+     },
+     "text": "Sie bestand aus loser Asche.",
+     "key": "Asche",
+     "say": "Denn die junge Insel bestand fast nur aus loser Asche.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "huge storm waves ocean"
+     },
+     "text": "Jeder Sturm fraß an ihr.",
+     "key": "Sturm",
+     "say": "Jeder Wintersturm riss Stücke von ihr ins Wasser.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "small rocky islet ocean"
+     },
+     "text": "Zwei Schwesterinseln entstehen.",
+     "key": "Schwesterinseln",
+     "say": "In der Nähe tauchten sogar zwei weitere Inseln auf.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "waves over submerged rocks"
+     },
+     "text": "Beide versinken wieder.",
+     "key": "versinken",
+     "say": "Beide wurden von den Wellen verschluckt. Sie sind heute verschwunden.",
+     "motion": "push",
+     "amount": 0.05,
+     "pause": 0.9
+    },
+    {
+     "img": {
+      "sketch": "volcano"
+     },
+     "text": "Doch Surtsey hatte einen Vorteil.",
+     "key": "Vorteil",
+     "say": "Doch Surtsey hatte einen entscheidenden Vorteil.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "volcano crater steam"
+     },
+     "text": "Das Wasser erreicht den Krater nicht mehr.",
+     "key": "Krater",
+     "say": "Die Insel war so groß geworden, dass kein Meerwasser mehr in den Krater lief.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "lava fountain eruption night"
+     },
+     "text": "Statt Asche fließt jetzt Lava.",
+     "key": "Lava",
+     "say": "Statt Asche floss jetzt flüssige Lava.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "basalt rock texture"
+     },
+     "text": "Sie erstarrt zu einem Panzer aus Stein.",
+     "key": "Panzer",
+     "say": "Und die erstarrte zu einem harten Panzer aus Stein.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "volcanic coastline aerial"
+     },
+     "text": "Am 5. Juni 1967 erlischt das Feuer.",
+     "key": "1967",
+     "say": "Dreieinhalb Jahre lang brannte der Vulkan. Am fünften Juni neunzehnhundertsiebenundsechzig erlosch er.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "iceland fog landscape"
+     },
+     "text": "2,7 km² neues Land.",
+     "key": "2,7",
+     "say": "Zurück blieben zwei Komma sieben Quadratkilometer neues Land.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "starry sky clouds night"
+     },
+     "text": "Und dann kam das Leben.",
+     "key": "Leben",
+     "say": "Und dann kam etwas, womit kaum jemand so schnell gerechnet hatte: Leben.",
+     "motion": "push",
+     "amount": 0.05,
+     "xfade": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Bis dann.",
+     "key": "Bis dann.",
+     "say": "Teil vier kommt morgen. Bis dann.",
+     "motion": "pull",
+     "amount": 0.05,
+     "size": 150,
+     "pause": 1.4,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ]
+  },
+  {
+   "part": 4,
+   "yt_title": "Wie kommt Leben auf eine leere Insel? 🌱 Surtsey Teil 4",
+   "description": "Keine Erde, keine Pflanze, nichts. Und trotzdem kam das Leben nach Surtsey: übers Meer, mit dem Wind und mit den Vögeln.\n\n#surtsey #natur #leben #vögel #shorts",
+   "tags": [
+    "Surtsey",
+    "Island",
+    "Vulkan",
+    "wahre Geschichte",
+    "Elemente",
+    "Natur"
+   ],
+   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "milky way night sky"
+     },
+     "text": "Keine Erde. Keine Pflanze. Nichts.",
+     "key": "Nichts.",
+     "say": "Auf Surtsey gab es nichts. Keine Erde. Keine Pflanze. Kein Leben.",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Surtsey · Teil 4",
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "sea foam beach waves"
+     },
+     "text": "Doch das Meer brachte Gäste.",
+     "key": "Gäste",
+     "say": "Doch das Meer brachte die ersten Gäste.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "beach plant white flowers sand"
+     },
+     "text": "1965: die erste Pflanze.",
+     "key": "erste",
+     "say": "Neunzehnhundertfünfundsechzig keimt am Strand die erste Pflanze. Ein Meersenf.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "moss macro"
+     },
+     "text": "Dann kommen Moose.",
+     "key": "Moose",
+     "say": "Zwei Jahre später finden Forscher die ersten Moose.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "lichen on rock"
+     },
+     "text": "Dann Flechten.",
+     "key": "Flechten",
+     "say": "Dann Flechten, die sich an den kahlen Fels klammern.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "fulmar seabird flying"
+     },
+     "text": "Und dann: Vögel.",
+     "key": "Vögel",
+     "say": "Und dann kamen die Vögel.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "seabird nest cliff"
+     },
+     "text": "Die ersten Nester entstehen.",
+     "key": "Nester",
+     "say": "Eissturmvögel und Gryllteisten bauen die ersten Nester.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "seagulls flock sky"
+     },
+     "text": "1984 kommen die Möwen.",
+     "key": "Möwen",
+     "say": "Neunzehnhundertvierundachtzig gründen Möwen eine ganze Kolonie.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "green grass on lava rock"
+     },
+     "text": "Ihr Dünger macht die Insel grün.",
+     "key": "grün",
+     "say": "Ihr Dünger verwandelt Teile des schwarzen Gesteins in grüne Wiesen.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "atlantic puffin"
+     },
+     "text": "2004: die ersten Papageitaucher.",
+     "key": "Papageitaucher",
+     "say": "Zweitausendvier brüten sogar die ersten Papageitaucher.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "seabirds cliff ocean"
+     },
+     "text": "Heute brüten hier zwölf Vogelarten.",
+     "key": "zwölf",
+     "say": "Heute brüten hier regelmäßig zwölf Vogelarten.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "starry sky clouds night"
+     },
+     "text": "Doch Surtsey hat ein Ablaufdatum.",
+     "key": "Ablaufdatum",
+     "say": "Doch es gibt ein Problem. Surtsey hat ein Ablaufdatum.",
+     "motion": "push",
+     "amount": 0.05,
+     "xfade": true,
+     "riser": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Bis dann.",
+     "key": "Bis dann.",
+     "say": "Der letzte Teil kommt morgen. Bis dann.",
+     "motion": "pull",
+     "amount": 0.05,
+     "size": 150,
+     "pause": 1.4,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ]
+  },
+  {
+   "part": 5,
+   "yt_title": "Diese Insel verschwindet – jeden Tag ⏳ Surtsey Teil 5",
+   "description": "Surtsey wird jedes Jahr kleiner. Doch ihr harter Kern könnte noch Jahrhunderte überdauern. Das Finale der Serie.\n\nMorgen beginnt eine neue Geschichte.\n\n#surtsey #unesco #island #elemente #shorts",
+   "tags": [
+    "Surtsey",
+    "Island",
+    "Vulkan",
+    "wahre Geschichte",
+    "Elemente",
+    "Natur"
+   ],
+   "voice": "JBFqnCBsd6RMkjVDRZzb",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "milky way night sky"
+     },
+     "text": "Diese Insel verschwindet. Jeden Tag.",
+     "key": "verschwindet.",
+     "say": "Diese Insel verschwindet. Jeden einzelnen Tag.",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Surtsey · Teil 5",
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "waves eroding cliff"
+     },
+     "text": "Das Meer holt sich sein Land zurück.",
+     "key": "zurück",
+     "say": "Das Meer holt sich sein Land zurück.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "island coast aerial ocean"
+     },
+     "text": "1967: 2,7 km².",
+     "key": "2,7",
+     "say": "Neunzehnhundertsiebenundsechzig war sie zwei Komma sieben Quadratkilometer groß.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "rocky coastline waves"
+     },
+     "text": "Heute: nicht mal die Hälfte.",
+     "key": "Hälfte",
+     "say": "Heute ist es nicht einmal mehr die Hälfte.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "cliff edge sea dark"
+     },
+     "text": "Etwa ein Hektar pro Jahr.",
+     "key": "Hektar",
+     "say": "Jedes Jahr verschlingt das Meer ungefähr einen Hektar.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "sketch": "volcano"
+     },
+     "text": "Was bleibt, ist der harte Kern.",
+     "key": "Kern",
+     "say": "Doch je mehr verschwindet, desto mehr kommt der harte Kern zum Vorschein.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "basalt column rock"
+     },
+     "text": "Und der ist zäh.",
+     "key": "zäh",
+     "say": "Und der ist zäh.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "ancient rock formation"
+     },
+     "text": "Vielleicht noch viele Jahrhunderte.",
+     "key": "Jahrhunderte",
+     "say": "Forscher halten es für möglich, dass ein Rest noch viele Jahrhunderte überdauert.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "nasa": "iceland from space"
+     },
+     "text": "2008: UNESCO-Welterbe.",
+     "key": "UNESCO",
+     "say": "Zweitausendacht wurde Surtsey zum UNESCO-Welterbe.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "moss on lava rock"
+     },
+     "text": "Geboren aus Feuer. Geformt von Wasser.",
+     "key": "Feuer",
+     "say": "Geboren aus Feuer. Geformt von Wasser und Wind.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "green island mist"
+     },
+     "text": "Bewohnt von Leben, das ganz allein kam.",
+     "key": "allein",
+     "say": "Bewohnt von Leben, das ganz allein den Weg gefunden hat.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "meteor shooting star night"
+     },
+     "text": "Morgen: ein Stein, der vom Himmel fiel.",
+     "key": "Himmel",
+     "say": "Morgen beginnt eine neue Geschichte. Über einen Stein, der vom Himmel fiel.",
+     "motion": "push",
+     "amount": 0.05,
+     "xfade": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Bis dann.",
+     "key": "Bis dann.",
+     "say": "Bis dann.",
+     "motion": "pull",
+     "amount": 0.05,
+     "size": 150,
+     "pause": 1.4,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ]
+  }
+ ],
+ "next_series_idea": "Der Donnerstein von Ensisheim (Meteorit, 7. Nov. 1492, Elsass) – Fakten vor dem Schreiben prüfen"
 }

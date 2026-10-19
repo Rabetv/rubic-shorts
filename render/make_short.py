@@ -207,7 +207,7 @@ def elevenlabs_tts(text, voice_id, out):
     import urllib.request
     key = os.environ["ELEVENLABS_KEY"]
     body = json.dumps({"text": text, "model_id": "eleven_multilingual_v2",
-                       "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.35}}).encode()
+                       "voice_settings": {"stability": 0.5, "similarity_boost": 0.8, "style": 0.3, "speed": 0.9}}).encode()
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}?output_format=mp3_44100_128",
         data=body, headers={"xi-api-key": key, "Content-Type": "application/json", "Accept": "audio/mpeg"})
@@ -315,7 +315,7 @@ def render(story_path, part_no, out_mp4, used_ids=None):
         script = "\n\n".join(x.get("say", x["text"]) for x in shots)
         part["voice_file"] = elevenlabs_tts(script, part["voice"], os.path.join(tmp, "voice.mp3"))
     if part.get("voice_file"):
-        ext, sr_v = align_voice(part["voice_file"], shots, part.get("tempo", 1.0))
+        ext, sr_v = align_voice(part["voice_file"], shots, part.get("tempo", 0.95))
     t = 0.0
     for i, s in enumerate(shots):
         if ext is not None:
@@ -323,8 +323,8 @@ def render(story_path, part_no, out_mp4, used_ids=None):
         else:
             a, sr_v = synth_voice(s.get("say", s["text"]), os.path.join(tmp, f"v{i}.wav"))
         lead = s.get("lead", 0.35 if i == 0 else 0.0)
-        d = lead + len(a) / sr_v + s.get("pause", 0.25)
-        d = max(d, s.get("min", 1.6))
+        d = lead + len(a) / sr_v + s.get("pause", 0.7)
+        d = max(d, s.get("min", 3.0))
         clips.append((t + lead, a))
         starts.append(t)
         durs.append(d)
