@@ -26,6 +26,8 @@ Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht
   Neue Serie: `stories/NN-<slug>.json` im Format von `stories/01-surtsey.json`, in `state.json` `story` umstellen und `next_part` auf 1.
 - **Spannung:** Hook im ersten Satz (Rätsel/Behauptung), falsche Fährte, kurze Schläge, Auflösung, Cliffhanger auf den nächsten Teil (der kommt „übermorgen“, nie „morgen“ schreiben). `"hit": true` auf Wendepunkte, `"riser": true` vor einer Enthüllung.
 - **Ruhiges Tempo:** 12–14 Shots, pro Shot ein kurzer Gedanke, `say` höchstens 1–2 kurze Sätze; gesamt 650–850 Zeichen.
-- Erster Shot = Milchstraße (`{"unsplash": "milky way night sky"}`, mit `"sub": "<Serie> · Teil N"`), letzter Shot `{"same_as": 0}`, `"motion": "pull"`, Text „Bis dann.“, `"text_out": 0.5` → Loop.
+- Erster Shot = das stärkste, sofort verständliche Motiv zum Hook (z. B. Lava, Ausbruch, Insel im Meer) – KEIN generischer Sternenhimmel; mit `"sub": "<Serie> · Teil N"`. Letzter Shot `{"same_as": 0}`, `"motion": "pull"`, Text „Bis dann.“, `"text_out": 0.5` → Loop.
+- `description`: vor den Hashtags eine Frage an die Zuschauer, die zum Kommentieren einlädt (keine Werbung).
+- Bereits produzierte/eingeplante Teile nie nachträglich ändern – Verbesserungen nur für noch nicht produzierte Teile.
 - **Emotion:** pro Shot optional `"tag"` mit ElevenLabs-Tags, z. B. `[mysterious]`, `[serious]`, `[whispers]`, `[dramatically]`, `[curious]`, `[nervous]`, `[warmly]`. Ein Tag gilt bis zum nächsten – nur bei Stimmungswechsel setzen. Erster Shot immer `[mysterious]` (ohne slowly, Anfang soll zügig sein), letzter `[warmly] [softly]`. `[pause]` sparsam an echten Spannungsstellen.
 - Zahlen in `say` ausschreiben. Bild-Suchbegriffe englisch, ohne Menschen. Bewegungen: push, pull, pan_l, pan_r, pan_u, pan_d, rot.
