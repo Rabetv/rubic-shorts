@@ -27,8 +27,10 @@ def unsplash(query, used, orientation="portrait"):
     os.makedirs(CACHE, exist_ok=True)
     key = unsplash_key()
     h = {"Authorization": f"Client-ID {key}", "Accept-Version": "v1"}
-    q = urllib.parse.urlencode({"query": query, "orientation": orientation,
-                                "per_page": 30, "content_filter": "high"})
+    params = {"query": query, "per_page": 30, "content_filter": "high"}
+    if orientation:
+        params["orientation"] = orientation
+    q = urllib.parse.urlencode(params)
     data = json.loads(_get(f"https://api.unsplash.com/search/photos?{q}", h))
     res = data.get("results", [])
     if not res and orientation:

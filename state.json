@@ -1,20 +1,32 @@
 {
  "story": "stories/01-surtsey.json",
- "next_part": 2,
+ "next_part": 3,
  "used_photos": [
+  "3THn0EN_Ydo",
   "3iI_5QlJ6aU",
   "42H1wKbvq7Y",
   "4D953R0aRUo",
   "5cwigXmGWTo",
+  "9ZkKso4eESQ",
   "9sxeKzuCVoE",
+  "Iku7fjx4718",
+  "NJng32Q4KZs",
   "NW-aUjUm7Lo",
   "QLhHlNOu9Lw",
   "Q_gtPPR56K8",
+  "Trz5GtIgv3Y",
+  "VzRKG0piEp8",
   "XQqU97eXGvU",
   "iss071e364425",
+  "j0vZaWRj1PQ",
+  "k_D4VuZnXyI",
   "kfbMAK7kEEs",
+  "mkYNUu-EN40",
+  "p8NSgvjEk-Y",
+  "rcAdDnZqaJU",
   "skcFiBu91AA",
   "u9UNJToF4n8",
+  "uzSWD4gz87k",
   "wQu2rc4Seh4"
  ],
  "history": [
@@ -24,6 +36,13 @@
    "part": 1,
    "file": "videos/2026-10-20-surtsey-1.mp4",
    "publish": "2026-10-20"
+  },
+  {
+   "date": "2026-10-21",
+   "publish": "2026-10-22",
+   "story": "stories/01-surtsey.json",
+   "part": 2,
+   "file": "videos/2026-10-21-surtsey-2.mp4"
   }
  ]
 }
