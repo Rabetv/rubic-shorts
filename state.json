@@ -1,7 +1,8 @@
 {
  "story": "stories/01-surtsey.json",
- "next_part": 4,
+ "next_part": 5,
  "used_photos": [
+  "2xM1bhFsgwc",
   "3THn0EN_Ydo",
   "3iI_5QlJ6aU",
   "42H1wKbvq7Y",
@@ -12,12 +13,18 @@
   "9RY5fyg7bcA",
   "9ZkKso4eESQ",
   "9sxeKzuCVoE",
+  "BkjEAPIXeJI",
   "E4944K_4SvI",
+  "EROxfjSym1g",
+  "G4PR8Th2dYE",
   "Iku7fjx4718",
   "JqilJONARTQ",
+  "L0IVYMTjZfs",
   "NJng32Q4KZs",
   "NW-aUjUm7Lo",
+  "OWEKd-ey1HY",
   "Orn0K8mzsmg",
+  "PCGC-9qW3o4",
   "QLhHlNOu9Lw",
   "Q_gtPPR56K8",
   "RwkBCZhG9LU",
@@ -26,20 +33,25 @@
   "VzRKG0piEp8",
   "WPqG3eTEKr4",
   "XQqU97eXGvU",
+  "Yg_CR7xMR2Q",
   "_29TMOyVraM",
+  "b47GtY5hRpA",
   "bDhgbyT1sDw",
+  "cMQT_atVywk",
   "iss071e364425",
   "j0vZaWRj1PQ",
   "k_D4VuZnXyI",
   "kfbMAK7kEEs",
   "mkYNUu-EN40",
   "p8NSgvjEk-Y",
+  "q0DS3w4XvY8",
   "rcAdDnZqaJU",
   "skcFiBu91AA",
   "u9UNJToF4n8",
   "uzSWD4gz87k",
   "wQu2rc4Seh4",
-  "x6eA35TUyzY"
+  "x6eA35TUyzY",
+  "yXyXUlbeJMQ"
  ],
  "history": [
   {
@@ -62,6 +74,13 @@
    "story": "stories/01-surtsey.json",
    "part": 3,
    "file": "videos/2026-10-23-surtsey-3.mp4"
+  },
+  {
+   "date": "2026-10-25",
+   "publish": "2026-10-26",
+   "story": "stories/01-surtsey.json",
+   "part": 4,
+   "file": "videos/2026-10-25-surtsey-4.mp4"
   }
  ]
 }
