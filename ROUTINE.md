@@ -7,6 +7,7 @@ Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht
 ## Ablauf – wenige Schritte, kurze Ausgaben
 1. Repo `Rabetv/rubic-shorts` anhängen (add_repo, push) und klonen. Setup in EINEM Bash-Aufruf:
    `pip install --break-system-packages -q piper-tts faster-whisper; mkdir -p ~/rubic-cache/voice && cd ~/rubic-cache/voice && for e in onnx onnx.json; do [ -f de_DE-thorsten-high.$e ] || curl -sSL -o de_DE-thorsten-high.$e https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high/de_DE-thorsten-high.$e; done`
+1b. **Analytics (jeder Lauf):** `vidiq_user_videos` (channelId `UC3OXnEqXsoapzesJ3LQCwxA`, limit 10, privacyStatus [public], videoType [short]; 5 Credits). Zahlen der Rubic-Shorts (ab Okt. 2026, alte englische Videos ignorieren) als Zeile in `ANALYTICS.md` unter „Verlauf“ ergänzen (Datum, Teil, Aufrufe, Likes, Kommentare, Länge). Nur Videos ≥ 2 Tage alt bewerten. Wenn sich ein klares Muster zeigt, die „Erkenntnisse“ in `ANALYTICS.md` kurz anpassen. Beim Schreiben neuer Teile die Erkenntnisse aus `ANALYTICS.md` anwenden (Titel-Stil, Länge, Hook, Kommentar-Frage). Mit dem nächsten Commit pushen.
 2. `python3 render/daily.py next`
    - `MISSING_PART`: nur dann den nächsten Teil schreiben (siehe „Neue Teile“), committen, dann erneut `next`.
 3. Stimme (in dieser Reihenfolge, Text = `script`):
@@ -18,7 +19,7 @@ Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht
 6. Metricool `createScheduledPost`: blogId 7525052, date = `publish_at` aus dem Ergebnis (19:00 Asia/Nicosia = 18:00 deutsche Zeit),
    info: autoPublish true, media [url], providers [{"network":"youtube"}], publicationDate {dateTime, timezone "Asia/Nicosia"},
    text = description, youtubeData {title: yt_title, type "short", privacy "public", tags, category "EDUCATION", madeForKids false, isAiGeneratedContent false}.
-7. Bericht an den Nutzer (Deutsch, max. 3 Zeilen): Titel, geplante Zeit, welche Stimme.
+7. Bericht an den Nutzer (Deutsch, max. 3 Zeilen): Titel, geplante Zeit, welche Stimme, kurz die wichtigste Analytics-Erkenntnis.
 
 ## Neue Teile / neue Serie schreiben
 - Fakten vorher per Websuche prüfen, Quellen in `sources`. Lieber vage als falsch.
