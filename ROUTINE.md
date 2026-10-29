@@ -17,7 +17,7 @@ Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht
 5. Kontaktbogen (`sheet` im Ergebnis) EINMAL ansehen. Nur bei klar falschen Bildern (Menschen, Städte, Text, Boote ohne Bezug): Suchbegriff in der Story ändern, `git reset --hard HEAD~1`, erneut bauen.
 6. Metricool `createScheduledPost`: blogId 7525052, date = `publish_at` aus dem Ergebnis (19:00 Asia/Nicosia = 18:00 deutsche Zeit),
    info: autoPublish true, media [url], providers [{"network":"youtube"}], publicationDate {dateTime, timezone "Asia/Nicosia"},
-   text = description, youtubeData {title: yt_title, type "short", privacy "public", tags, category "EDUCATION", madeForKids false, isAiGeneratedContent false}.
+   text = description, firstCommentText = Kommentar-Frage aus der description, youtubeData {title: yt_title, type "short", privacy "public", tags, category "EDUCATION", madeForKids false, isAiGeneratedContent false}.
 7. Bericht an den Nutzer (Deutsch, max. 3 Zeilen): Titel, geplante Zeit, kurz die wichtigste Analytics-Erkenntnis.
 
 ## Neue Teile / neue Serie schreiben
@@ -26,8 +26,8 @@ Keine Werbung im Video (kein Shop, kein Logo, kein Produkt). Der Shop-Link steht
   Neue Serie: `stories/NN-<slug>.json` im Format von `stories/01-surtsey.json`, in `state.json` `story` umstellen und `next_part` auf 1.
 - **Spannung:** Hook im ersten Satz (Rätsel/Behauptung), falsche Fährte, kurze Schläge, Auflösung, Cliffhanger auf den nächsten Teil (der kommt „in ein paar Tagen“ / „beim nächsten Mal“, nie „morgen“ oder „übermorgen“ schreiben). `"hit": true` auf Wendepunkte, `"riser": true` vor einer Enthüllung.
 - **Ruhiges Tempo:** 12–14 Shots, pro Shot ein kurzer Gedanke, `say` höchstens 1–2 kurze Sätze; gesamt 650–850 Zeichen.
-- Erster Shot = das stärkste, sofort verständliche Motiv zum Hook (z. B. Lava, Ausbruch, Insel im Meer) – KEIN generischer Sternenhimmel; mit `"sub": "<Serie> · Teil N"`. Letzter Shot `{"same_as": 0}`, `"motion": "pull"`, Text „Bis dann.“, `"text_out": 0.5` → Loop.
-- `description`: vor den Hashtags eine Frage an die Zuschauer, die zum Kommentieren einlädt (keine Werbung).
+- Erste 3 Sekunden = Titel-Versprechen sofort einlösen: stärkstes, sofort verständliches Motiv + spannendste Aussage, Kontext (Ort/Datum) erst danach. Erster Shot = das stärkste, sofort verständliche Motiv zum Hook (z. B. Lava, Ausbruch, Insel im Meer) – KEIN generischer Sternenhimmel; mit `"sub": "<Serie> · Teil N"`. Letzter Shot `{"same_as": 0}`, `"motion": "pull"`, `"text_out": 0.5` → Loop. **Kein Ausklingen** (kein „Bis dann.“, kein „Das erfährst du …“, keine Verabschiedung): der Cliffhanger ist der letzte Satz, kurz und hart, und soll nahtlos in den ersten Satz zurückführen.
+- `description`: vor den Hashtags eine Frage an die Zuschauer, die zum Kommentieren einlädt (keine Werbung). Dieselbe Frage zusätzlich als `firstCommentText` beim Metricool-Post (nicht im Video – das Ende muss hart bleiben).
 - Bereits produzierte/eingeplante Teile nie nachträglich ändern – Verbesserungen nur für noch nicht produzierte Teile.
-- **Emotion:** pro Shot optional `"tag"` mit ElevenLabs-Tags, z. B. `[mysterious]`, `[serious]`, `[whispers]`, `[dramatically]`, `[curious]`, `[nervous]`, `[warmly]`. Ein Tag gilt bis zum nächsten – nur bei Stimmungswechsel setzen. Erster Shot immer `[mysterious]` (ohne slowly, Anfang soll zügig sein), letzter `[warmly] [softly]`. `[pause]` sparsam an echten Spannungsstellen.
+- **Emotion:** pro Shot optional `"tag"` mit ElevenLabs-Tags, z. B. `[mysterious]`, `[serious]`, `[whispers]`, `[dramatically]`, `[curious]`, `[nervous]`, `[warmly]`. Ein Tag gilt bis zum nächsten – nur bei Stimmungswechsel setzen. Erster Shot immer `[mysterious]` (ohne slowly, Anfang soll zügig sein), letzter Shot spannungsvoll (`[mysterious]`/`[whispers]`), nicht `[warmly] [softly]`. `[pause]` sparsam an echten Spannungsstellen.
 - Zahlen in `say` ausschreiben. Bild-Suchbegriffe englisch, ohne Menschen. Bewegungen: push, pull, pan_l, pan_r, pan_u, pan_d, rot.
