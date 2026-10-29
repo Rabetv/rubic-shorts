@@ -1,0 +1,198 @@
+{
+ "series": "ensisheim",
+ "title": "Der Donnerstein von Ensisheim",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ensisheim_meteorite",
+  "https://www.nhm-wien.ac.at/jart/prj3/nhm-resp/data/uploads//Pressemappe_Der Meteorit von Ensisheim_final.pdf",
+  "https://meteorites.asu.edu/meteorites/ensisheim"
+ ],
+ "plan": [
+  "Teil 1: Der Knall – 7.11.1492 kurz vor Mittag, Donnerschlag weit hörbar, ein Junge im Weizenfeld sieht den Stein fallen, ~1 m tiefes Loch, über 100 kg (urspr. ca. 127 kg). Cliffhanger: Was die Leute mit ihm taten.",
+  "Teil 2: Die Leute schlagen Stücke ab (Glücksbringer), der Stein wird in die Kirche gebracht. Cliffhanger: Ein König kommt.",
+  "Teil 3: König Maximilian besucht den Stein Ende Nov. 1492, deutet ihn als gutes Zeichen gegen Frankreich; Flugblätter von Sebastian Brant. Cliffhanger: Warum lag er in Ketten?",
+  "Teil 4: In der Kirche angekettet – Legende: damit er nicht davonfliegt. Heute ca. 55 kg in Ensisheim. Cliffhanger: Was ist er wirklich?",
+  "Teil 5: Gewöhnlicher Chondrit, rund 4,5 Mrd. Jahre alt; ältester Meteorit Europas mit bekanntem Falldatum, von dem noch etwas erhalten ist. Abschluss + nächste Serie."
+ ],
+ "next_series_idea": "Moldavit – grünes Glas aus dem Nördlinger-Ries-Einschlag – Fakten vor dem Schreiben prüfen",
+ "parts": [
+  {
+   "part": 1,
+   "yt_title": "Ein Stein fiel vom Himmel – 1492 ☄️ Donnerstein Teil 1",
+   "description": "7. November 1492, Elsass: Ein gewaltiger Knall, und ein Junge sieht einen Stein vom Himmel stürzen. Teil 1 der Geschichte vom Donnerstein von Ensisheim.\n\nWas hättest du 1492 gedacht, wenn plötzlich ein Stein vom Himmel fällt? Schreib es in die Kommentare.\n\n#meteorit #ensisheim #geschichte #elemente #shorts",
+   "tags": [
+    "Meteorit",
+    "Ensisheim",
+    "Donnerstein",
+    "1492",
+    "wahre Geschichte",
+    "Elsass",
+    "Steine"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "meteor fireball night sky"
+     },
+     "text": "Ein Stein fiel vom Himmel.",
+     "key": "Himmel.",
+     "say": "Ein Stein fiel vom Himmel. Und das halbe Land hörte den Knall.",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Donnerstein · Teil 1",
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "golden wheat field"
+     },
+     "text": "Elsass, 7. November 1492.",
+     "key": "1492",
+     "say": "Elsass. Siebter November, vierzehnhundertzweiundneunzig.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "sun over field"
+     },
+     "text": "Kurz vor Mittag.",
+     "key": "Mittag",
+     "say": "Ein ganz gewöhnlicher Tag. Es ist kurz vor Mittag.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "lightning storm clouds"
+     },
+     "text": "Dann: ein Donnerschlag.",
+     "key": "Donnerschlag",
+     "say": "Dann plötzlich ein Donnerschlag. Gewaltig und ohrenbetäubend.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "dark clouds sky"
+     },
+     "text": "Ein Gewitter? Nein.",
+     "key": "Nein",
+     "say": "Viele dachten an ein Gewitter. Aber es war keins.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "swiss alps mountains"
+     },
+     "text": "Man hörte ihn bis in die Schweiz.",
+     "key": "Schweiz",
+     "say": "Man hörte den Knall noch viele Kilometer entfernt, bis hinüber in die Schweiz.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "plowed field soil"
+     },
+     "text": "Nur einer sah es.",
+     "key": "einer",
+     "say": "Doch nur einer sah, was wirklich geschah.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[whispers]"
+    },
+    {
+     "img": {
+      "unsplash": "farm field path"
+     },
+     "text": "Ein Junge auf dem Feld.",
+     "key": "Junge",
+     "say": "Ein Junge, ganz allein draußen auf einem Weizenfeld.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "meteor streak sky"
+     },
+     "text": "Ein Stein. Aus dem Himmel.",
+     "key": "Stein.",
+     "say": "Er sah, wie ein großer Stein vom Himmel stürzte und in den Acker krachte.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "hole in soil ground"
+     },
+     "text": "Ein Loch, fast einen Meter tief.",
+     "key": "Meter",
+     "say": "Der Stein schlug ein Loch, fast einen Meter tief.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "large dark meteorite rock"
+     },
+     "text": "Weit über 100 Kilo.",
+     "key": "100",
+     "say": "Und er war schwer. Er wog weit über hundert Kilo.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "medieval village church"
+     },
+     "text": "Das Dorf strömte herbei.",
+     "key": "Dorf",
+     "say": "Bald strömten die Leute aus der ganzen Gegend herbei. Und was sie dann taten …",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "meteor shooting star night"
+     },
+     "text": "Übermorgen: was sie mit ihm taten.",
+     "key": "Übermorgen",
+     "say": "Das erfährst du übermorgen. Im zweiten Teil.",
+     "motion": "push",
+     "amount": 0.05,
+     "xfade": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Bis dann.",
+     "key": "Bis dann.",
+     "say": "Bis dann.",
+     "motion": "pull",
+     "amount": 0.05,
+     "size": 150,
+     "pause": 1.4,
+     "text_out": 0.5,
+     "xfade": true,
+     "tag": "[warmly] [softly]"
+    }
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
+  }
+ ]
+}
