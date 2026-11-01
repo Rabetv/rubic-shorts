@@ -193,6 +193,174 @@
    ],
    "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
    "voice_model": "eleven_v4"
+  },
+  {
+   "part": 2,
+   "yt_title": "Warum zerschlugen sie den Stein vom Himmel? 🔨 Donnerstein Teil 2",
+   "description": "Ensisheim 1492: Kaum ist der Donnerstein gefallen, schlagen die Leute Stücke von ihm ab. Teil 2 der Geschichte vom Donnerstein von Ensisheim.\n\nHättest du dir auch ein Stück abgeschlagen – ja oder nein? Schreib es in die Kommentare.\n\n#meteorit #ensisheim #geschichte #elemente #shorts",
+   "tags": [
+    "Meteorit",
+    "Ensisheim",
+    "Donnerstein",
+    "1492",
+    "wahre Geschichte",
+    "Elsass",
+    "Steine"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "dark meteorite rock closeup"
+     },
+     "text": "Sie hackten ihn in Stücke.",
+     "key": "Stücke.",
+     "say": "Ein Stein fällt vom Himmel. Und die Leute hacken ihn in Stücke.",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Donnerstein · Teil 2",
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "plowed field soil"
+     },
+     "text": "Das Loch im Acker.",
+     "key": "Acker.",
+     "say": "Ensisheim, kurz nach dem Einschlag. Rund um das Loch im Acker drängen sich die Menschen.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "large dark meteorite rock"
+     },
+     "text": "Über 100 Kilo.",
+     "key": "100",
+     "say": "Mit vereinten Kräften ziehen sie den Brocken aus der Erde. Weit über hundert Kilo.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "stormy sky clouds"
+     },
+     "text": "Ein Zeichen Gottes?",
+     "key": "Gottes?",
+     "say": "Für sie ist klar: Das ist kein gewöhnlicher Stein. Er kommt direkt aus dem Himmel.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "stone texture rough"
+     },
+     "text": "Also wollte jeder ein Stück.",
+     "key": "Stück.",
+     "say": "Und genau deshalb will jeder ein Stück davon haben.",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true
+    },
+    {
+     "img": {
+      "unsplash": "old hammer tools"
+     },
+     "text": "Hammer. Meißel.",
+     "key": "Hammer.",
+     "say": "Sie holen Hämmer und Werkzeug. Und schlagen Brocken um Brocken ab.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "small stones in hand"
+     },
+     "text": "Ein Glücksbringer.",
+     "key": "Glücksbringer.",
+     "say": "Ein Splitter vom Himmel, das versprach Schutz und Glück.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[whispers]"
+    },
+    {
+     "img": {
+      "unsplash": "rock fragments pile"
+     },
+     "text": "Der Stein wurde kleiner.",
+     "key": "kleiner.",
+     "say": "Mit jedem Schlag wird der Donnerstein kleiner.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[nervous]"
+    },
+    {
+     "img": {
+      "unsplash": "medieval town gate"
+     },
+     "text": "Dann: Halt!",
+     "key": "Halt!",
+     "say": "Bis die Obrigkeit eingreift. Schluss damit.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "old church interior"
+     },
+     "text": "Ab in die Kirche.",
+     "key": "Kirche.",
+     "say": "Der Stein wird in die Kirche gebracht. Dort soll er sicher sein.",
+     "motion": "pan_u",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "church candles dark"
+     },
+     "text": "Doch warum so eilig?",
+     "key": "eilig?",
+     "say": "Doch warum plötzlich diese Eile?",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "medieval castle"
+     },
+     "text": "Ein König war unterwegs.",
+     "key": "König",
+     "say": "Weil ein König davon gehört hatte.",
+     "motion": "push",
+     "amount": 0.05,
+     "xfade": true,
+     "hit": true,
+     "tag": "[whispers]"
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Und er wollte ihn sehen.",
+     "key": "sehen.",
+     "say": "Und er wollte diesen Stein mit eigenen Augen sehen.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
   }
  ]
 }
