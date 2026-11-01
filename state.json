@@ -1,6 +1,6 @@
 {
  "story": "stories/02-ensisheim.json",
- "next_part": 2,
+ "next_part": 3,
  "used_photos": [
   "-Bq3TeSBRdE",
   "2xM1bhFsgwc",
@@ -16,8 +16,10 @@
   "9R7voH34evo",
   "9RY5fyg7bcA",
   "9ZkKso4eESQ",
+  "9hTIzhUYxH4",
   "9sxeKzuCVoE",
   "ACdBYLwnJlA",
+  "B5PNmw5XSpk",
   "B64sjafiUf8",
   "BkjEAPIXeJI",
   "DdMLP9ovF3U",
@@ -28,12 +30,14 @@
   "G4PR8Th2dYE",
   "Iku7fjx4718",
   "JqilJONARTQ",
+  "KJq0f0t4qTI",
   "NChuVFzZeNk",
   "NJng32Q4KZs",
   "NW-aUjUm7Lo",
   "OWEKd-ey1HY",
   "Orn0K8mzsmg",
   "PCGC-9qW3o4",
+  "Pe1Ol9oLc4o",
   "QLhHlNOu9Lw",
   "QTjMnpYUdXU",
   "Q_gtPPR56K8",
@@ -45,16 +49,22 @@
   "VzRKG0piEp8",
   "WPqG3eTEKr4",
   "XQqU97eXGvU",
+  "XaQyrnZbddA",
   "Xvu8OiUJeI0",
   "Yg_CR7xMR2Q",
   "ZqXrMvqHskQ",
   "_29TMOyVraM",
+  "_adGw5v7sSo",
   "b47GtY5hRpA",
   "bDhgbyT1sDw",
   "cMQT_atVywk",
+  "gRFwALi-Cw0",
+  "i1O_Hr6cbWc",
   "iss071e364425",
   "j0vZaWRj1PQ",
   "jIeIKBvmuCY",
+  "jk2D9-jOREw",
+  "jycCp4KQ73M",
   "k-sk07-7vkA",
   "k_D4VuZnXyI",
   "kfbMAK7kEEs",
@@ -72,9 +82,11 @@
   "sts085-502-078",
   "tYw3TOaFVPc",
   "u9UNJToF4n8",
+  "uCQnRmpnpHE",
   "uzSWD4gz87k",
   "wQu2rc4Seh4",
   "x6eA35TUyzY",
+  "xY6QuPHYXEw",
   "yXyXUlbeJMQ"
  ],
  "history": [
@@ -119,6 +131,13 @@
    "story": "stories/02-ensisheim.json",
    "part": 1,
    "file": "videos/2026-10-29-ensisheim-1.mp4"
+  },
+  {
+   "date": "2026-11-01",
+   "publish": "2026-11-01",
+   "story": "stories/02-ensisheim.json",
+   "part": 2,
+   "file": "videos/2026-11-01-ensisheim-2.mp4"
   }
  ]
 }

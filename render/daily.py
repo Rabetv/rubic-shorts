@@ -77,7 +77,7 @@ def cmd_build(voice):
             if os.path.exists(f"videos/{f}.json"):
                 sh("git", "rm", "-q", f"videos/{f}.json")
     sh("git", "add", "-A")
-    sh("git", "-c", "user.name=Rabetv", "-c", "user.email=raschke.fab@gmail.com", "commit", "-qm",
+    sh("git", "commit", "-qm",
        f"Short {today}: {slug} Teil {part['part']}")
     sh("git", "push", "-q", "origin", "HEAD:main")
     sha = sh("git", "rev-parse", "HEAD").strip()
