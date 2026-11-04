@@ -6,7 +6,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - Ende: starker Abfall in den letzten 3–4 s (30 % → 12 %). Kein Ausklingen, kein „Bis dann.“ – mit hartem Cliffhanger enden, der in den Anfang loopt.
 - Titel: Rätsel-Frage („Wie kommt …?“) = beste Bindung, Drama/Dringlichkeit („verschwindet – jeden Tag“) = meiste Reichweite → kombinieren: Rätsel + klarer Einsatz, z. B. „Warum lag dieser Stein in Ketten? ⛓️“.
 - Länge: unter 60 s (Teil 1 mit 72 s lief am schlechtesten). Ø Wiedergabe 24–28 s bei ~55 s.
-- Kommentare: bisher 0 → Frage als angepinnter erster Kommentar (firstCommentText) + in der Beschreibung; leicht zu beantworten (Schätzung, Entweder-oder).
+- Kommentare: erster Kommentar bei Donnerstein 2 (mit Entweder-oder-Frage + firstCommentText) → beibehalten; Frage als angepinnter erster Kommentar (firstCommentText) + in der Beschreibung; leicht zu beantworten (Schätzung, Entweder-oder).
 - Aufrufe sättigen nach ~2 Tagen (Surtsey kaum Zuwachs seit 29.10.); Donnerstein 1 mit 421/8 Likes nach 2 Tagen bisher bester Start → Meteoriten-Thema zieht.
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
@@ -23,3 +23,6 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 | 2026-11-01 | Surtsey 4 | 55 s | 214 | 5 | 0 |
 | 2026-11-01 | Surtsey 5 | 53 s | 422 | 6 | 0 |
 | 2026-11-01 | Donnerstein 1 | 59 s | 421 (2 Tage) | 8 | 0 |
+| 2026-11-04 | Surtsey 5 | 53 s | 432 | 6 | 0 |
+| 2026-11-04 | Donnerstein 1 | 59 s | 433 | 8 | 0 |
+| 2026-11-04 | Donnerstein 2 | 54 s | 344 (2 Tage) | 6 | 1 |
