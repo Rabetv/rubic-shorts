@@ -361,6 +361,172 @@
    ],
    "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
    "voice_model": "eleven_v4"
+  },
+  {
+   "part": 3,
+   "yt_title": "Warum reiste ein König zu diesem Stein? 👑 Donnerstein Teil 3",
+   "description": "Ensisheim 1492: König Maximilian kommt, um den Donnerstein zu sehen – und deutet ihn als Zeichen gegen Frankreich. Teil 3 der Geschichte vom Donnerstein von Ensisheim.\n\nWar das für dich ein Zeichen oder einfach nur Zufall? Schreib es in die Kommentare.\n\n#meteorit #ensisheim #geschichte #elemente #shorts",
+   "tags": [
+    "Meteorit",
+    "Ensisheim",
+    "Donnerstein",
+    "1492",
+    "Maximilian",
+    "wahre Geschichte",
+    "Steine"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "dark meteorite rock closeup"
+     },
+     "text": "Ein König kam zu diesem Stein.",
+     "key": "König",
+     "say": "Ein König reist an, nur um einen Stein zu sehen.",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Donnerstein · Teil 3",
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "old church interior"
+     },
+     "text": "Ensisheim, Ende November 1492.",
+     "key": "1492.",
+     "say": "Ensisheim, Ende November vierzehnhundertzweiundneunzig. Der Stein liegt in der Kirche.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "medieval castle"
+     },
+     "text": "Maximilian.",
+     "key": "Maximilian.",
+     "say": "Dann kommt Maximilian, der römisch-deutsche König.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "stormy sky clouds"
+     },
+     "text": "Mitten im Krieg.",
+     "key": "Krieg.",
+     "say": "Er steckt mitten in einem Konflikt mit Frankreich.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "tag": "[nervous]"
+    },
+    {
+     "img": {
+      "unsplash": "rock texture dark closeup"
+     },
+     "text": "Warum ein Stein?",
+     "key": "Stein?",
+     "say": "Warum also verliert er Zeit mit einem Stein?",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "lightning storm night"
+     },
+     "text": "Ein Zeichen.",
+     "key": "Zeichen.",
+     "say": "Weil er darin ein Zeichen sieht.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "sunrays through clouds"
+     },
+     "text": "Gott ist auf meiner Seite.",
+     "key": "Seite.",
+     "say": "Ein Zeichen vom Himmel. Für ihn. Gegen Frankreich.",
+     "motion": "pan_u",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "stone fragments closeup"
+     },
+     "text": "Zwei Stücke für den Hof.",
+     "key": "Zwei",
+     "say": "Er lässt sich Stücke abschlagen und mitnehmen.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "old paper texture"
+     },
+     "text": "Flugblätter.",
+     "key": "Flugblätter.",
+     "say": "Und der Dichter Sebastian Brant schreibt Verse über den Stein.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "old printing press letters"
+     },
+     "text": "Gedruckt und verteilt.",
+     "key": "verteilt.",
+     "say": "Gedruckt auf Flugblättern, verbreitet im ganzen Land.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "church candles dark"
+     },
+     "text": "Doch der König befahl noch etwas.",
+     "key": "noch",
+     "say": "Doch der König befiehlt noch etwas anderes.",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "old iron chain"
+     },
+     "text": "Ketten.",
+     "key": "Ketten.",
+     "say": "Der Stein kommt in Ketten.",
+     "motion": "push",
+     "amount": 0.05,
+     "xfade": true,
+     "hit": true,
+     "tag": "[whispers]"
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Als könnte er fliehen.",
+     "key": "fliehen.",
+     "say": "Als hätten sie Angst, er könnte entkommen.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
   }
  ]
 }
