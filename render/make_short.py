@@ -226,9 +226,12 @@ def stretch_pauses(a, sr, factor=1.0, min_gap=0.12, max_gap=99.0):
         while j < n and quiet[j] == quiet[i]:
             j += 1
         seg = a[i:j]
-        if quiet[i] and (j - i) / sr >= min_gap and i > 0 and j < n:
-            target = min(len(seg) * factor, max_gap * sr)
-            seg = np.zeros(int(max(target, min_gap * sr)), dtype=a.dtype)
+        if quiet[i] and (j - i) / sr > max_gap and i > 0 and j < n:
+            h = int(max_gap * sr / 2)                             # Raumklang behalten, Mitte weich herausschneiden
+            f = min(int(0.02 * sr), h)
+            head, tail = seg[:h].copy(), seg[-h:].copy()
+            head[-f:] *= np.linspace(1, 0, f); tail[:f] *= np.linspace(0, 1, f)
+            seg = np.concatenate([head, tail])
         out.append(seg)
         i = j
     return np.concatenate(out)
@@ -238,9 +241,10 @@ def align_voice(path, shots, tempo=1.0):
     """Schneidet eine durchgehende Sprachaufnahme per Whisper-Wortzeiten in Clips pro Shot."""
     import difflib
     from faster_whisper import WhisperModel
-    wav = path + ".22k.wav"
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-ac", "1", "-ar", "22050",
-                    "-af", f"atempo={tempo}", wav], check=True)
+    wav = path + ".44k.wav"
+    af = ["-af", f"rubberband=tempo={tempo}:transients=smooth:pitchq=quality"] if abs(tempo - 1) > 1e-3 else []
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-ac", "1", "-ar", "44100"] + af + [wav],
+                   check=True)
     with wave.open(wav) as w:
         sr = w.getframerate()
         a = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32)
@@ -266,21 +270,27 @@ def align_voice(path, shots, tempo=1.0):
         k = seen.get(sh_i, 0); seen[sh_i] = k + 1
         if si in m and k >= shots[sh_i].get("skip_words", 0):
             first.setdefault(sh_i, m[si]); last[sh_i] = m[si]
-    clips = []
     for i in range(len(shots)):
         if i not in first:
             raise RuntimeError(f"Shot {i+1}: Sprache nicht gefunden")
-        t0 = max(0, words[first[i]][1] - 0.03)
-        if i + 1 < len(shots) and (i + 1) in first:
-            t1 = words[first[i + 1]][1] - 0.03                   # bis kurz vor den nächsten Shot
-        else:
-            t1 = len(a) / sr
-        c = a[int(t0 * sr): int(t1 * sr)]
+    env_all = np.convolve(np.abs(a), np.ones(int(0.02 * sr)) / int(0.02 * sr), mode="same")
+    cuts = [0]
+    for i in range(1, len(shots)):                               # leiseste Stelle zwischen Wortende und -anfang
+        lo = int(words[last[i - 1]][2] * sr); hi = int(words[first[i]][1] * sr)
+        lo, hi = (lo, hi) if hi - lo > int(0.02 * sr) else (hi - int(0.15 * sr), hi + int(0.05 * sr))
+        lo, hi = max(lo, cuts[-1] + 1), min(max(hi, lo + 2), len(a) - 1)
+        cuts.append(lo + int(np.argmin(env_all[lo:hi])))
+    cuts.append(len(a))
+    clips = []
+    for i in range(len(shots)):
+        c = a[cuts[i]: cuts[i + 1]].copy()
         env = np.convolve(np.abs(c), np.ones(441) / 441, mode="same")
-        loud = np.nonzero(env > 0.02 * env.max())[0]            # Stille am Ende abschneiden
+        loud = np.nonzero(env > 0.02 * env.max())[0]            # lange Stille am Ende kürzen (mit Ausklang)
         if len(loud):
-            c = c[: min(len(c), loud[-1] + int(0.08 * sr))]
-        clips.append(stretch_pauses(c, sr))
+            c = c[: min(len(c), loud[-1] + int(0.18 * sr))]
+        fi, fo = min(int(0.008 * sr), len(c) // 4), min(int(0.06 * sr), len(c) // 4)
+        c[:fi] *= np.linspace(0, 1, fi); c[len(c) - fo:] *= np.linspace(1, 0, fo)
+        clips.append(stretch_pauses(c, sr, max_gap=0.9))
     return clips, sr
 
 
@@ -379,15 +389,21 @@ def render(story_path, part_no, out_mp4, used_ids=None):
             k = 6; nz = np.convolve(nz, np.ones(k) / k, mode="same")
             env = np.linspace(0, 1, n) ** 2.2
             fx[i0:i1] += nz * env * 0.35
-    mix = voice[: len(bed)] * 0.9 + bed * 0.10 + fx * 0.5
+    mix = voice[: len(bed)] * 0.9 + bed * 0.08 + fx * 0.16
     mix = mix / (np.abs(mix).max() + 1e-9) * 0.9
     wav = os.path.join(tmp, "mix.wav")
     with wave.open(wav, "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr)
         w.writeframes((mix * 32767).astype(np.int16).tobytes())
     wav_n = os.path.join(tmp, "mix_n.wav")                       # Lautheit fuer Shorts: -14 LUFS
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", wav, "-af",
-                    "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "44100", wav_n], check=True)
+    ln = "loudnorm=I=-14:TP=-1.5:LRA=20"                        # 2 Durchgänge = lineare Verstärkung,
+    meas = subprocess.run(["ffmpeg", "-hide_banner", "-i", wav, "-af", ln + ":print_format=json",  # kein Pumpen
+                           "-f", "null", "-"], capture_output=True, text=True).stderr
+    j = json.loads(meas[meas.rindex("{"): meas.rindex("}") + 1])
+    ln += (f":measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}"
+           f":measured_thresh={j['input_thresh']}:offset={j['target_offset']}:linear=true")
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", wav, "-af", ln, "-ar", "44100", wav_n],
+                   check=True)
     wav = wav_n
 
     # Text-Layer vorbereiten
