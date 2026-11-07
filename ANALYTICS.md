@@ -9,6 +9,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - Kommentare: erster Kommentar bei Donnerstein 2 (mit Entweder-oder-Frage + firstCommentText) → beibehalten; Frage als angepinnter erster Kommentar (firstCommentText) + in der Beschreibung; leicht zu beantworten (Schätzung, Entweder-oder).
 - Aufrufe sättigen nach ~2 Tagen (Surtsey kaum Zuwachs seit 29.10.); Donnerstein 1 mit 421/8 Likes nach 2 Tagen bisher bester Start → Meteoriten-Thema zieht.
 - Serien verlieren ab Teil 3 deutlich (Surtsey 4: 215, Donnerstein 3: 169 nach 3 Tagen) → jeder Teil muss für sich allein verständlich sein und im Titel ein eigenständiges Rätsel tragen, Teilnummer nur am Ende.
+- YouTube-Analyse 07.11. (T2/T3): nur ~35 % bleiben im Feed; Abfall 130 % → 80–90 % bis Sek. 6, bei T3 weiter auf 52 % bis Sek. 15 – genau beim vorgelesenen Setup (Ort/Datum). Mitte hält gut (T3 ~37 % von 0:29–0:43, T2 Spitze bei 0:32). Ende: Abfall in den letzten Sekunden bei ausklingendem Satz/Pause. → Hook als Frage mit Einsatz, kein Setup-Satz, Ende ohne Stille (Renderer seit 07.11.: letzter Shot ohne Mindestdauer/Nachpause, Start nach 0,15 s).
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
 ## Verlauf (Stand-Abrufe)

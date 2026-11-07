@@ -307,7 +307,7 @@ def ambient(dur, sr=44100, seed=1):
     noise = np.convolve(noise, np.ones(k) / k, mode="same")
     wind = noise * (0.5 + 0.5 * np.sin(2 * np.pi * 0.07 * t))
     out = out / np.abs(out).max() * 0.6 + wind / (np.abs(wind).max() + 1e-9) * 0.25
-    fade = int(0.6 * sr)
+    fade = int(0.05 * sr)                                         # kurze Blenden, damit der Loop nahtlos wirkt
     out[:fade] *= np.linspace(0, 1, fade)
     out[-fade:] *= np.linspace(1, 0, fade)
     return out
@@ -352,9 +352,10 @@ def render(story_path, part_no, out_mp4, used_ids=None):
             a = ext[i]
         else:
             a, sr_v = synth_voice(s.get("say", s["text"]), os.path.join(tmp, f"v{i}.wav"))
-        lead = s.get("lead", 0.35 if i == 0 else 0.0)
-        d = lead + len(a) / sr_v + s.get("pause", 0.7)
-        d = max(d, s.get("min", 3.0))
+        last = i == len(shots) - 1
+        lead = s.get("lead", 0.15 if i == 0 else 0.0)            # Start sofort (Hook in den ersten 1,5 s)
+        d = lead + len(a) / sr_v + s.get("pause", 0.15 if last else 0.7)
+        d = max(d, s.get("min", 0.0 if last else 3.0))           # Ende hart auf der letzten Silbe -> Loop
         clips.append((t + lead, a))
         starts.append(t)
         durs.append(d)
