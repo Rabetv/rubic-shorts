@@ -527,6 +527,186 @@
    ],
    "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
    "voice_model": "eleven_v4"
+  },
+  {
+   "part": 4,
+   "yt_title": "Warum lag dieser Stein in Ketten? ⛓️ Donnerstein Teil 4",
+   "description": "Ensisheim: Der Donnerstein von 1492 wurde in der Kirche angekettet – der Legende nach, damit er nicht davonfliegt. Teil 4 der Geschichte vom Donnerstein von Ensisheim.\n\nHättest du ihn auch angekettet – ja oder nein? Schreib es in die Kommentare.\n\n#meteorit #ensisheim #geschichte #elemente #shorts",
+   "tags": [
+    "Meteorit",
+    "Ensisheim",
+    "Donnerstein",
+    "1492",
+    "Legende",
+    "wahre Geschichte",
+    "Steine"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "old iron chain closeup"
+     },
+     "text": "Er lag in Ketten.",
+     "key": "Ketten.",
+     "say": "Dieser Stein lag in Ketten. Wie ein Gefangener.",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Donnerstein · Teil 4",
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "old church interior"
+     },
+     "text": "Kirche von Ensisheim.",
+     "key": "Ensisheim.",
+     "say": "In der Kirche von Ensisheim, nach vierzehnhundertzweiundneunzig.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "dark meteorite rock closeup"
+     },
+     "text": "Gefährlich?",
+     "key": "Gefährlich?",
+     "say": "War er gefährlich? Konnte er jemandem schaden?",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "church candles dark"
+     },
+     "text": "Nein.",
+     "key": "Nein.",
+     "say": "Nein. Die Angst war eine ganz andere.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "stormy night sky clouds"
+     },
+     "text": "Vom Himmel gefallen.",
+     "key": "Himmel",
+     "say": "Er war vom Himmel gefallen. Einfach so, aus dem Nichts.",
+     "motion": "pan_u",
+     "amount": 0.05,
+     "riser": true
+    },
+    {
+     "img": {
+      "unsplash": "dramatic clouds sky"
+     },
+     "text": "Er könnte zurück.",
+     "key": "zurück.",
+     "say": "Und was vom Himmel kommt, so erzählt die Legende, kann auch wieder verschwinden.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "old iron chain"
+     },
+     "text": "Also: Ketten.",
+     "key": "Ketten.",
+     "say": "Also wird er festgemacht. Damit er nicht davonfliegt.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "candlelight stone wall"
+     },
+     "text": "Jahrhundertelang.",
+     "key": "Jahrhundertelang.",
+     "say": "Jahrhundertelang bleibt er dort und wird bestaunt.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "dark storm sky"
+     },
+     "text": "Dann: die Revolution.",
+     "key": "Revolution.",
+     "say": "Dann kommt die Französische Revolution. Der Stein wird fortgebracht.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[nervous]"
+    },
+    {
+     "img": {
+      "unsplash": "broken rock fragments"
+     },
+     "text": "Immer kleiner.",
+     "key": "kleiner.",
+     "say": "Und Stück für Stück wird er kleiner.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "old stone building facade"
+     },
+     "text": "Heute: rund 55 kg.",
+     "key": "55",
+     "say": "Heute liegt er wieder in Ensisheim. Nur noch etwa fünfundfünfzig Kilo.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "meteorite rock texture"
+     },
+     "text": "Was ist er wirklich?",
+     "key": "wirklich?",
+     "say": "Aber was ist dieser Stein eigentlich?",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "dark rock surface closeup"
+     },
+     "text": "Älter als jedes Gestein der Erde.",
+     "key": "Älter",
+     "say": "Die Antwort ist älter als jedes Gestein der Erde.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "xfade": true,
+     "tag": "[whispers]"
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Und sie legten ihn in Ketten.",
+     "key": "Ketten.",
+     "say": "Und sie legten ihn in Ketten.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
   }
  ]
 }

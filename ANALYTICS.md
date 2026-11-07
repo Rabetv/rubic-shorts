@@ -8,6 +8,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - Länge: unter 60 s (Teil 1 mit 72 s lief am schlechtesten). Ø Wiedergabe 24–28 s bei ~55 s.
 - Kommentare: erster Kommentar bei Donnerstein 2 (mit Entweder-oder-Frage + firstCommentText) → beibehalten; Frage als angepinnter erster Kommentar (firstCommentText) + in der Beschreibung; leicht zu beantworten (Schätzung, Entweder-oder).
 - Aufrufe sättigen nach ~2 Tagen (Surtsey kaum Zuwachs seit 29.10.); Donnerstein 1 mit 421/8 Likes nach 2 Tagen bisher bester Start → Meteoriten-Thema zieht.
+- Serien verlieren ab Teil 3 deutlich (Surtsey 4: 215, Donnerstein 3: 169 nach 3 Tagen) → jeder Teil muss für sich allein verständlich sein und im Titel ein eigenständiges Rätsel tragen, Teilnummer nur am Ende.
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
 ## Verlauf (Stand-Abrufe)
@@ -26,3 +27,6 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 | 2026-11-04 | Surtsey 5 | 53 s | 432 | 6 | 0 |
 | 2026-11-04 | Donnerstein 1 | 59 s | 433 | 8 | 0 |
 | 2026-11-04 | Donnerstein 2 | 54 s | 344 (2 Tage) | 6 | 1 |
+| 2026-11-07 | Donnerstein 1 | 59 s | 434 | 8 | 0 |
+| 2026-11-07 | Donnerstein 2 | 54 s | 345 | 6 | 1 |
+| 2026-11-07 | Donnerstein 3 | 48 s | 169 (3 Tage) | 2 | 1 |
