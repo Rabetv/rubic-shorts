@@ -294,6 +294,47 @@ def align_voice(path, shots, tempo=1.0):
     return clips, sr
 
 
+def ffx(x, sr, af):
+    """Mono-Signal (float) durch einen ffmpeg-Filter schicken."""
+    raw = (np.clip(x, -1, 1) * 32767).astype(np.int16).tobytes()
+    out = subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "s16le", "-ar", str(sr), "-ac", "1", "-i", "-",
+                          "-af", af, "-f", "s16le", "-ar", str(sr), "-ac", "1", "-"], input=raw,
+                         capture_output=True, check=True).stdout
+    y = np.frombuffer(out, np.int16).astype(np.float32) / 32768.0
+    return np.pad(y, (0, max(0, len(x) - len(y))))[: len(x)]
+
+
+def load_sfx(name, sr):
+    d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "sfx")
+    for ext in ("", ".mp3", ".wav"):
+        p = os.path.join(d, name + ext)
+        if os.path.isfile(p):
+            raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", p, "-ac", "1", "-ar", str(sr),
+                                  "-f", "s16le", "-"], capture_output=True, check=True).stdout
+            return np.frombuffer(raw, np.int16).astype(np.float32) / 32768.0
+    return None
+
+
+def load_music(story, part, n, sr):
+    """Hintergrundmusik aus assets/music (pro Serie fest), auf Länge geloopt, ohne lange Blenden."""
+    d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "music")
+    files = sorted(x for x in os.listdir(d) if x.endswith((".mp3", ".wav"))) if os.path.isdir(d) else []
+    if not files:
+        return np.zeros(n)
+    name = part.get("music") or story.get("music") or files[sum(map(ord, story.get("series", ""))) % len(files)]
+    raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", os.path.join(d, name), "-ac", "1", "-ar", str(sr),
+                          "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    m = np.frombuffer(raw, np.int16).astype(np.float32) / 32768.0
+    m = m / (np.sqrt(np.mean(m ** 2)) + 1e-9) * 0.2                  # gleiche Grundlautheit für alle Tracks
+    xf = int(1.5 * sr)
+    while len(m) < n:                                               # nahtlos loopen
+        r = np.linspace(0, 1, xf)
+        m = np.concatenate([m[:-xf], m[-xf:] * (1 - r) + m[:xf] * r, m[xf:]])
+    m = m[:n].copy()
+    f = int(0.03 * sr); m[:f] *= np.linspace(0, 1, f); m[-f:] *= np.linspace(1, 0, f)
+    return m
+
+
 def ambient(dur, sr=44100, seed=1):
     t = np.arange(int(dur * sr)) / sr
     rng = np.random.default_rng(seed)
@@ -370,34 +411,45 @@ def render(story_path, part_no, out_mp4, used_ids=None):
         a = np.interp(np.arange(0, len(a), sr_v / sr), np.arange(len(a)), a) / 32768.0
         i0 = int(st * sr)
         voice[i0:i0 + len(a)] += a[: len(voice) - i0]
-    bed = ambient(total, sr)
-    tt_ = np.arange(len(bed)) / sr
-    swell = np.interp(tt_, [0, total * 0.75, total - 2.5, total], [0.7, 1.6, 1.0, 0.6])
-    bed = bed * swell                                            # Spannung baut sich auf
-    fx = np.zeros_like(bed)
-    rng = np.random.default_rng(5)
-    for i, s in enumerate(shots):
+    voice = voice[: int(total * sr)]
+    voice = ffx(voice, sr, "highpass=f=80,acompressor=threshold=-22dB:ratio=2.5:attack=8:release=150:makeup=2")
+    k = int(0.03 * sr)
+    venv = np.convolve(np.abs(voice), np.ones(k) / k, mode="same")
+    speaking = venv > 0.02 * (venv.max() + 1e-9)
+    vrms = np.sqrt(np.mean(voice[speaking] ** 2)) if speaking.any() else 0.1
+    music = load_music(story, part, len(voice), sr)
+    mrms = np.sqrt(np.mean(music ** 2)) + 1e-9
+    # Ducking: Musik ca. -20 dB unter der Stimme, in Sprechpausen -14 dB
+    sp = speaking.astype(float)
+    att, rel = int(0.08 * sr), int(0.45 * sr)
+    sp = np.convolve(sp, np.ones(att) / att, mode="same")
+    sp = np.clip(np.convolve(np.clip(sp * 3, 0, 1), np.ones(rel) / rel, mode="same"), 0, 1)
+    db = -14 + (-20 + 14) * sp
+    gain = vrms / mrms * 10 ** (db / 20)
+    lift = np.ones_like(gain)
+    sfx = np.zeros_like(voice)
+    for i, s in enumerate(shots):                                    # Spannung über die Musik
         i0 = int(starts[i] * sr)
-        if s.get("hit"):                                         # tiefer Einschlag auf dem Schnitt
-            n = int(1.6 * sr); tt = np.arange(n) / sr
-            boom = np.sin(2 * np.pi * (48 + 30 * np.exp(-tt * 9)) * tt) * np.exp(-tt * 2.6)
-            thump = rng.normal(0, 1, n) * np.exp(-tt * 28) * 0.35
-            seg = (boom + thump) * 0.9
-            fx[i0:i0 + n] += seg[: len(fx) - i0]
-        if s.get("riser") and i + 1 < len(shots):                # Rauschen steigt bis zum nächsten Schnitt
-            i1 = int(starts[i + 1] * sr); n = i1 - i0
-            nz = rng.normal(0, 1, n)
-            k = 6; nz = np.convolve(nz, np.ones(k) / k, mode="same")
-            env = np.linspace(0, 1, n) ** 2.2
-            fx[i0:i1] += nz * env * 0.35
-    mix = voice[: len(bed)] * 0.9 + bed * 0.08 + fx * 0.16
+        if s.get("riser") and i + 1 < len(shots):
+            i1 = int(starts[i + 1] * sr)
+            lift[i0:i1] *= 1 + 0.4 * np.linspace(0, 1, i1 - i0) ** 2
+        if s.get("hit"):
+            n = min(int(0.9 * sr), len(lift) - i0)
+            lift[i0:i0 + n] *= 1 + 0.3 * np.exp(-np.arange(n) / (0.3 * sr))
+        if s.get("sfx"):                                             # echte Geräusche aus assets/sfx (Foley)
+            e = load_sfx(s["sfx"], sr)
+            if e is not None:
+                e = e * vrms / (np.sqrt(np.mean(e ** 2)) + 1e-9) * 10 ** (s.get("sfx_db", -12) / 20)
+                i0 += int(s.get("sfx_at", 0) * sr)
+                sfx[i0:i0 + len(e)] += e[: max(0, len(sfx) - i0)]
+    mix = voice + music * gain * lift + sfx
     mix = mix / (np.abs(mix).max() + 1e-9) * 0.9
     wav = os.path.join(tmp, "mix.wav")
     with wave.open(wav, "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr)
         w.writeframes((mix * 32767).astype(np.int16).tobytes())
     wav_n = os.path.join(tmp, "mix_n.wav")                       # Lautheit fuer Shorts: -14 LUFS
-    ln = "loudnorm=I=-14:TP=-1.5:LRA=20"                        # 2 Durchgänge = lineare Verstärkung,
+    ln = "loudnorm=I=-14:TP=-1.0:LRA=20"                        # 2 Durchgänge = lineare Verstärkung,
     meas = subprocess.run(["ffmpeg", "-hide_banner", "-i", wav, "-af", ln + ":print_format=json",  # kein Pumpen
                            "-f", "null", "-"], capture_output=True, text=True).stderr
     j = json.loads(meas[meas.rindex("{"): meas.rindex("}") + 1])
