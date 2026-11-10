@@ -247,7 +247,7 @@ def caption_chunks(words, starts, durs, maxw=3, maxc=20):
     return out
 
 
-def caption_strip(words, active, keyset, size=64):
+def caption_strip(words, active, keyset, size=76):
     f = font(size, "Bold")
     txt = " ".join(words)
     while f.getlength(txt) > TXMAX_W and size > 44:
