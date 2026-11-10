@@ -707,6 +707,171 @@
    ],
    "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
    "voice_model": "eleven_v4"
+  },
+  {
+   "part": 5,
+   "yt_title": "Älter als jeder Stein der Erde – wie geht das? 🌌 Donnerstein Teil 5",
+   "description": "Der Donnerstein von Ensisheim (1492) ist ein gewöhnlicher Chondrit – rund 4,5 Milliarden Jahre alt und damit älter als jedes Gestein der Erde. Letzter Teil der Geschichte vom Donnerstein von Ensisheim.\n\nWürdest du ein Stück davon in der Hand halten wollen – ja oder nein? Schreib es in die Kommentare.\n\n#meteorit #ensisheim #weltall #steine #shorts",
+   "tags": [
+    "Meteorit",
+    "Ensisheim",
+    "Donnerstein",
+    "Chondrit",
+    "Weltall",
+    "wahre Geschichte",
+    "Steine"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "meteorite closeup"
+     },
+     "text": "Älter als jedes Gestein der Erde?",
+     "key": "Älter",
+     "say": "Wie kann ein Stein älter sein als jedes Gestein auf der Erde?",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Donnerstein · Teil 5",
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "dark rock surface macro"
+     },
+     "text": "Der Donnerstein weiß es.",
+     "key": "Donnerstein",
+     "say": "Der Donnerstein von Ensisheim hat die Antwort. Und sie klingt unmöglich.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "volcanic rock texture"
+     },
+     "text": "Ein fremder Planet?",
+     "key": "Planet?",
+     "say": "Ist er ein Stück von einem fremden Planeten?",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "red desert planet surface"
+     },
+     "text": "Nein. Noch älter.",
+     "key": "Nein.",
+     "say": "Nein. Er ist noch viel älter als das.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "rock thin section microscope"
+     },
+     "text": "Ein Chondrit.",
+     "key": "Chondrit.",
+     "say": "Forscher nennen ihn einen Chondriten. Einen ganz gewöhnlichen sogar.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "small round pebbles macro"
+     },
+     "text": "Winzige Kügelchen.",
+     "key": "Kügelchen.",
+     "say": "Innen stecken winzige Kügelchen. Erstarrte Tropfen aus geschmolzenem Gestein.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "nebula space dust"
+     },
+     "text": "Vor den Planeten.",
+     "key": "Planeten.",
+     "say": "Sie entstanden in der Staubwolke um die junge Sonne. Bevor es Planeten gab.",
+     "motion": "pan_u",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "galaxy stars dark sky"
+     },
+     "text": "4,5 Milliarden Jahre.",
+     "key": "Milliarden",
+     "say": "Rund viereinhalb Milliarden Jahre alt.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "planet earth from space"
+     },
+     "text": "Nie eingeschmolzen.",
+     "key": "Nie",
+     "say": "Die Erde hat ihr Gestein immer wieder eingeschmolzen. Ihn nicht.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "meteor shooting star night"
+     },
+     "text": "Bis 1492.",
+     "key": "1492.",
+     "say": "Er trieb durchs All. Bis er an einem Novembertag im Elsass einschlug.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "old stone church exterior"
+     },
+     "text": "Ältester Fall Europas.",
+     "key": "Ältester",
+     "say": "Er ist der älteste bekannte Meteoritenfall Europas, von dem noch Stücke erhalten sind.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "green glass crystal"
+     },
+     "text": "Grünes Glas?",
+     "key": "Glas?",
+     "say": "Doch ein anderer Einschlag hinterließ etwas noch Seltsameres. Grünes Glas.",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[whispers]"
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Älter als jedes Gestein der Erde.",
+     "key": "Älter",
+     "say": "Und dieser Stein? Älter als jedes Gestein der Erde.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true,
+     "tag": "[mysterious]"
+    }
+   ],
+   "voice_vidiq": "JBFqnCBsd6RMkjVDRZzb",
+   "voice_model": "eleven_v4"
   }
  ]
 }

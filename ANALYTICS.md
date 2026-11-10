@@ -31,3 +31,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 | 2026-11-07 | Donnerstein 1 | 59 s | 434 | 8 | 0 |
 | 2026-11-07 | Donnerstein 2 | 54 s | 345 | 6 | 1 |
 | 2026-11-07 | Donnerstein 3 | 48 s | 169 (3 Tage) | 2 | 1 |
+| 2026-11-10 | Donnerstein 1 | 59 s | 436 | 8 | 0 |
+| 2026-11-10 | Donnerstein 2 | 54 s | 347 | 6 | 1 |
+| 2026-11-10 | Donnerstein 3 | 48 s | 171 | 2 | 1 |
+| 2026-11-10 | Donnerstein 4 | 55 s | 98 (2,5 Tage) | 0 | 1 |
