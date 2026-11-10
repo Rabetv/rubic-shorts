@@ -24,10 +24,17 @@ TY_MIN, TY_MAX = 250, 1400
 assert TX0 + TXMAX_W <= int(W * 0.88) + 1
 
 
-def font(size):
+MOTION_GAIN = 2.2        # Kamerabewegung kräftiger als die 0,05 in den Storys (seit 10.11.)
+SPLIT_MIN = 2.6          # Shots länger als das bekommen ein zweites Bild (B-Roll-Schnitt)
+CAP_Y, CAP_H = 1235, 190 # Live-Untertitel (gesprochene Wörter) – innerhalb der Safe Zone
+ALT_MOTION = {"push": "pan_r", "pull": "pan_l", "pan_l": "push", "pan_r": "push",
+              "pan_u": "push", "pan_d": "push", "rot": "push"}
+
+
+def font(size, weight="Regular"):
     f = ImageFont.truetype(FONT, size)
     try:
-        f.set_variation_by_name("Regular")
+        f.set_variation_by_name(weight)
     except Exception:
         pass
     return f
@@ -131,7 +138,7 @@ def wrap(words, f, maxw):
     return lines
 
 
-def text_layers(text, key, sub, size):
+def text_layers(text, key, sub, size, ymax=TY_MAX):
     """Gibt (Hauptlayer, Nebenlayer) als RGBA zurück, inkl. weichem Schatten."""
     keyset = {norm(k) for k in (key or "").split()}
     words = text.split()
@@ -150,7 +157,7 @@ def text_layers(text, key, sub, size):
     sub_h = (len(sub_lines) * int(sub_size * 1.3) + 34) if sub_lines else 0
     block_h = len(lines) * lh + sub_h
     top = int(860 - block_h / 2)
-    top = max(TY_MIN, min(top, TY_MAX - block_h))
+    top = max(TY_MIN, min(top, ymax - block_h))
 
     def layer(draw_fn):
         mask = Image.new("L", (W, H), 0)
@@ -183,6 +190,82 @@ def text_layers(text, key, sub, size):
             y += int(sub_size * 1.3)
 
     return layer(main), (layer(subl) if sub_lines else None)
+
+
+def caption_words(voice, sr, shots, starts, durs):
+    """Wortzeiten im fertigen Zeitstrahl (Whisper auf der fertigen Stimmspur), Schreibweise aus dem Skript."""
+    import difflib
+    from faster_whisper import WhisperModel
+    a16 = np.interp(np.arange(0, len(voice), sr / 16000), np.arange(len(voice)), voice).astype(np.float32)
+    model = WhisperModel(os.environ.get("WHISPER_MODEL", "small"), device="cpu", compute_type="int8")
+    segs, _ = model.transcribe(a16, language="de", word_timestamps=True)
+    heard = [(norm(x.word), x.start, x.end) for sg in segs for x in sg.words if norm(x.word)]
+    script = []
+    for i, sh in enumerate(shots):
+        for w_ in sh.get("say", sh["text"]).split():
+            if norm(w_):
+                script.append([w_.strip(",.;:–-\"„“"), i, None, None, w_.rstrip("\"“")[-1:] in ".?!:"])
+    sm = difflib.SequenceMatcher(a=[norm(w[0]) for w in script], b=[h[0] for h in heard], autojunk=False)
+    for blk in sm.get_matching_blocks():
+        for k in range(blk.size):
+            script[blk.a + k][2], script[blk.a + k][3] = heard[blk.b + k][1], heard[blk.b + k][2]
+    for k, w in enumerate(script):                                 # Lücken innerhalb des Shots interpolieren
+        if w[2] is None:
+            i = w[1]
+            prev = next((script[j] for j in range(k - 1, -1, -1) if script[j][2] is not None and script[j][1] == i), None)
+            nxt = next((script[j] for j in range(k + 1, len(script)) if script[j][2] is not None and script[j][1] == i), None)
+            t0 = prev[3] if prev else starts[i] + 0.1
+            t1 = nxt[2] if nxt else starts[i] + durs[i] - 0.2
+            w[2], w[3] = t0, max(t0 + 0.15, min(t1, t0 + 0.4))
+    for w in script:                                               # Wörter gehören zu ihrem Shot
+        i = w[1]
+        w[2] = min(max(w[2], starts[i]), starts[i] + durs[i] - 0.05)
+        w[3] = min(max(w[3], w[2] + 0.08), starts[i] + durs[i])
+    return script
+
+
+def caption_chunks(words, starts, durs, maxw=3, maxc=20):
+    """Wörter zu kurzen Einblendungen (max. 3 Wörter) gruppieren."""
+    chunks, cur = [], []
+    for w in words:
+        if cur and (cur[0][1] != w[1] or len(cur) >= maxw or len(" ".join(x[0] for x in cur + [w])) > maxc):
+            chunks.append(cur); cur = []
+        cur.append(w)
+        if w[4]:
+            chunks.append(cur); cur = []
+    if cur:
+        chunks.append(cur)
+    out = []
+    for k, c in enumerate(chunks):
+        i = c[0][1]
+        end = starts[i] + durs[i]
+        if k + 1 < len(chunks) and chunks[k + 1][0][1] == i:
+            end = chunks[k + 1][0][2]
+        else:
+            end = min(end, c[-1][3] + 0.6)
+        out.append({"words": [w[0] for w in c], "t": [w[2] for w in c], "t0": c[0][2], "t1": end, "shot": i})
+    return out
+
+
+def caption_strip(words, active, keyset, size=64):
+    f = font(size, "Bold")
+    txt = " ".join(words)
+    while f.getlength(txt) > TXMAX_W and size > 44:
+        size -= 4; f = font(size, "Bold")
+    img = Image.new("RGBA", (W, CAP_H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    x = (W - f.getlength(txt)) / 2
+    x = max(TX0, min(x, TX0 + TXMAX_W - f.getlength(txt)))
+    y = (CAP_H - size * 1.2) / 2
+    for k, w in enumerate(words):
+        c = GOLD if (k == active or norm(w) in keyset) else WHITE
+        if k > active:
+            c = c[:3] + (150,)
+        else:
+            c = c[:3] + (255,)
+        d.text((x, y), w, font=f, fill=c, stroke_width=max(3, size // 14), stroke_fill=(0, 0, 0, 230))
+        x += f.getlength(w + " ")
+    return img
 
 
 def ease_out(t):
@@ -403,6 +486,35 @@ def render(story_path, part_no, out_mp4, used_ids=None):
         t += d
     total = t
     nframes = int(round(total * FPS))
+    caps_on = part.get("captions", story.get("captions", True))
+    # Live-Untertitel und Schnittpunkte aus der fertigen Stimmspur
+    vtrack = np.zeros(int(total * 16000) + 16000, np.float32)
+    for st, a in clips:
+        a16 = np.interp(np.arange(0, len(a), sr_v / 16000), np.arange(len(a)), a) / 32768.0
+        i0 = int(st * 16000)
+        vtrack[i0:i0 + len(a16)] += a16[: len(vtrack) - i0]
+    words = caption_words(vtrack, 16000, shots, starts, durs)
+    chunks = caption_chunks(words, starts, durs) if caps_on else []
+    # B-Roll: lange Shots auf einem Wortanfang nahe der Mitte teilen, zweites Bild zur selben Suche
+    split, bases2 = {}, {}
+    for i, s in enumerate(shots):
+        if durs[i] < SPLIT_MIN or s.get("no_split") or "same_as" in s["img"] or "sketch" in s["img"]:
+            continue
+        cand = [w[2] - starts[i] for w in words if w[1] == i and 1.1 < w[2] - starts[i] < durs[i] - 1.0]
+        if not cand:
+            continue
+        st_ = min(cand, key=lambda x: abs(x - durs[i] * 0.5))
+        spec = s.get("img2") or s["img"]
+        try:
+            path, meta = fetch.fetch(spec, used)
+        except Exception as e:
+            print(f"B-Roll Shot {i+1} übersprungen: {e}", flush=True)
+            continue
+        used.add(meta["id"]); credits.append(meta)
+        img2 = s.get("img2") or s["img"]
+        bases2[i] = grade(cover(Image.open(path), img2.get("fx", 0.5), img2.get("fy", 0.5)))
+        split[i] = st_
+        print(f"B-Roll Shot {i+1} bei {st_:.1f}s: {meta['source']} {meta['id']}", flush=True)
 
     # Audio-Mix
     sr = 44100
@@ -460,13 +572,60 @@ def render(story_path, part_no, out_mp4, used_ids=None):
     wav = wav_n
 
     # Text-Layer vorbereiten
-    layers = [text_layers(s["text"], s.get("key"), s.get("sub"), s.get("size", 120)) for s in shots]
+    ymax = CAP_Y - 40 if caps_on else TY_MAX
+    layers = [text_layers(s["text"], s.get("key"), s.get("sub"), s.get("size", 120), ymax) for s in shots]
+    cap_cache = {}
+    keysets = [{norm(k) for k in (s.get("key") or "").split()} for s in shots]
+
+    def caption_on(arr, tt):
+        c = next((c for c in chunks if c["t0"] <= tt < c["t1"]), None)
+        if c is None:
+            return arr
+        act = max(k for k, t_ in enumerate(c["t"]) if t_ <= tt + 1e-6) if c["t"][0] <= tt else 0
+        key = (id(c), act)
+        if key not in cap_cache:
+            st_ = caption_strip(c["words"], act, keysets[c["shot"]])
+            cap_cache[key] = (np.asarray(st_, np.float32)[..., :3], np.asarray(st_, np.float32)[..., 3:] / 255.0)
+        rgb, al = cap_cache[key]
+        p = min(max((tt - c["t0"]) / 0.08, 0), 1)                # 0,08 s Einblenden
+        dy = int(round(10 * (1 - p)))
+        y0 = CAP_Y + dy
+        al = al * p
+        reg = arr[y0:y0 + CAP_H]
+        arr[y0:y0 + CAP_H] = reg * (1 - al) + rgb * al
+        return arr
+
+    # Staubpartikel (periodisch über die Gesamtdauer -> nahtloser Loop)
+    prng = np.random.default_rng(3)
+    NP = 0 if not part.get("particles", story.get("particles", True)) else 34
+    pp = [dict(x=prng.uniform(0, W), y=prng.uniform(0, H), k=int(prng.integers(1, 3)), r=float(prng.uniform(2.5, 7)),
+               a=float(prng.uniform(0.10, 0.30)), sx=float(prng.uniform(10, 40)), m=int(prng.integers(1, 3)),
+               ph=float(prng.uniform(0, 6.28))) for _ in range(NP)]
+    sprites = {}
+
+    def particles_on(arr, tt):
+        for q in pp:
+            r = q["r"]; n = int(r * 3) | 1
+            if n not in sprites:
+                g = np.mgrid[0:n, 0:n].astype(np.float32) - n // 2
+                sprites[n] = np.exp(-(g[0] ** 2 + g[1] ** 2) / (2 * (n / 6) ** 2))[..., None]
+            sp = sprites[n]
+            ph = tt / total
+            y = (q["y"] - H * q["k"] * ph) % H
+            x = q["x"] + q["sx"] * math.sin(2 * math.pi * q["m"] * ph + q["ph"])
+            x0, y0 = int(x) - n // 2, int(y) - n // 2
+            if x0 < 0 or y0 < 0 or x0 + n > W or y0 + n > H:
+                continue
+            reg = arr[y0:y0 + n, x0:x0 + n]
+            arr[y0:y0 + n, x0:x0 + n] = reg + (np.array([255, 236, 200], np.float32) - reg) * sp * q["a"]
+        return arr
+
     vig = vignette()
     gr = grains()
 
-    def motion(s, u):
-        m = s.get("motion", "push")
-        a = s.get("amount", 0.05)
+    def motion(s, u, m=None):
+        m = m or s.get("motion", "push")
+        a = s.get("amount", 0.05) * MOTION_GAIN
         z, ox, oy, rot = 1.0, 0.0, 0.0, 0.0
         if m == "push":
             z = 1.0 + a * u
@@ -484,15 +643,23 @@ def render(story_path, part_no, out_mp4, used_ids=None):
 
     def frame_img(i, tl):
         s = shots[i]
-        u = min(max(tl / durs[i], 0), 1.1)
-        z, ox, oy, rot = motion(s, u)
+        base = bases[i]
+        if i in split and tl >= split[i]:
+            base = bases2[i]
+            u = min(max((tl - split[i]) / (durs[i] - split[i]), 0), 1.1)
+            z, ox, oy, rot = motion(s, u, ALT_MOTION.get(s.get("motion", "push"), "push"))
+        else:
+            u = min(max(tl / (split.get(i) or durs[i]), 0), 1.1)
+            z, ox, oy, rot = motion(s, u)
+        if s.get("hit") and i > 0:                                # Zoom-Punch auf Wendepunkten
+            z *= 1 + 0.07 * math.exp(-max(tl, 0) / 0.14)
         k = SC / z
         c, sn = math.cos(math.radians(rot)), math.sin(math.radians(rot))
         a_, b_ = k * c, -k * sn
         d_, e_ = k * sn, k * c
         cbx, cby = BW / 2 + ox * BW, BH / 2 + oy * BH
         data = (a_, b_, cbx - a_ * W / 2 - b_ * H / 2, d_, e_, cby - d_ * W / 2 - e_ * H / 2)
-        return bases[i].transform((W, H), Image.AFFINE, data, resample=Image.BICUBIC)
+        return base.transform((W, H), Image.AFFINE, data, resample=Image.BICUBIC)
 
     def text_on(img, i, tl):
         main, sub = layers[i]
@@ -538,8 +705,14 @@ def render(story_path, part_no, out_mp4, used_ids=None):
             prev = text_on(prev, i - 1, tt - starts[i - 1])
             img = Image.blend(prev, img, (fl + 1) / (XF + 1))
         arr = np.asarray(img.convert("RGB"), np.float32) * vig
+        if shots[i].get("hit") and i > 0 and tl < 0.12:            # kurzer Lichtblitz
+            arr = arr + (255 - arr) * 0.28 * (1 - tl / 0.12)
+        if NP:
+            arr = particles_on(arr, tt if fi < nframes - 1 else 0.0)
         arr = np.asarray(text_on(Image.fromarray(arr.astype(np.uint8)).convert("RGBA"), i, tl).convert("RGB"),
                          np.float32)
+        if chunks and fi < nframes - 1:
+            arr = caption_on(arr, tt)
         g = gr[0] if fi in (0, nframes - 1) else gr[fi % len(gr)]   # 10 wechselnde Kornmuster
         arr = np.clip(arr + g, 0, 255).astype(np.uint8)
         ff.stdin.write(arr.tobytes())
