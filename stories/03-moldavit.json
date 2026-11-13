@@ -1,0 +1,184 @@
+{
+ "series": "moldavit",
+ "title": "Moldavit – das grüne Glas vom Himmel",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Moldavite",
+  "https://en.wikipedia.org/wiki/N%C3%B6rdlinger_Ries",
+  "https://www.ub.uni-mainz.de/de/sammlungen/moldavite-gruene-traenen-aus-dem-himmel/4791",
+  "https://digitalgeology.de/en/nordlinger-ries-impact-crater"
+ ],
+ "plan": [
+  "Teil 1: Grünes Naturglas in tschechischen Äckern (Moldau), fast nur dort; falsche Fährten Flasche/Vulkan/Glashütte; Millionen Jahre alt. Cliffhanger: Spur führt nach Bayern zu einem runden Kessel.",
+  "Teil 2: Das Nördlinger Ries – runder Kessel, rund 24 km breit; lange für einen Vulkan gehalten. Cliffhanger: Ein Mineral verrät die Wahrheit.",
+  "Teil 3: 1960 finden Shoemaker und Chao Coesit (entsteht nur bei extremem Druck) → Einschlag, kein Vulkan. Cliffhanger: Wie gewaltig war er?",
+  "Teil 4: Vor rund 15 Mio. Jahren schlägt ein Asteroid ein; oberflächliches Gestein schmilzt, Spritzer fliegen Hunderte km nach Osten und erstarren zu Moldavit. Cliffhanger: Eine Stadt mitten im Krater.",
+  "Teil 5: Nördlingen – Kirche St. Georg aus Suevit (Einschlaggestein) mit winzigen Diamanten; Apollo-14-Astronauten trainierten 1970 im Ries. Abschluss + nächste Serie."
+ ],
+ "next_series_idea": "Blitzröhren (Fulgurite) – wenn ein Blitz Sand zu Glas schmilzt – Fakten vor dem Schreiben prüfen",
+ "parts": [
+  {
+   "part": 1,
+   "yt_title": "Grünes Glas, das kein Mensch gemacht hat? 💚 Moldavit Teil 1",
+   "description": "In tschechischen Äckern liegt grünes Naturglas – Moldavit. Kein Vulkan, keine Glashütte. Woher kommt es? Teil 1 der Geschichte vom Moldavit.\n\nHättest du es für Flaschenglas gehalten – ja oder nein? Schreib es in die Kommentare.\n\n#moldavit #steine #meteorit #geologie #shorts",
+   "tags": [
+    "Moldavit",
+    "Tektit",
+    "Nördlinger Ries",
+    "Steine",
+    "Meteorit",
+    "Geologie",
+    "wahre Geschichte"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "voice_model": "eleven_v4",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "green glass stone"
+     },
+     "text": "Glas, das niemand machte?",
+     "key": "Glas,",
+     "say": "Warum liegt grünes Glas in Äckern, das nie ein Mensch gemacht hat?",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Moldavit · Teil 1",
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "plowed field soil"
+     },
+     "text": "Mitten im Acker.",
+     "key": "Acker.",
+     "say": "Bauern pflügen es aus der Erde. Mitten in Tschechien.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "green glass shard macro"
+     },
+     "text": "Flaschenglas?",
+     "key": "Flaschenglas?",
+     "say": "Scherben einer alten Flasche? Das dachten viele.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "rough green crystal"
+     },
+     "text": "Nein.",
+     "key": "Nein.",
+     "say": "Doch keine Flasche sieht so aus. Gerippt, zerfurcht, wie geschmolzen.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "river valley forest"
+     },
+     "text": "Moldavit.",
+     "key": "Moldavit.",
+     "say": "Man nennt es Moldavit. Nach der Moldau, dem Fluss in dieser Gegend.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "misty forest hills"
+     },
+     "text": "Fast nur hier.",
+     "key": "nur",
+     "say": "Und das Seltsame: Man findet es fast nur hier. Kaum irgendwo sonst auf der Welt.",
+     "motion": "pan_u",
+     "amount": 0.05,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "volcano crater lake"
+     },
+     "text": "Ein Vulkan?",
+     "key": "Vulkan?",
+     "say": "Kam es aus einem Vulkan? Hier gibt es keinen, der so etwas ausspuckt.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "glass furnace fire"
+     },
+     "text": "Eine Glashütte?",
+     "key": "Glashütte?",
+     "say": "Aus einer Glashütte? Aber dieses Glas ist viel älter als jede Hütte.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "sediment rock layers cliff"
+     },
+     "text": "Millionen Jahre.",
+     "key": "Millionen",
+     "say": "Es steckt in Erdschichten, die Millionen Jahre alt sind.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "green gemstone light"
+     },
+     "text": "Reines Naturglas.",
+     "key": "Naturglas.",
+     "say": "Kein Kristall, kein Edelstein. Reines Naturglas.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "old map paper"
+     },
+     "text": "Die Spur führt fort.",
+     "key": "Spur",
+     "say": "Forscher folgten seiner Spur. Hunderte Kilometer weit.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "aerial view farmland fields"
+     },
+     "text": "Bis nach Bayern.",
+     "key": "Bayern.",
+     "say": "Bis nach Bayern. Zu einem riesigen, runden Kessel in der Landschaft.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Was machte dieses Glas?",
+     "key": "Glas?",
+     "say": "Doch was hat diesen Kessel geformt? Und dieses Glas?",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true,
+     "tag": "[whispers]"
+    }
+   ]
+  }
+ ]
+}

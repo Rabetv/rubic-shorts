@@ -10,6 +10,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - Aufrufe sättigen nach ~2 Tagen (Surtsey kaum Zuwachs seit 29.10.); Donnerstein 1 mit 421/8 Likes nach 2 Tagen bisher bester Start → Meteoriten-Thema zieht.
 - Serien verlieren ab Teil 3 deutlich (Surtsey 4: 215, Donnerstein 3: 169 nach 3 Tagen) → jeder Teil muss für sich allein verständlich sein und im Titel ein eigenständiges Rätsel tragen, Teilnummer nur am Ende.
 - YouTube-Analyse 07.11. (T2/T3): nur ~35 % bleiben im Feed; Abfall 130 % → 80–90 % bis Sek. 6, bei T3 weiter auf 52 % bis Sek. 15 – genau beim vorgelesenen Setup (Ort/Datum). Mitte hält gut (T3 ~37 % von 0:29–0:43, T2 Spitze bei 0:32). Ende: Abfall in den letzten Sekunden bei ausklingendem Satz/Pause. → Hook als Frage mit Einsatz, kein Setup-Satz, Ende ohne Stille (Renderer seit 07.11.: letzter Shot ohne Mindestdauer/Nachpause, Start nach 0,15 s).
+- Donnerstein 5 (Superlativ-Rätsel „Älter als jeder Stein der Erde – wie geht das?“) 285 Aufrufe nach 2,5 Tagen vs. Teil 4 nur ~100 → großes, eigenständiges Rätsel im Titel holt späte Serienteile zurück.
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
 ## Verlauf (Stand-Abrufe)
@@ -35,3 +36,6 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 | 2026-11-10 | Donnerstein 2 | 54 s | 347 | 6 | 1 |
 | 2026-11-10 | Donnerstein 3 | 48 s | 171 | 2 | 1 |
 | 2026-11-10 | Donnerstein 4 | 55 s | 98 (2,5 Tage) | 0 | 1 |
+| 2026-11-13 | Donnerstein 3 | 48 s | 171 | 2 | 1 |
+| 2026-11-13 | Donnerstein 4 | 55 s | 101 | 0 | 1 |
+| 2026-11-13 | Donnerstein 5 | 60 s | 285 (2,5 Tage) | 3 | 1 |
