@@ -198,14 +198,13 @@
    "shots": [
     {
      "img": {
-      "unsplash": "aerial view farmland circle"
+      "unsplash": "crater aerial view"
      },
-     "text": "Kreisrund. Warum?",
-     "key": "Kreisrund.",
-     "say": "Warum ist mitten in Bayern ein riesiges Stück Land fast kreisrund?",
+     "text": "Ein riesiger Kreis.",
+     "key": "Kreis.",
+     "say": "Ein riesiger Kreis, vierundzwanzig Kilometer breit, mitten in Bayern. Wer hat ihn gezogen?",
      "motion": "push",
      "amount": 0.05,
-     "sub": "Moldavit · Teil 2",
      "hit": true,
      "tag": "[mysterious]"
     },
@@ -213,9 +212,9 @@
      "img": {
       "unsplash": "aerial view farmland patchwork"
      },
-     "text": "Rund 24 Kilometer.",
-     "key": "Kilometer.",
-     "say": "Rund vierundzwanzig Kilometer breit. Ein flacher Kessel, ringsum Hügel.",
+     "text": "Ringsum Hügel.",
+     "key": "Hügel.",
+     "say": "Ein flacher Kessel, ringsum ein Wall aus Hügeln.",
      "motion": "pan_r",
      "amount": 0.05
     },
@@ -298,9 +297,9 @@
      "img": {
       "unsplash": "green glass stone"
      },
-     "text": "Und das grüne Glas?",
-     "key": "Glas?",
-     "say": "Und das grüne Glas in Tschechien? Hunderte Kilometer entfernt?",
+     "text": "Grünes Glas – gleich alt?",
+     "key": "Glas,",
+     "say": "Und warum liegt Hunderte Kilometer entfernt grünes Naturglas, genauso alt wie dieser Kreis?",
      "motion": "push",
      "amount": 0.05,
      "tag": "[curious]"

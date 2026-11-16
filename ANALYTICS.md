@@ -13,6 +13,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - Donnerstein 5 (Superlativ-Rätsel „Älter als jeder Stein der Erde – wie geht das?“) 285 Aufrufe nach 2,5 Tagen vs. Teil 4 nur ~100 → großes, eigenständiges Rätsel im Titel holt späte Serienteile zurück.
 - Moldavit 1 („Grünes Glas, das kein Mensch gemacht hat?“) nur 81 Aufrufe nach 3 Tagen = schwächster Serienstart; Meteorit/Himmel-Bezug fehlte im Titel → Einschlag/Weltall-Bezug früh im Titel andeuten (☄️), großes Landschafts-Rätsel statt Material.
 - YouTube-Analyse 16.11. (28 Tage): 3.441 Aufrufe (>5× Vorzeitraum), 778 neue Zuschauer. „Dranbleiben“ bei Top-Shorts (Donnerstein 1, Surtsey 5) 31–35 %, Surtsey 2 nur ~13 %. Ø Wiedergabe der besten Shorts 52–56 %. Kommentare noch wenig → Frage im Video 5–10 s vor Ende (Audio + Bildtext), Bildtext im Hook max. 3 Wörter, nächsten Teil manuell als „Ähnliches Video“ in YouTube Studio verlinken.
+- Analyse 16.11. (Vergleich): Donnerstein 5 = 57 % Dranbleiben (Paradox-Frage ohne Vorwissen), Donnerstein 4 = 13 % (Ort/Jahr vorneweg, setzt Teil 1–3 voraus). Sichtbares „Teil N“ hält Neue ab → keine Teilnummer im Bild; Brücken-Satz am Ende (D5 → grünes Glas) + „Ähnliches Video“ manuell verknüpfen (D5 → Moldavit 1 offen).
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
 ## Verlauf (Stand-Abrufe)
