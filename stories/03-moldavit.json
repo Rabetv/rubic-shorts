@@ -307,6 +307,17 @@
     },
     {
      "img": {
+      "unsplash": "crater landscape aerial"
+     },
+     "text": "Vulkan – oder?",
+     "key": "Vulkan",
+     "say": "Was meinst du: Vulkan – oder etwas ganz anderes?",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
       "unsplash": "microscope crystal"
      },
      "text": "Ein winziger Kristall.",

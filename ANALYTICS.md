@@ -12,6 +12,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - YouTube-Analyse 07.11. (T2/T3): nur ~35 % bleiben im Feed; Abfall 130 % → 80–90 % bis Sek. 6, bei T3 weiter auf 52 % bis Sek. 15 – genau beim vorgelesenen Setup (Ort/Datum). Mitte hält gut (T3 ~37 % von 0:29–0:43, T2 Spitze bei 0:32). Ende: Abfall in den letzten Sekunden bei ausklingendem Satz/Pause. → Hook als Frage mit Einsatz, kein Setup-Satz, Ende ohne Stille (Renderer seit 07.11.: letzter Shot ohne Mindestdauer/Nachpause, Start nach 0,15 s).
 - Donnerstein 5 (Superlativ-Rätsel „Älter als jeder Stein der Erde – wie geht das?“) 285 Aufrufe nach 2,5 Tagen vs. Teil 4 nur ~100 → großes, eigenständiges Rätsel im Titel holt späte Serienteile zurück.
 - Moldavit 1 („Grünes Glas, das kein Mensch gemacht hat?“) nur 81 Aufrufe nach 3 Tagen = schwächster Serienstart; Meteorit/Himmel-Bezug fehlte im Titel → Einschlag/Weltall-Bezug früh im Titel andeuten (☄️), großes Landschafts-Rätsel statt Material.
+- YouTube-Analyse 16.11. (28 Tage): 3.441 Aufrufe (>5× Vorzeitraum), 778 neue Zuschauer. „Dranbleiben“ bei Top-Shorts (Donnerstein 1, Surtsey 5) 31–35 %, Surtsey 2 nur ~13 %. Ø Wiedergabe der besten Shorts 52–56 %. Kommentare noch wenig → Frage im Video 5–10 s vor Ende (Audio + Bildtext), Bildtext im Hook max. 3 Wörter, nächsten Teil manuell als „Ähnliches Video“ in YouTube Studio verlinken.
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
 ## Verlauf (Stand-Abrufe)
