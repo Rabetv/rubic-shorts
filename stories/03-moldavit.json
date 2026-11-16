@@ -313,8 +313,7 @@
      "key": "Vulkan",
      "say": "Was meinst du: Vulkan – oder etwas ganz anderes?",
      "motion": "pan_r",
-     "amount": 0.05,
-     "tag": "[curious]"
+     "amount": 0.05
     },
     {
      "img": {
