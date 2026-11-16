@@ -179,6 +179,169 @@
      "tag": "[whispers]"
     }
    ]
+  },
+  {
+   "part": 2,
+   "yt_title": "Warum ist dieses Stück Bayern kreisrund? ☄️ Moldavit Teil 2",
+   "description": "Mitten in Bayern liegt ein fast kreisrunder Kessel, rund 24 Kilometer breit: das Nördlinger Ries. Lange hielt man ihn für einen Vulkan. Teil 2 der Geschichte vom Moldavit.\n\nVulkan oder etwas ganz anderes – was ist dein Tipp? Schreib es in die Kommentare.\n\n#moldavit #nördlingerries #steine #geologie #shorts",
+   "tags": [
+    "Moldavit",
+    "Nördlinger Ries",
+    "Krater",
+    "Steine",
+    "Meteorit",
+    "Geologie",
+    "wahre Geschichte"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "voice_model": "eleven_v4",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "aerial view farmland circle"
+     },
+     "text": "Kreisrund. Warum?",
+     "key": "Kreisrund.",
+     "say": "Warum ist mitten in Bayern ein riesiges Stück Land fast kreisrund?",
+     "motion": "push",
+     "amount": 0.05,
+     "sub": "Moldavit · Teil 2",
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "aerial view farmland patchwork"
+     },
+     "text": "Rund 24 Kilometer.",
+     "key": "Kilometer.",
+     "say": "Rund vierundzwanzig Kilometer breit. Ein flacher Kessel, ringsum Hügel.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "green rolling hills horizon"
+     },
+     "text": "Erst von oben.",
+     "key": "oben.",
+     "say": "Wer unten steht, sieht es kaum. Erst von oben erkennt man den Kreis.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "wheat field aerial"
+     },
+     "text": "Das Ries.",
+     "key": "Ries.",
+     "say": "Man nennt ihn das Nördlinger Ries.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "volcano crater aerial"
+     },
+     "text": "Ein Vulkan?",
+     "key": "Vulkan?",
+     "say": "Für Forscher war die Sache lange klar: ein Krater. Also ein Vulkan.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "volcanic rock texture"
+     },
+     "text": "Wie Lava.",
+     "key": "Lava.",
+     "say": "Im Boden lag ein graues Gestein voller Brocken und Glas. Es sah aus wie erstarrte Lava.",
+     "motion": "pan_u",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "lava flow night"
+     },
+     "text": "So glaubte man.",
+     "key": "glaubte",
+     "say": "Ein uralter Vulkan, der sich selbst gesprengt hat. So glaubte man jahrzehntelang.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "smoke ash cloud"
+     },
+     "text": "Doch…",
+     "key": "passte",
+     "say": "Doch etwas passte nicht.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "dry grass field wind"
+     },
+     "text": "Kein Vulkankegel.",
+     "key": "Vulkankegel.",
+     "say": "Kein Vulkankegel. Keine Lavaströme.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "green glass stone"
+     },
+     "text": "Und das grüne Glas?",
+     "key": "Glas?",
+     "say": "Und das grüne Glas in Tschechien? Hunderte Kilometer entfernt?",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "microscope crystal"
+     },
+     "text": "Ein winziger Kristall.",
+     "key": "Kristall.",
+     "say": "Die Antwort lag nicht in der Landschaft. Sondern in einem winzigen Kristall.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "quartz crystal macro"
+     },
+     "text": "Extremer Druck.",
+     "key": "Druck.",
+     "say": "Ein Mineral, das nur unter unvorstellbarem Druck entsteht.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Was formte diesen Kreis?",
+     "key": "Kreis?",
+     "say": "Und es verrät, was diesen Kreis wirklich geformt hat.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true,
+     "tag": "[whispers]"
+    }
+   ]
   }
  ]
 }
