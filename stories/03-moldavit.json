@@ -302,7 +302,10 @@
      "say": "Und warum liegt Hunderte Kilometer entfernt grünes Naturglas, genauso alt wie dieser Kreis?",
      "motion": "push",
      "amount": 0.05,
-     "tag": "[curious]"
+     "tag": "[curious]",
+     "img2": {
+      "unsplash": "rough green crystal"
+     }
     },
     {
      "img": {
