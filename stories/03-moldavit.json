@@ -5,7 +5,10 @@
   "https://en.wikipedia.org/wiki/Moldavite",
   "https://en.wikipedia.org/wiki/N%C3%B6rdlinger_Ries",
   "https://www.ub.uni-mainz.de/de/sammlungen/moldavite-gruene-traenen-aus-dem-himmel/4791",
-  "https://digitalgeology.de/en/nordlinger-ries-impact-crater"
+  "https://digitalgeology.de/en/nordlinger-ries-impact-crater",
+  "https://www.earthmagazine.org/article/benchmarks-july-221960-mineral-discovery-ends-meteor-crater-debate/",
+  "https://en.wikipedia.org/wiki/Edward_C._T._Chao",
+  "https://www.lfu.bayern.de/geologie/meteorite/ries/stosswellen/index.htm"
  ],
  "plan": [
   "Teil 1: Grünes Naturglas in tschechischen Äckern (Moldau), fast nur dort; falsche Fährten Flasche/Vulkan/Glashütte; Millionen Jahre alt. Cliffhanger: Spur führt nach Bayern zu einem runden Kessel.",
@@ -352,6 +355,182 @@
      "text_out": 0.5,
      "xfade": true,
      "tag": "[whispers]"
+    }
+   ]
+  },
+  {
+   "part": 3,
+   "yt_title": "Warum war dieser Vulkan gar keiner? ☄️ Moldavit Teil 3",
+   "description": "Jahrzehntelang galt das Nördlinger Ries als alter Vulkan. Dann fanden Forscher 1960 Coesit – ein Mineral, das nur unter extremem Druck entsteht. Teil 3 der Geschichte vom Moldavit.\n\nWie groß war der Brocken – ein Haus oder ein Berg? Schreib deinen Tipp in die Kommentare.\n\n#moldavit #nördlingerries #meteorit #steine #shorts",
+   "tags": [
+    "Moldavit",
+    "Nördlinger Ries",
+    "Coesit",
+    "Einschlagkrater",
+    "Meteorit",
+    "Steine",
+    "wahre Geschichte"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "voice_model": "eleven_v4",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "meteor impact crater"
+     },
+     "text": "Falscher Vulkan?",
+     "key": "Vulkan",
+     "say": "Warum war dieser Vulkan in Bayern gar keiner?",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "grey rock texture"
+     },
+     "text": "Graues Gestein.",
+     "key": "Gestein",
+     "say": "Im Boden des riesigen Kreises: ein graues Gestein voller Glas.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "volcano eruption"
+     },
+     "text": "Lava?",
+     "key": "Lava",
+     "say": "Jahrzehntelang hieß es: erstarrte Lava eines alten Vulkans.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "desert crater arizona"
+     },
+     "text": "Arizona, 1960.",
+     "key": "Arizona",
+     "say": "Doch neunzehnhundertsechzig: ein Fund in einem Krater in Arizona.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "quartz crystal macro"
+     },
+     "text": "Coesit.",
+     "key": "Coesit.",
+     "say": "Coesit. Eine seltene Form von Quarz.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "laboratory glassware"
+     },
+     "text": "Nur im Labor.",
+     "key": "Labor",
+     "say": "Bis dahin kannte man ihn nur aus dem Labor, unter gewaltigem Druck hergestellt.",
+     "motion": "pan_u",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "meteor night sky"
+     },
+     "text": "Nur ein Einschlag.",
+     "key": "Einschlag",
+     "say": "Kein Vulkan erzeugt so einen Druck. Nur ein Einschlag aus dem All.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "rock sample closeup"
+     },
+     "text": "Die Probe.",
+     "key": "Forscher",
+     "say": "Noch im selben Jahr prüfen zwei Forscher das graue Gestein aus dem Ries.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "crystal under microscope"
+     },
+     "text": "Coesit!",
+     "key": "Coesit.",
+     "say": "Und finden: Coesit.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "asteroid space"
+     },
+     "text": "Ein Einschlagkrater.",
+     "key": "Einschlagkrater.",
+     "say": "Der Kreis in Bayern ist kein Vulkan. Er ist ein Einschlagkrater.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "comet space"
+     },
+     "text": "Haus oder Berg?",
+     "key": "Haus",
+     "say": "Was meinst du: Wie groß war der Brocken – ein Haus oder ein Berg?",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "emerald green glass"
+     },
+     "text": "Grünes Glas?",
+     "key": "Glas",
+     "say": "Und das grüne Glas, Hunderte Kilometer entfernt? Es könnte von hier stammen.",
+     "motion": "push",
+     "amount": 0.05,
+     "img2": {
+      "unsplash": "rough green crystal"
+     }
+    },
+    {
+     "img": {
+      "unsplash": "fire explosion sky"
+     },
+     "text": "Wie gewaltig?",
+     "key": "gewaltig",
+     "say": "Doch wie gewaltig muss ein Schlag sein, der Gestein bis nach Tschechien schleudert?",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[whispers]"
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Was traf Bayern?",
+     "key": "Antwort",
+     "say": "Die Antwort sprengt jede Vorstellung.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true
     }
    ]
   }
