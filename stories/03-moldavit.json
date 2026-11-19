@@ -376,7 +376,7 @@
    "shots": [
     {
      "img": {
-      "unsplash": "meteor impact crater"
+      "unsplash": "meteor crater arizona aerial"
      },
      "text": "Falscher Vulkan?",
      "key": "Vulkan",
@@ -518,7 +518,10 @@
      "motion": "push",
      "amount": 0.05,
      "riser": true,
-     "tag": "[whispers]"
+     "tag": "[whispers]",
+     "img2": {
+      "unsplash": "lava fountain eruption night"
+     }
     },
     {
      "img": {
