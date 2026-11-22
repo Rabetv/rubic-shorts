@@ -15,6 +15,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - Moldavit 2 („Warum ist dieses Stück Bayern kreisrund? ☄️“) 446 Aufrufe nach 2 Tagen = bester Start bisher (Moldavit 1: 85) trotz 66 s → Landschafts-Rätsel mit konkretem Ort + ☄️ im Titel bestätigt; Länge trotzdem unter 60 s halten.
 - YouTube-Analyse 16.11. (28 Tage): 3.441 Aufrufe (>5× Vorzeitraum), 778 neue Zuschauer. „Dranbleiben“ bei Top-Shorts (Donnerstein 1, Surtsey 5) 31–35 %, Surtsey 2 nur ~13 %. Ø Wiedergabe der besten Shorts 52–56 %. Kommentare noch wenig → Frage im Video 5–10 s vor Ende (Audio + Bildtext), Bildtext im Hook max. 3 Wörter, nächsten Teil manuell als „Ähnliches Video“ in YouTube Studio verlinken.
 - Analyse 16.11. (Vergleich): Donnerstein 5 = 57 % Dranbleiben (Paradox-Frage ohne Vorwissen), Donnerstein 4 = 13 % (Ort/Jahr vorneweg, setzt Teil 1–3 voraus). Sichtbares „Teil N“ hält Neue ab → keine Teilnummer im Bild; Brücken-Satz am Ende (D5 → grünes Glas) + „Ähnliches Video“ manuell verknüpfen (D5 → Moldavit 1 offen).
+- Moldavit 3 („Warum war dieser Vulkan gar keiner?“) nur 208 nach 3 Tagen vs. Teil 2 452 → Teil-3-Einbruch wiederholt sich (Surtsey, Donnerstein, Moldavit); späte Teile brauchen ein eigenständiges Orts-/Superlativ-Rätsel im Titel.
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
 ## Verlauf (Stand-Abrufe)
@@ -49,3 +50,6 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 | 2026-11-19 | Donnerstein 5 | 60 s | 284 | 3 | 1 |
 | 2026-11-19 | Moldavit 1 | 59 s | 85 | 0 | 1 |
 | 2026-11-19 | Moldavit 2 | 66 s | 446 (2 Tage) | 4 | 1 |
+| 2026-11-22 | Moldavit 1 | 59 s | 88 | 0 | 1 |
+| 2026-11-22 | Moldavit 2 | 66 s | 452 | 5 | 1 |
+| 2026-11-22 | Moldavit 3 | 61 s | 208 (3 Tage) | 4 | 1 |

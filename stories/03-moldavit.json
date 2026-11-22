@@ -8,7 +8,8 @@
   "https://digitalgeology.de/en/nordlinger-ries-impact-crater",
   "https://www.earthmagazine.org/article/benchmarks-july-221960-mineral-discovery-ends-meteor-crater-debate/",
   "https://en.wikipedia.org/wiki/Edward_C._T._Chao",
-  "https://www.lfu.bayern.de/geologie/meteorite/ries/stosswellen/index.htm"
+  "https://www.lfu.bayern.de/geologie/meteorite/ries/stosswellen/index.htm",
+  "https://opac.geologie.ac.at/ais312/dokumente/Ries_impact_A-review.pdf"
  ],
  "plan": [
   "Teil 1: Grünes Naturglas in tschechischen Äckern (Moldau), fast nur dort; falsche Fährten Flasche/Vulkan/Glashütte; Millionen Jahre alt. Cliffhanger: Spur führt nach Bayern zu einem runden Kessel.",
@@ -530,6 +531,183 @@
      "text": "Was traf Bayern?",
      "key": "Antwort",
      "say": "Die Antwort sprengt jede Vorstellung.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ]
+  },
+  {
+   "part": 4,
+   "yt_title": "Wie kam Bayern-Gestein nach Tschechien? ☄️ Moldavit Teil 4",
+   "description": "Vor rund 15 Millionen Jahren schlug ein Asteroid im heutigen Bayern ein. Geschmolzenes Gestein flog Hunderte Kilometer weit nach Osten und erstarrte zu grünem Glas: Moldavit. Teil 4 der Geschichte vom Moldavit.\n\nWie weit flogen die Spritzer – zehn Kilometer oder Hunderte? Schreib deinen Tipp in die Kommentare.\n\n#moldavit #nördlingerries #asteroid #steine #shorts",
+   "tags": [
+    "Moldavit",
+    "Nördlinger Ries",
+    "Asteroid",
+    "Einschlag",
+    "Meteorit",
+    "Steine",
+    "wahre Geschichte"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "voice_model": "eleven_v4",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "asteroid earth impact"
+     },
+     "text": "Glas vom Himmel?",
+     "key": "Gestein",
+     "say": "Wie fliegt Gestein aus Bayern bis nach Tschechien?",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "asteroid space"
+     },
+     "text": "Über 1 km.",
+     "key": "Brocken",
+     "say": "Ein Brocken aus dem All rast auf die Erde zu. Über einen Kilometer groß.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "meteor streak night sky"
+     },
+     "text": "Rasend schnell.",
+     "key": "Gewehrkugel",
+     "say": "Schneller als jede Gewehrkugel.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "green forest aerial"
+     },
+     "text": "Vor 15 Mio. Jahren.",
+     "key": "Ziel",
+     "say": "Sein Ziel: das heutige Bayern, vor rund fünfzehn Millionen Jahren.",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "fire explosion"
+     },
+     "text": "Einschlag!",
+     "key": "Einschlag",
+     "say": "[pause] Einschlag.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "crater aerial view"
+     },
+     "text": "Über 20 km.",
+     "key": "Krater",
+     "say": "In wenigen Minuten entsteht ein Krater, über zwanzig Kilometer breit.",
+     "motion": "pan_u",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "molten lava flow"
+     },
+     "text": "Geschmolzen.",
+     "key": "schmilzt",
+     "say": "Das Gestein an der Oberfläche schmilzt.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "sparks night sky"
+     },
+     "text": "Nach Osten.",
+     "key": "Spritzer",
+     "say": "Glühende Spritzer schießen hoch in den Himmel. Richtung Osten.",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true
+    },
+    {
+     "img": {
+      "unsplash": "dramatic clouds sunset sky"
+     },
+     "text": "10 km oder 100+?",
+     "key": "weit",
+     "say": "Was meinst du: Wie weit flogen sie? Zehn Kilometer oder Hunderte?",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[curious]"
+    },
+    {
+     "img": {
+      "unsplash": "czech countryside fields"
+     },
+     "text": "Bis Tschechien.",
+     "key": "Hunderte",
+     "say": "Hunderte Kilometer. Bis nach Böhmen und Mähren.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "green glass"
+     },
+     "text": "Grünes Glas.",
+     "key": "Glas",
+     "say": "Im Flug kühlen sie ab und erstarren zu grünem Glas.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[mysterious]",
+     "img2": {
+      "unsplash": "green gemstone macro"
+     }
+    },
+    {
+     "img": {
+      "unsplash": "moldavite"
+     },
+     "text": "Moldavit.",
+     "key": "Moldavit.",
+     "say": "Moldavit. Geboren in einem Feuer aus dem All.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true
+    },
+    {
+     "img": {
+      "unsplash": "medieval town walls aerial"
+     },
+     "text": "Eine Stadt?",
+     "key": "Stadt",
+     "say": "Doch mitten im Krater steht heute eine ganze Stadt.",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[whispers]"
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Aus Einschlag-Stein?",
+     "key": "Kirche",
+     "say": "Und ihre Kirche ist aus Einschlag-Gestein gebaut.",
      "motion": "pull",
      "amount": 0.05,
      "text_out": 0.5,
