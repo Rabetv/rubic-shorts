@@ -568,16 +568,14 @@
     },
     {
      "img": {
-      "unsplash": "asteroid space"
+      "unsplash": "asteroid rock space dark"
      },
      "text": "Über 1 km.",
      "key": "Brocken",
      "say": "Ein Brocken aus dem All rast auf die Erde zu. Über einen Kilometer groß.",
      "motion": "pan_r",
      "amount": 0.05,
-     "img2": {
-      "unsplash": "asteroid rock space dark"
-     }
+     "no_split": true
     },
     {
      "img": {
