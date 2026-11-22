@@ -325,7 +325,7 @@ def align_voice(path, shots, tempo=1.0):
     import difflib
     from faster_whisper import WhisperModel
     wav = path + ".44k.wav"
-    af = ["-af", f"rubberband=tempo={tempo}:transients=smooth:pitchq=quality"] if abs(tempo - 1) > 1e-3 else []
+    af = ["-af", f"atempo={tempo}"] if abs(tempo - 1) > 1e-3 else []  # atempo wie bis Donnerstein 3 (Rubberband klang verwaschen)
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-ac", "1", "-ar", "44100"] + af + [wav],
                    check=True)
     with wave.open(wav) as w:
@@ -524,7 +524,7 @@ def render(story_path, part_no, out_mp4, used_ids=None):
         i0 = int(st * sr)
         voice[i0:i0 + len(a)] += a[: len(voice) - i0]
     voice = voice[: int(total * sr)]
-    voice = ffx(voice, sr, "highpass=f=80,acompressor=threshold=-22dB:ratio=2.5:attack=8:release=150:makeup=2")
+    voice = ffx(voice, sr, "highpass=f=80")  # keine Kompression mehr (Stimme klang ab Donnerstein 4 schlechter)
     k = int(0.03 * sr)
     venv = np.convolve(np.abs(voice), np.ones(k) / k, mode="same")
     speaking = venv > 0.02 * (venv.max() + 1e-9)
