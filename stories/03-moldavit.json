@@ -574,18 +574,22 @@
      "key": "Brocken",
      "say": "Ein Brocken aus dem All rast auf die Erde zu. Über einen Kilometer groß.",
      "motion": "pan_r",
-     "amount": 0.05
+     "amount": 0.05,
+     "img2": {
+      "unsplash": "asteroid rock space dark"
+     }
     },
     {
      "img": {
-      "unsplash": "meteor streak night sky"
+      "unsplash": "meteor shower long exposure"
      },
      "text": "Rasend schnell.",
      "key": "Gewehrkugel",
      "say": "Schneller als jede Gewehrkugel.",
      "motion": "push",
      "amount": 0.05,
-     "tag": "[serious]"
+     "tag": "[serious]",
+     "no_split": true
     },
     {
      "img": {
@@ -680,14 +684,15 @@
     },
     {
      "img": {
-      "unsplash": "moldavite"
+      "unsplash": "green crystal macro"
      },
      "text": "Moldavit.",
      "key": "Moldavit.",
      "say": "Moldavit. Geboren in einem Feuer aus dem All.",
      "motion": "push",
      "amount": 0.05,
-     "hit": true
+     "hit": true,
+     "no_split": true
     },
     {
      "img": {
