@@ -321,8 +321,8 @@ def align_voice(path, shots, tempo=1.0):
     """Schneidet eine durchgehende Sprachaufnahme per Whisper-Wortzeiten in Clips pro Shot."""
     import difflib
     from faster_whisper import WhisperModel
-    wav = path + ".22k.wav"
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-ac", "1", "-ar", "22050",
+    wav = path + ".44k.wav"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-ac", "1", "-ar", "44100",  # volle Bandbreite (22 kHz klang stumpf)
                     "-af", f"atempo={tempo}", wav], check=True)
     with wave.open(wav) as w:
         sr = w.getframerate()
@@ -514,7 +514,7 @@ def render(story_path, part_no, out_mp4, used_ids=None):
         i0 = int(st * sr)
         voice[i0:i0 + len(a)] += a[: len(voice) - i0]
     voice = voice[: int(total * sr)]
-    # Stimme unbearbeitet wie bis Donnerstein 3 (Nutzerwunsch 22.11.)
+    voice = ffx(voice, sr, "highpass=f=70,equalizer=f=3500:t=q:w=1.2:g=2.5,highshelf=f=8000:g=2")  # klarer, keine Kompression (Nutzerwunsch 24.11.)
     k = int(0.03 * sr)
     venv = np.convolve(np.abs(voice), np.ones(k) / k, mode="same")
     speaking = venv > 0.02 * (venv.max() + 1e-9)
