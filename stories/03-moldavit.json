@@ -9,7 +9,10 @@
   "https://www.earthmagazine.org/article/benchmarks-july-221960-mineral-discovery-ends-meteor-crater-debate/",
   "https://en.wikipedia.org/wiki/Edward_C._T._Chao",
   "https://www.lfu.bayern.de/geologie/meteorite/ries/stosswellen/index.htm",
-  "https://opac.geologie.ac.at/ais312/dokumente/Ries_impact_A-review.pdf"
+  "https://opac.geologie.ac.at/ais312/dokumente/Ries_impact_A-review.pdf",
+  "https://www.smithsonianmag.com/travel/german-town-contains-millions-diamonds-180961467/",
+  "https://www.nasa.gov/history/alsj/a14/a14ries-News2.html",
+  "https://www.lfu.bayern.de/geologie/meteorite/ries/daniel/index.htm"
  ],
  "plan": [
   "Teil 1: Grünes Naturglas in tschechischen Äckern (Moldau), fast nur dort; falsche Fährten Flasche/Vulkan/Glashütte; Millionen Jahre alt. Cliffhanger: Spur führt nach Bayern zu einem runden Kessel.",
@@ -711,6 +714,176 @@
      "text": "Aus Einschlag-Stein?",
      "key": "Kirche",
      "say": "Und ihre Kirche ist aus Einschlag-Gestein gebaut.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ]
+  },
+  {
+   "part": 5,
+   "yt_title": "Warum ist diese Stadt voller Diamanten? ☄️ Moldavit Teil 5",
+   "description": "Nördlingen liegt mitten im Nördlinger Ries, einem rund 15 Millionen Jahre alten Asteroidenkrater. Der Einschlag schuf das Gestein Suevit – mit winzigen Diamanten. Daraus ist die Kirche St. Georg gebaut. 1970 trainierten hier die Astronauten von Apollo 14. Teil 5 der Geschichte vom Moldavit.\n\nWer übte hier für den Mond – Piloten oder Astronauten? Schreib deinen Tipp in die Kommentare.\n\n#nördlingen #nördlingerries #diamanten #asteroid #steine #shorts",
+   "tags": [
+    "Nördlingen",
+    "Nördlinger Ries",
+    "Diamanten",
+    "Suevit",
+    "Apollo 14",
+    "Asteroid",
+    "Moldavit",
+    "Steine"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "voice_model": "eleven_v4",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "medieval town aerial red roofs"
+     },
+     "text": "Voller Diamanten?",
+     "key": "Diamanten",
+     "say": "Warum steckt eine ganze Stadt voller Diamanten?",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "old church tower stone"
+     },
+     "text": "In den Mauern.",
+     "key": "Mauern",
+     "say": "Sie stecken in den Mauern. Sogar im Kirchturm.",
+     "motion": "pan_u",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "old stone wall texture"
+     },
+     "text": "Unsichtbar.",
+     "key": "winzig",
+     "say": "Doch niemand kann sie sehen. Sie sind winzig klein.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "rough diamond macro"
+     },
+     "text": "Ein Schatz?",
+     "key": "Schatz",
+     "say": "Ein vergessener Schatz? Ein reicher Fürst?",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]",
+     "no_split": true
+    },
+    {
+     "img": {
+      "unsplash": "round town wall aerial"
+     },
+     "text": "Im Krater.",
+     "key": "Krater",
+     "say": "Nein. Die Stadt Nördlingen liegt mitten in einem Krater.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "asteroid earth impact"
+     },
+     "text": "Einschlag!",
+     "key": "Asteroid",
+     "say": "Vor rund fünfzehn Millionen Jahren schlug hier ein Asteroid ein.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[dramatically]",
+     "no_split": true
+    },
+    {
+     "img": {
+      "unsplash": "black graphite texture"
+     },
+     "text": "Gewaltiger Druck.",
+     "key": "Kohlenstoff",
+     "say": "Der Schlag presste das Gestein zusammen. Aus Kohlenstoff wurden winzige Diamanten.",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true
+    },
+    {
+     "img": {
+      "unsplash": "grey rock texture macro"
+     },
+     "text": "Suevit.",
+     "key": "Suevit",
+     "say": "So entstand ein neues Gestein: Suevit.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "gothic church interior stone"
+     },
+     "text": "St. Georg.",
+     "key": "Kirche",
+     "say": "Aus ihm bauten die Menschen ihre Kirche. Ohne es zu ahnen.",
+     "motion": "pan_u",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "full moon night sky"
+     },
+     "text": "Piloten oder Astronauten?",
+     "key": "Mond",
+     "say": "Was meinst du: Wer übte später hier für den Mond? Piloten oder Astronauten?",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]",
+     "no_split": true
+    },
+    {
+     "img": {
+      "unsplash": "moon surface craters"
+     },
+     "text": "Apollo 14.",
+     "key": "Apollo",
+     "say": "Astronauten. Neunzehnhundertsiebzig trainierte die Crew von Apollo vierzehn im Krater.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]"
+    },
+    {
+     "img": {
+      "unsplash": "lightning storm night"
+     },
+     "text": "Glas in 1 Sekunde?",
+     "key": "Blitz",
+     "say": "Doch es gibt Glas, das in einem Wimpernschlag entsteht.",
+     "motion": "push",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[whispers]",
+     "no_split": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Durch einen Blitz.",
+     "key": "Blitz.",
+     "say": "Geschmolzen von einem Blitz.",
      "motion": "pull",
      "amount": 0.05,
      "text_out": 0.5,
