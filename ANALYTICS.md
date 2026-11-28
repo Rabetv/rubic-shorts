@@ -17,6 +17,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - Analyse 16.11. (Vergleich): Donnerstein 5 = 57 % Dranbleiben (Paradox-Frage ohne Vorwissen), Donnerstein 4 = 13 % (Ort/Jahr vorneweg, setzt Teil 1–3 voraus). Sichtbares „Teil N“ hält Neue ab → keine Teilnummer im Bild; Brücken-Satz am Ende (D5 → grünes Glas) + „Ähnliches Video“ manuell verknüpfen (D5 → Moldavit 1 offen).
 - Moldavit 3 („Warum war dieser Vulkan gar keiner?“) nur 208 nach 3 Tagen vs. Teil 2 452 → Teil-3-Einbruch wiederholt sich (Surtsey, Donnerstein, Moldavit); späte Teile brauchen ein eigenständiges Orts-/Superlativ-Rätsel im Titel.
 - Moldavit 4 („Wie kam Bayern-Gestein nach Tschechien? ☄️“) 554 Aufrufe nach 3 Tagen = bester Wert bisher, trotz Teil 4 → Orts-Rätsel mit zwei konkreten Orten (A → B) + ☄️ bricht den Spätteil-Einbruch; beibehalten.
+- Moldavit 5 („Warum ist diese Stadt voller Diamanten? ☄️“) 373 Aufrufe nach 3 Tagen (Teil 4: 554, Teil 3: 208) → zweiter Spätteil in Folge stark: Orts-Rätsel mit überraschendem Superlativ trägt auch Teil 5; Serie Moldavit insgesamt ~1.690 Aufrufe = beste Serie.
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
 ## Verlauf (Stand-Abrufe)
@@ -58,3 +59,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 | 2026-11-25 | Moldavit 2 | 66 s | 457 | 5 | 1 |
 | 2026-11-25 | Moldavit 3 | 61 s | 215 | 4 | 1 |
 | 2026-11-25 | Moldavit 4 | 56 s | 554 (3 Tage) | 5 | 1 |
+| 2026-11-28 | Moldavit 2 | 66 s | 458 | 5 | 1 |
+| 2026-11-28 | Moldavit 3 | 61 s | 215 | 4 | 1 |
+| 2026-11-28 | Moldavit 4 | 56 s | 555 | 5 | 1 |
+| 2026-11-28 | Moldavit 5 | 53 s | 373 (3 Tage) | 3 | 1 |

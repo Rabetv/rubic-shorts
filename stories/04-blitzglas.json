@@ -1,0 +1,200 @@
+{
+ "series": "blitzglas",
+ "title": "Blitzglas – wenn ein Blitz Sand zu Glas macht",
+ "music": "03-strings-tension.mp3",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Fulgurite",
+  "https://geology.utah.gov/fulgurites-when-lightning-strikes-sand-magic-is-formed",
+  "https://www.guinnessworldrecords.com/world-records/66619-longest-excavated-fulgurite",
+  "https://www.nature.com/articles/srep30586",
+  "https://futurezone.at/science/mineral-blitzeinschlag-baum-florida-cahpo3-fulgurit-matthew-pasek-university-of-south-florida/402415013"
+ ],
+ "plan": [
+  "Teil 1: Hohle, verzweigte Glasröhren im Sand; falsche Fährten Müll/Glashütte/Tiergänge; Auflösung: Blitz schmilzt Sand in < 1 s (heißer als Sonnenoberfläche) → Fulgurit (lat. fulgur = Blitz). Cliffhanger: Darwin fand sie in Südamerika.",
+  "Teil 2: Darwin 1832 bei Maldonado (Uruguay): Glasröhren in den Dünen, beschrieben in der Reise der Beagle. Fakten prüfen.",
+  "Teil 3: Der längste ausgegrabene Fulgurit (rund 5 m, Florida) – Auflösung der Kommentar-Frage. Fakten prüfen.",
+  "Teil 4: Blitze auf Bestellung – Forscher lösen Blitze mit Raketen aus und graben die Röhren aus. Fakten prüfen.",
+  "Teil 5: Seltene Minerale im Blitzglas (Florida, Phosphor) – half der Blitz beim Ursprung des Lebens? Fakten prüfen."
+ ],
+ "next_series_idea": "Ein Vulkan-/Kristall-Thema (z. B. Riesenkristalle von Naica) – Fakten vor dem Schreiben prüfen",
+ "parts": [
+  {
+   "part": 1,
+   "yt_title": "Wer vergräbt Glasröhren im Sand? ⚡ Blitzglas Teil 1",
+   "description": "Hohle, verzweigte Röhren aus Glas im Sand – gemacht hat sie kein Mensch. Ein Blitz schmilzt den Sand in weniger als einer Sekunde zu Glas. Forscher nennen das Fulgurit, nach dem lateinischen Wort für Blitz. Teil 1 der Serie Blitzglas.\n\nWie lang wird so eine Blitzröhre – ein Meter oder fünf? Schreib deinen Tipp in die Kommentare.\n\n#fulgurit #blitz #glas #steine #natur #shorts",
+   "tags": [
+    "Fulgurit",
+    "Blitz",
+    "Blitzröhre",
+    "Glas",
+    "Sand",
+    "Steine",
+    "Natur"
+   ],
+   "voice": "NBqeXKdZHweef6y0B67V",
+   "voice_model": "eleven_v4",
+   "shots": [
+    {
+     "img": {
+      "unsplash": "lightning strike desert"
+     },
+     "text": "Glas im Sand?",
+     "key": "Glas",
+     "say": "Wer vergräbt Röhren aus Glas mitten im Sand?",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "sand dunes desert"
+     },
+     "text": "Hohl. Verzweigt.",
+     "key": "hohl",
+     "say": "Sie sind hohl wie ein Knochen. Und verzweigt wie eine Wurzel.",
+     "motion": "pan_r",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "sand dune close up"
+     },
+     "text": "Meterweit tief.",
+     "key": "Tiefe",
+     "say": "Manche reichen meterweit in die Tiefe.",
+     "motion": "pan_d",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "glass bottle sand beach"
+     },
+     "text": "Müll?",
+     "key": "Glashütte",
+     "say": "Müll? Reste einer alten Glashütte?",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]",
+     "no_split": true
+    },
+    {
+     "img": {
+      "unsplash": "desert sand ripples texture"
+     },
+     "text": "Ein Tier?",
+     "key": "Tieres",
+     "say": "Oder die Gänge eines Tieres, zu Stein geworden?",
+     "motion": "pan_l",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "dark storm clouds desert"
+     },
+     "text": "Nein.",
+     "key": "Nein.",
+     "say": "Nein. Kein Mensch und kein Tier war hier.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "storm clouds dramatic sky"
+     },
+     "text": "Unter 1 Sekunde.",
+     "key": "Sekunde",
+     "say": "Es passiert in weniger als einer Sekunde.",
+     "motion": "pan_u",
+     "amount": 0.05,
+     "riser": true
+    },
+    {
+     "img": {
+      "unsplash": "lightning bolt"
+     },
+     "text": "Blitz!",
+     "key": "Blitz",
+     "say": "Ein Blitz schlägt in den Sand.",
+     "motion": "push",
+     "amount": 0.05,
+     "hit": true,
+     "tag": "[dramatically]",
+     "no_split": true
+    },
+    {
+     "img": {
+      "unsplash": "lightning night sky"
+     },
+     "text": "Heißer als die Sonne.",
+     "key": "Sonne",
+     "say": "Er ist heißer als die Oberfläche der Sonne.",
+     "motion": "push",
+     "amount": 0.05
+    },
+    {
+     "img": {
+      "unsplash": "molten glass glowing"
+     },
+     "text": "Sand wird Glas.",
+     "key": "schmilzt",
+     "say": "Der Sand schmilzt entlang seines Weges. Und erstarrt zu einer Röhre aus Glas.",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[serious]"
+    },
+    {
+     "img": {
+      "unsplash": "quartz sand macro"
+     },
+     "text": "Fulgurit.",
+     "key": "Fulgurite",
+     "say": "Forscher nennen sie Fulgurite. Nach dem lateinischen Wort für Blitz.",
+     "motion": "pan_r",
+     "amount": 0.05,
+     "tag": "[mysterious]"
+    },
+    {
+     "img": {
+      "unsplash": "tape measure sand"
+     },
+     "text": "1 Meter oder 5?",
+     "key": "lang",
+     "say": "Was meinst du: Wie lang wird so eine Blitzröhre? Ein Meter? Oder fünf?",
+     "motion": "push",
+     "amount": 0.05,
+     "tag": "[curious]",
+     "no_split": true
+    },
+    {
+     "img": {
+      "unsplash": "coastal sand dunes ocean"
+     },
+     "text": "Südamerika.",
+     "key": "Forscher",
+     "say": "Ein berühmter Forscher fand sie einst in den Dünen Südamerikas.",
+     "motion": "pan_l",
+     "amount": 0.05,
+     "riser": true,
+     "tag": "[whispers]",
+     "no_split": true
+    },
+    {
+     "img": {
+      "same_as": 0
+     },
+     "text": "Charles Darwin.",
+     "key": "Darwin.",
+     "say": "Sein Name: Charles Darwin.",
+     "motion": "pull",
+     "amount": 0.05,
+     "text_out": 0.5,
+     "xfade": true
+    }
+   ]
+  }
+ ]
+}
