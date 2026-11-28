@@ -18,6 +18,7 @@ Quelle: eigene Abrufe + YouTube-Retention-Report 29.10. (erste 16 h: T5 411 Aufr
 - Moldavit 3 („Warum war dieser Vulkan gar keiner?“) nur 208 nach 3 Tagen vs. Teil 2 452 → Teil-3-Einbruch wiederholt sich (Surtsey, Donnerstein, Moldavit); späte Teile brauchen ein eigenständiges Orts-/Superlativ-Rätsel im Titel.
 - Moldavit 4 („Wie kam Bayern-Gestein nach Tschechien? ☄️“) 554 Aufrufe nach 3 Tagen = bester Wert bisher, trotz Teil 4 → Orts-Rätsel mit zwei konkreten Orten (A → B) + ☄️ bricht den Spätteil-Einbruch; beibehalten.
 - Moldavit 5 („Warum ist diese Stadt voller Diamanten? ☄️“) 373 Aufrufe nach 3 Tagen (Teil 4: 554, Teil 3: 208) → zweiter Spätteil in Folge stark: Orts-Rätsel mit überraschendem Superlativ trägt auch Teil 5; Serie Moldavit insgesamt ~1.690 Aufrufe = beste Serie.
+- YouTube-Analyse 28.11.: Moldavit 2 = 47,8 % Dranbleiben (bester Wert; Hook: großes Bild + konkrete Zahl + Ort + Wer-Frage im ersten Satz: „Ein riesiger Kreis, vierundzwanzig Kilometer breit, mitten in Bayern. Wer hat ihn gezogen?“), Donnerstein 2 = 35,6 %. Wiederkehrende Zuschauer 12 → 54 (+350 %), Abonnenten aber nur +4 → Serienzuschauer werden noch nicht zu Abonnenten.
 - Datenbasis noch klein – Tendenzen, keine festen Regeln.
 
 ## Verlauf (Stand-Abrufe)
